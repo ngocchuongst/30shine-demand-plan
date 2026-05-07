@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demand Master Plan — 30Shine T5-T10/2026</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy-900: #0F172A;
+  --navy-800: #1E293B;
+  --navy-700: #334155;
+  --indigo-500: #6366F1;
+  --indigo-600: #4F46E5;
+  --teal-400: #2DD4BF;
+  --teal-500: #14B8A6;
+  --emerald-500: #10B981;
+  --emerald-100: #D1FAE5;
+  --amber-500: #F59E0B;
+  --amber-100: #FEF3C7;
+  --rose-500: #F43F5E;
+  --rose-100: #FFE4E6;
+  --slate-50: #F8FAFC;
+  --slate-100: #F1F5F9;
+  --slate-200: #E2E8F0;
+  --slate-400: #94A3B8;
+  --slate-500: #64748B;
+  --slate-600: #475569;
+  --shadow-sm: 0 1px 3px rgba(15,23,42,.06), 0 1px 2px rgba(15,23,42,.04);
+  --shadow-md: 0 4px 12px rgba(15,23,42,.08), 0 2px 4px rgba(15,23,42,.04);
+  --shadow-lg: 0 10px 30px rgba(15,23,42,.10), 0 4px 8px rgba(15,23,42,.04);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  background: linear-gradient(180deg, #EEF2FF 0%, #F8FAFC 30%, #F8FAFC 100%);
+  background-attachment: fixed;
+  color: var(--navy-800);
+  line-height: 1.6;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.app { display: flex; min-height: 100vh; }
+
+.sidebar {
+  width: 280px;
+  background: linear-gradient(180deg, var(--navy-900) 0%, #1E1B4B 100%);
+  color: #fff;
+  padding: 28px 0 0;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: 4px 0 24px rgba(15,23,42,.12);
+  z-index: 10;
+}
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); border-radius: 4px; }
+
+.sidebar h1 {
+  font-size: 18px;
+  font-weight: 800;
+  padding: 0 24px 20px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  letter-spacing: -.3px;
+}
+.sidebar h1 .badge {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--teal-400);
+  margin-top: 6px;
+  letter-spacing: .3px;
+}
+.sidebar nav { padding: 8px 0; }
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 24px;
+  color: rgba(255,255,255,.75);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  border-left: 3px solid transparent;
+  transition: all .25s cubic-bezier(.4,0,.2,1);
+  cursor: pointer;
+  position: relative;
+}
+.sidebar nav a:hover {
+  background: rgba(255,255,255,.05);
+  color: #fff;
+  padding-left: 28px;
+}
+.sidebar nav a.active {
+  background: linear-gradient(90deg, rgba(45,212,191,.15) 0%, transparent 100%);
+  border-left-color: var(--teal-400);
+  color: #fff;
+  font-weight: 600;
+}
+.sidebar nav a.active::after {
+  content: '';
+  position: absolute;
+  right: 16px;
+  width: 6px;
+  height: 6px;
+  background: var(--teal-400);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--teal-400);
+}
+.sidebar nav a .num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background: rgba(255,255,255,.08);
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255,255,255,.6);
+  flex-shrink: 0;
+}
+.sidebar nav a.active .num {
+  background: var(--teal-500);
+  color: #fff;
+}
+
+.main {
+  margin-left: 280px;
+  flex: 1;
+  padding: 36px 44px 60px;
+  max-width: calc(100vw - 280px);
+}
+
+.section { display: none; animation: slideUp .35s cubic-bezier(.4,0,.2,1); }
+.section.active { display: block; }
+@keyframes slideUp { from { opacity: 0; transform: translateY(8px);} to { opacity: 1; transform: none;} }
+
+.hero {
+  background: linear-gradient(135deg, var(--navy-900) 0%, var(--indigo-600) 60%, var(--teal-500) 100%);
+  border-radius: 20px;
+  padding: 32px 36px;
+  margin-bottom: 28px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,.12) 0%, transparent 60%);
+}
+.hero h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  letter-spacing: -.5px;
+  position: relative;
+}
+.hero .subtitle {
+  font-size: 15px;
+  opacity: .85;
+  font-weight: 400;
+  position: relative;
+}
+
+.main > .section > header:not(.hero) {
+  background: #fff;
+  padding: 22px 28px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 24px;
+  border-left: 4px solid var(--indigo-500);
+}
+.main > .section > header:not(.hero) h2 {
+  font-size: 22px;
+  color: var(--navy-900);
+  margin-bottom: 6px;
+  font-weight: 700;
+  letter-spacing: -.3px;
+}
+.main > .section > header:not(.hero) .subtitle {
+  color: var(--slate-500);
+  font-size: 13px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 22px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow .25s, transform .25s;
+}
+.card:hover { box-shadow: var(--shadow-md); }
+.card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy-900);
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--slate-100);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: -.2px;
+}
+.card h3 .emoji { font-size: 22px; }
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+.kpi-card {
+  background: linear-gradient(135deg, #fff 0%, var(--slate-50) 100%);
+  border: 1px solid var(--slate-200);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  transition: all .3s cubic-bezier(.4,0,.2,1);
+}
+.kpi-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--indigo-500), var(--teal-500));
+  opacity: 0;
+  transition: opacity .3s;
+}
+.kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--indigo-500);
+}
+.kpi-card:hover::before { opacity: 1; }
+.kpi-card .label {
+  font-size: 11px;
+  color: var(--slate-500);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  font-weight: 600;
+}
+.kpi-card .value {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--navy-900);
+  letter-spacing: -.5px;
+  line-height: 1.2;
+}
+.kpi-card .delta {
+  font-size: 12px;
+  color: var(--emerald-500);
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 13px;
+  box-shadow: 0 0 0 1px var(--slate-200);
+}
+th {
+  background: var(--navy-900);
+  color: #fff;
+  text-align: left;
+  padding: 14px 14px;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  position: sticky;
+  top: 0;
+}
+td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--slate-100);
+  vertical-align: top;
+  transition: background .15s;
+}
+tr:hover td { background: var(--slate-50); }
+tr:last-child td { border-bottom: none; }
+
+.target-cell {
+  background: var(--emerald-100) !important;
+  color: #047857;
+  font-weight: 700;
+  text-align: center;
+}
+.baseline-cell {
+  color: var(--rose-500);
+  font-weight: 700;
+  text-align: center;
+}
+.section-header td {
+  background: linear-gradient(90deg, var(--indigo-600) 0%, var(--indigo-500) 100%) !important;
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: .3px;
+  padding: 14px !important;
+}
+.section-header td:hover { background: linear-gradient(90deg, var(--indigo-600) 0%, var(--indigo-500) 100%) !important; }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .2px;
+}
+.badge.urgent { background: var(--rose-100); color: #BE123C; }
+.badge.warning { background: var(--amber-100); color: #B45309; }
+.badge.deferred { background: var(--slate-100); color: var(--slate-600); }
+.badge.locked { background: var(--emerald-100); color: #047857; }
+.badge.testing { background: linear-gradient(135deg, var(--amber-100), #FEF9C3); color: #B45309; border: 1px solid var(--amber-500); }
+.badge.dropped { background: var(--rose-100); color: #BE123C; text-decoration: line-through; }
+
+.out-of-scope {
+  background: linear-gradient(135deg, var(--rose-100) 0%, #FFF1F2 100%);
+  border-left: 4px solid var(--rose-500);
+}
+.out-of-scope ul { list-style: none; }
+.out-of-scope li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(244,63,94,.12);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.out-of-scope li:last-child { border-bottom: none; }
+
+.note {
+  background: linear-gradient(135deg, #F0FDFA 0%, #ECFEFF 100%);
+  border-left: 3px solid var(--teal-500);
+  padding: 14px 18px;
+  font-style: italic;
+  color: var(--slate-600);
+  font-size: 13px;
+  margin-top: 16px;
+  border-radius: 0 8px 8px 0;
+}
+
+/* === Bucket grid (5 ngón) === */
+.bucket-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.bucket {
+  background: linear-gradient(180deg, #fff 0%, var(--slate-50) 100%);
+  border: 1px solid var(--slate-200);
+  border-radius: 14px;
+  padding: 20px;
+  position: relative;
+  transition: all .25s;
+}
+.bucket:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--indigo-500);
+}
+.bucket .pill {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .8px;
+  background: var(--emerald-500);
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+.bucket.testing { border: 2px dashed var(--amber-500); background: linear-gradient(180deg, #FEF9C3 0%, #FFFBEB 100%); }
+.bucket.testing .pill { background: var(--amber-500); }
+.bucket h4 {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--navy-900);
+  margin-bottom: 6px;
+  letter-spacing: -.2px;
+}
+.bucket .persona {
+  font-size: 12px;
+  color: var(--slate-500);
+  margin-bottom: 12px;
+  font-style: italic;
+}
+.bucket .metric {
+  font-size: 12px;
+  color: var(--navy-700);
+  padding: 4px 0;
+  border-top: 1px dashed var(--slate-200);
+}
+.bucket .metric strong { color: var(--indigo-600); }
+
+/* === Workflow steps === */
+.workflow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.workflow .step {
+  background: #fff;
+  border: 1px solid var(--slate-200);
+  border-top: 4px solid var(--indigo-500);
+  border-radius: 12px;
+  padding: 18px;
+  position: relative;
+}
+.workflow .step .num {
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--indigo-500);
+  opacity: .25;
+  line-height: 1;
+  position: absolute;
+  right: 14px;
+  top: 8px;
+}
+.workflow .step h4 {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--navy-900);
+  margin-bottom: 8px;
+  letter-spacing: -.2px;
+}
+.workflow .step .who {
+  font-size: 11px;
+  color: var(--teal-500);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: 8px;
+}
+.workflow .step p {
+  font-size: 12px;
+  color: var(--slate-600);
+  line-height: 1.5;
+}
+.workflow .step ul {
+  font-size: 12px;
+  color: var(--slate-600);
+  margin-left: 16px;
+  margin-top: 6px;
+}
+
+/* === Risk severity === */
+.severity {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  letter-spacing: .3px;
+}
+.severity.s1 { background: #FEF3C7; color: #B45309; border: 1px solid #FCD34D; }
+.severity.s2 { background: #FECACA; color: #B91C1C; border: 1px solid #F87171; }
+.severity.s3 { background: #1F2937; color: #fff; border: 1px solid #111827; }
+
+.risk-row.s1 td:first-child { border-left: 4px solid var(--amber-500); }
+.risk-row.s2 td:first-child { border-left: 4px solid var(--rose-500); }
+.risk-row.s3 td:first-child { border-left: 4px solid var(--navy-900); }
+
+/* === Formula box === */
+.formula {
+  background: linear-gradient(135deg, var(--navy-900) 0%, #1E1B4B 100%);
+  color: #fff;
+  padding: 18px 24px;
+  border-radius: 12px;
+  font-family: 'JetBrains Mono', "SF Mono", monospace;
+  font-size: 14px;
+  margin: 14px 0;
+  letter-spacing: .2px;
+  box-shadow: var(--shadow-md);
+}
+.formula .label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--teal-400);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .sidebar { width: 240px; }
+  .main { margin-left: 240px; max-width: calc(100vw - 240px); padding: 24px; }
+  .hero { padding: 24px; }
+  .hero h2 { font-size: 22px; }
+  .workflow { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .sidebar { width: 100%; position: relative; height: auto; }
+  .main { margin-left: 0; max-width: 100%; padding: 16px; }
+  .kpi-grid { grid-template-columns: 1fr 1fr; }
+  .workflow { grid-template-columns: 1fr; }
+}
+
+@media print {
+  body { background: #fff; }
+  .sidebar { display: none; }
+  .main { margin-left: 0; max-width: 100%; padding: 0; }
+  .section { display: block !important; page-break-after: always; }
+  .hero { background: var(--navy-900) !important; -webkit-print-color-adjust: exact; }
+  .card, table { box-shadow: none; border: 1px solid var(--slate-200); }
+}
+</style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h1>✋ Demand Master Plan
+        <span class="badge">30Shine • T5-T10/2026</span>
+      </h1>
+      <nav>
+        <a data-target="overview" onclick="showSection('overview')"><span class="num">1</span>🎯 Tổng quan & KPI</a>
+        <a data-target="hand" onclick="showSection('hand')"><span class="num">2</span>✋ Bàn tay 5 ngón</a>
+        <a data-target="process" onclick="showSection('process')"><span class="num">3</span>🔄 Quy trình 4 bước</a>
+        <a data-target="pipeline" onclick="showSection('pipeline')"><span class="num">4</span>📋 Pipeline T5</a>
+        <a data-target="engine" onclick="showSection('engine')"><span class="num">5</span>⚙️ Test Engine</a>
+        <a data-target="tracking" onclick="showSection('tracking')"><span class="num">6</span>📊 Tracking & Đo lường</a>
+        <a data-target="risk" onclick="showSection('risk')"><span class="num">7</span>🛡️ Risk & Backup</a>
+      </nav>
+      <div style="padding:20px;font-size:11px;opacity:.6;border-top:1px solid rgba(255,255,255,.15);margin-top:20px">
+        Generated: 07/05/2026<br>
+        Owner: Chương (T-5)<br>
+        Framework: chị Oanh — Họp Plan T5
+      </div>
+    </aside>
+    <main class="main">
+
+    <!-- ========== 1. OVERVIEW ========== -->
+    <section id="overview" class="section">
+      <header class="hero">
+        <h2>✋ DEMAND MASTER PLAN — 30SHINE</h2>
+        <div class="subtitle">T5/2026 → T10/2026 • 6 tháng • Bàn tay 5 ngón + ngón thứ 6 • Hypothesis-driven, không cảm tính</div>
+      </header>
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="label">Demand đã lock</div>
+          <div class="value">5 + 1</div>
+          <div class="delta">+ Trẻ hóa (mới pass T4)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="label">Demand test/tháng</div>
+          <div class="value">4 chặng</div>
+          <div class="delta">10 video/demand × 1.6tr/3 ngày</div>
+        </div>
+        <div class="kpi-card">
+          <div class="label">Pass rate giả định</div>
+          <div class="value">30%</div>
+          <div class="delta">→ ~1.2 demand WIN/tháng</div>
+        </div>
+        <div class="kpi-card">
+          <div class="label">Test budget/tháng</div>
+          <div class="value">64tr</div>
+          <div class="delta">4 demand × 10 video × 1.6tr</div>
+        </div>
+        <div class="kpi-card">
+          <div class="label">3s view rate</div>
+          <div class="value">7% → 10%</div>
+          <div class="delta">Leading metric chính</div>
+        </div>
+        <div class="kpi-card">
+          <div class="label">Ratio Media:Ads</div>
+          <div class="value">1 : 10</div>
+          <div class="delta">1tr booking → 10tr ads</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🎯</span> KPI tổng thể — Mục tiêu 6 tháng</h3>
+        <table>
+          <thead><tr>
+            <th>Chỉ số</th><th>Ghi chú</th><th>Baseline T4</th>
+            <th>T5</th><th>T6</th><th>T7</th><th>T8</th><th>T9</th><th>T10</th>
+          </tr></thead>
+          <tbody>
+            <tr><td><strong>Demand đã lock</strong></td><td>5 cũ + ngón thứ 6 trong test</td><td class="baseline-cell">5</td><td class="target-cell">6</td><td class="target-cell">≥6</td><td class="target-cell">≥7</td><td class="target-cell">≥7</td><td class="target-cell">≥8</td><td class="target-cell">≥8</td></tr>
+            <tr><td>Demand đang test</td><td>Mỗi chặng 1 demand × 4 chặng</td><td class="baseline-cell">—</td><td class="target-cell">4</td><td class="target-cell">4</td><td class="target-cell">4</td><td class="target-cell">4</td><td class="target-cell">4</td><td class="target-cell">4</td></tr>
+            <tr><td>Hypothesis card/tháng (Radar)</td><td>Chương cấp input cho test</td><td class="baseline-cell">0</td><td class="target-cell">≥3</td><td class="target-cell">≥4</td><td class="target-cell">≥4</td><td class="target-cell">≥5</td><td class="target-cell">≥5</td><td class="target-cell">≥6</td></tr>
+            <tr><td>Số video sản xuất/tháng</td><td>2 Hà + KOC + stylist</td><td class="baseline-cell">~60</td><td class="target-cell">≥80</td><td class="target-cell">≥90</td><td class="target-cell">≥90</td><td class="target-cell">≥90</td><td class="target-cell">≥90</td><td class="target-cell">≥90</td></tr>
+            <tr><td>3s view rate TB</td><td>Leading metric — chị Oanh chốt</td><td class="baseline-cell">7%</td><td class="target-cell">≥7.5%</td><td class="target-cell">≥8%</td><td class="target-cell">≥8.5%</td><td class="target-cell">≥9%</td><td class="target-cell">≥9.5%</td><td class="target-cell">≥10%</td></tr>
+            <tr><td>25% view rate TB</td><td>Engagement check</td><td class="baseline-cell">—</td><td class="target-cell">track</td><td class="target-cell">≥3%</td><td class="target-cell">≥3.5%</td><td class="target-cell">≥4%</td><td class="target-cell">≥4%</td><td class="target-cell">≥4.5%</td></tr>
+            <tr><td>50% view rate TB</td><td>Hấp dẫn thực sự</td><td class="baseline-cell">—</td><td class="target-cell">track</td><td class="target-cell">≥1.5%</td><td class="target-cell">≥2%</td><td class="target-cell">≥2%</td><td class="target-cell">≥2.5%</td><td class="target-cell">≥2.5%</td></tr>
+            <tr><td>Ngân sách TB/video</td><td>1 video chất = 10tr ads</td><td class="baseline-cell">—</td><td class="target-cell">10tr</td><td class="target-cell">10tr</td><td class="target-cell">10tr</td><td class="target-cell">10tr</td><td class="target-cell">10tr</td><td class="target-cell">10tr</td></tr>
+            <tr><td>Số KOC booking</td><td>Đáp ứng pipeline 90 video</td><td class="baseline-cell">20</td><td class="target-cell">≥40</td><td class="target-cell">≥45</td><td class="target-cell">≥45</td><td class="target-cell">≥50</td><td class="target-cell">≥50</td><td class="target-cell">≥50</td></tr>
+            <tr><td>Decision Log entry</td><td>Mỗi demand test ghi pass/drop + lý do</td><td class="baseline-cell">0</td><td class="target-cell">≥4</td><td class="target-cell">≥8</td><td class="target-cell">≥12</td><td class="target-cell">≥16</td><td class="target-cell">≥20</td><td class="target-cell">≥24</td></tr>
+            <tr><td>Top-of-mind ngón đã lock</td><td>Brand lift survey hoặc share-of-voice social</td><td class="baseline-cell">—</td><td class="target-cell">setup</td><td class="target-cell">baseline</td><td class="target-cell">+5%</td><td class="target-cell">+10%</td><td class="target-cell">+15%</td><td class="target-cell">+20%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🔑</span> Tools & data sources</h3>
+        <table>
+          <thead><tr><th>Tool / Tài khoản</th><th>Vai trò trong demand model</th><th>Trạng thái</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Facebook Ads Manager</strong></td><td>Test ads + đo CPA + 3s/25%/50% view</td><td>✅ Có</td></tr>
+            <tr><td><strong>TikTok Ads Manager</strong></td><td>Cross-channel test (T6+)</td><td>✅ Có</td></tr>
+            <tr><td><strong>Google Search Console</strong></td><td>Demand intent — keyword volume cho Radar</td><td>✅ Có</td></tr>
+            <tr><td><strong>Daily Collect (Chương)</strong></td><td>Source hypothesis card — competitor barber, NEW ads, Top advertisers</td><td>✅ Có (skill collect-daily)</td></tr>
+            <tr><td><strong>FB Ads Library API</strong></td><td>Quét competitor barber → angle mới</td><td>✅ Có</td></tr>
+            <tr><td><strong>VOZ / Tinhte WebSearch</strong></td><td>Validate pain point + tiếng nói thật nam VN</td><td>✅ Có (skill analyze-validate)</td></tr>
+            <tr><td><strong>Apify ($0.45/run)</strong></td><td>Pull own ads + competitor quote — paid version</td><td>⚠️ Optional — weekly deep-dive</td></tr>
+            <tr><td><strong>Notion (Decision Log)</strong></td><td>Log mỗi demand đã test — pass/drop/why</td><td>🆕 Cần setup T5</td></tr>
+            <tr><td><strong>Looker Studio / Excel</strong></td><td>Dashboard theo dõi 3s/25%/50% view</td><td>🆕 Cần setup T5</td></tr>
+            <tr><td><strong>Brand Lift Survey</strong></td><td>Đo top-of-mind cho ngón đã lock</td><td>⚠️ T6+ (escalate Vân Hà)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+
+    <!-- ========== 2. BÀN TAY 5 NGÓN ========== -->
+    <section id="hand" class="section">
+      <header class="hero">
+        <h2>✋ Bàn tay 5 ngón + ngón thứ 6</h2>
+        <div class="subtitle">5 demand bucket đang phục vụ + 1 ngón thứ 6 đang test mỗi tháng — chị Oanh chốt họp Plan T5</div>
+      </header>
+
+      <div class="card">
+        <h3><span class="emoji">🧠</span> Tư duy: từ phần ngọn về phần gốc</h3>
+        <p style="color:var(--slate-700);margin-bottom:14px">
+          <strong>Phần ngọn</strong> (cũ): chạy theo "trend" / "mẫu mới" — đẹp ngắn hạn, fail không có log, không nhân rộng.<br>
+          <strong>Phần gốc</strong> (mới): xác định 30Shine đang sở hữu bao nhiêu <strong>"giỏ nhu cầu" (demand bucket)</strong>. Mỗi giỏ = 1 ngón tay. Mục tiêu Branding = làm 30Shine <strong>top-of-mind</strong> trong từng giỏ — kiểu khách muốn xả stress là nghĩ ngay 30Shine, như Haidilao = lẩu vui vẻ.
+        </p>
+        <div class="note">
+          <strong>Quy ước</strong>: 5 ngón = duy trì + bồi đắp, KHÔNG được mất thị phần. Ngón thứ 6 = thí nghiệm, mỗi tháng test 1 ngón mới → pass thì lock, fail thì cắt bỏ tập trung nguồn lực.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">✋</span> 5 ngón hiện hữu (cần Tùng + Chương chốt baseline T5)</h3>
+        <div class="bucket-grid">
+          <div class="bucket">
+            <span class="pill">NGÓN 1 — LOCKED</span>
+            <h4>👔 Cắt tóc văn phòng</h4>
+            <div class="persona">Nam 25-40 đi làm — cần gọn gàng, chuyên nghiệp</div>
+            <div class="metric">Service: <strong>Cắt + gội thường (CTV/CT)</strong></div>
+            <div class="metric">JTBD: chỉn chu cho meeting / sếp / khách hàng</div>
+            <div class="metric">Status: <span class="badge locked">Đang scale</span></div>
+          </div>
+          <div class="bucket">
+            <span class="pill">NGÓN 2 — LOCKED</span>
+            <h4>👂 Lấy ráy tai (USP)</h4>
+            <div class="persona">Nam 28-45 — relax sau giờ làm, signature 30Shine</div>
+            <div class="metric">Service: <strong>Lấy ráy tai 70K</strong> (CPA tier ngon ~22k)</div>
+            <div class="metric">JTBD: thư giãn + signature experience</div>
+            <div class="metric">Status: <span class="badge locked">USP phải bảo vệ</span></div>
+          </div>
+          <div class="bucket">
+            <span class="pill">NGÓN 3 — LOCKED</span>
+            <h4>🎬 KOC look</h4>
+            <div class="persona">Nam 22-35 — cắt giống idol/creator, theo trend</div>
+            <div class="metric">Service: <strong>Combo KOC</strong> (CPA tier ~28k)</div>
+            <div class="metric">JTBD: bắt trend, đẹp giống KOC</div>
+            <div class="metric">Status: <span class="badge locked">Đang scale</span></div>
+          </div>
+          <div class="bucket">
+            <span class="pill">NGÓN 4 — LOCKED</span>
+            <h4>💆 Massage gội thư giãn</h4>
+            <div class="persona">Coder / banking / BĐS — xả stress giờ trưa</div>
+            <div class="metric">Service: <strong>Gội dưỡng sinh / massage đầu vai gáy</strong></div>
+            <div class="metric">JTBD: 45 phút escape khỏi văn phòng</div>
+            <div class="metric">Status: <span class="badge locked">Cluster Relax (SEO synergy)</span></div>
+          </div>
+          <div class="bucket">
+            <span class="pill">NGÓN 5 — LOCKED</span>
+            <h4>✨ TMXD (combo cao cấp)</h4>
+            <div class="persona">Khách thân thiết / chăm sóc combo</div>
+            <div class="metric">Service: <strong>TMXD</strong> (CPA tier ~27k)</div>
+            <div class="metric">JTBD: chăm sóc toàn diện, thưởng cho bản thân</div>
+            <div class="metric">Status: <span class="badge locked">Đang scale</span></div>
+          </div>
+          <div class="bucket testing">
+            <span class="pill">NGÓN 6 — JUST PASSED</span>
+            <h4>🧬 Trẻ hóa / Hack tuổi</h4>
+            <div class="persona">Nam 35-45 — sợ già, muốn thay đổi diện mạo để thăng tiến</div>
+            <div class="metric">Service: <strong>Đa dạng (cắt + nhuộm + styling)</strong></div>
+            <div class="metric">JTBD: hack 5-10 tuổi, lợi thế công việc + tình cảm</div>
+            <div class="metric">Status: <span class="badge testing">Pass test → cần LOCK top-of-mind</span></div>
+          </div>
+        </div>
+        <div class="note">
+          <strong>⚠️ Action T5</strong>: Tùng + Chương chốt lại 5 ngón này (có thể adjust tên gọi / persona / KPI sức khỏe). Đây là <em>baseline</em> để biết ngón nào yếu cần bồi, ngón nào mạnh cần khóa top-of-mind. Không có baseline = không biết test ngón thứ 6 cho cái gì.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🎯</span> Sức khỏe baseline — 5 ngón (cần fill T5)</h3>
+        <table>
+          <thead><tr>
+            <th>Ngón</th><th>Volume khách/tháng</th><th>CPA</th><th>IOV</th><th>Share-of-mind</th><th>Trạng thái</th>
+          </tr></thead>
+          <tbody>
+            <tr><td><strong>Cắt VP</strong></td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>230k (ref)</td><td style="background:#fff8dc">[fill]</td><td><span class="badge locked">Stable</span></td></tr>
+            <tr><td><strong>Lấy ráy tai</strong></td><td style="background:#fff8dc">[fill]</td><td>~22k</td><td>70k</td><td style="background:#fff8dc">[fill]</td><td><span class="badge locked">USP</span></td></tr>
+            <tr><td><strong>KOC look</strong></td><td style="background:#fff8dc">[fill]</td><td>~28k</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td><span class="badge locked">Scaling</span></td></tr>
+            <tr><td><strong>Massage gội</strong></td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td><span class="badge locked">Cluster Relax</span></td></tr>
+            <tr><td><strong>TMXD</strong></td><td style="background:#fff8dc">[fill]</td><td>~27k</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td><span class="badge locked">Combo cao</span></td></tr>
+            <tr><td><strong>Trẻ hóa (mới)</strong></td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>0 (chưa lock)</td><td><span class="badge testing">Pass → lock</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ========== 3. QUY TRÌNH 4 BƯỚC ========== -->
+    <section id="process" class="section">
+      <header class="hero">
+        <h2>🔄 Quy trình 4 bước — Define → Radar → Test → Lock</h2>
+        <div class="subtitle">Hypothesis-driven, không cảm tính. Mỗi bước có owner rõ + output cụ thể.</div>
+      </header>
+
+      <div class="card">
+        <h3><span class="emoji">⚙️</span> 4 bước workflow</h3>
+        <div class="workflow">
+          <div class="step">
+            <div class="num">1</div>
+            <div class="who">Owner: Tùng + Chương</div>
+            <h4>DEFINE — Chốt baseline</h4>
+            <p>Liệt kê 5-6 ngón hiện hữu, define:</p>
+            <ul>
+              <li>Persona + JTBD</li>
+              <li>KPI sức khỏe (volume, CPA, IOV)</li>
+              <li>Service tương ứng</li>
+            </ul>
+            <p style="margin-top:8px"><strong>Output</strong>: Baseline doc (xem section "Bàn tay")</p>
+          </div>
+          <div class="step">
+            <div class="num">2</div>
+            <div class="who">Owner: Chương (T-5 BI)</div>
+            <h4>RADAR — Quét ngón thứ 6</h4>
+            <p>Quét thị trường tìm hypothesis demand mới:</p>
+            <ul>
+              <li>Daily collect: FB Ads, VOZ, Tinhte</li>
+              <li>Niche research 4-layer</li>
+              <li>Cross-industry signal</li>
+            </ul>
+            <p style="margin-top:8px"><strong>Output</strong>: ≥3 hypothesis card/tháng</p>
+          </div>
+          <div class="step">
+            <div class="num">3</div>
+            <div class="who">Owner: 2 Hà + Khánh/Huế</div>
+            <h4>TEST — Spend velocity</h4>
+            <p>10 video × 1.6tr/3 ngày × 4 demand:</p>
+            <ul>
+              <li>2 Hà: produce video</li>
+              <li>Khánh/Huế: chạy ads</li>
+              <li>Decision gate ngày 20</li>
+            </ul>
+            <p style="margin-top:8px"><strong>Output</strong>: Pass / Drop verdict</p>
+          </div>
+          <div class="step">
+            <div class="num">4</div>
+            <div class="who">Owner: Tùng + Vân Hà</div>
+            <h4>LOCK / DROP</h4>
+            <p>Demand pass → lock vào bộ quản trị:</p>
+            <ul>
+              <li>Branding top-of-mind</li>
+              <li>KPI dài hạn</li>
+              <li>Fail → ghi kho know-how</li>
+            </ul>
+            <p style="margin-top:8px"><strong>Output</strong>: Decision Log + branding brief</p>
+          </div>
+        </div>
+        <div class="note">
+          <strong>Lưu ý</strong>: bước 1 (Define) làm 1 lần T5 rồi review hàng quý. Bước 2-3-4 chạy <strong>monthly cycle</strong>. Decision gate cố định <strong>ngày 20 hàng tháng</strong> — không kéo dài.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">👥</span> Phân vai (RACI rút gọn)</h3>
+        <table>
+          <thead><tr>
+            <th>Hoạt động</th><th>Chương (T-5 BI)</th><th>Tùng (QL)</th><th>Vân Hà / Thanh Hà</th><th>Khánh / Huế (Perf)</th>
+          </tr></thead>
+          <tbody>
+            <tr><td>Define baseline 5 ngón</td><td>R</td><td>A</td><td>C</td><td>I</td></tr>
+            <tr><td>Radar — hypothesis card</td><td><strong>R/A</strong></td><td>C</td><td>I</td><td>I</td></tr>
+            <tr><td>Mapping fit demand × 30Shine</td><td><strong>R</strong></td><td>A</td><td>C</td><td>C</td></tr>
+            <tr><td>Produce video test</td><td>I</td><td>C</td><td><strong>R</strong></td><td>I</td></tr>
+            <tr><td>Chạy ads test (1.6tr/3 ngày)</td><td>I</td><td>C</td><td>I</td><td><strong>R</strong></td></tr>
+            <tr><td>Decision gate ngày 20</td><td>R (log)</td><td><strong>A</strong></td><td>C</td><td>C</td></tr>
+            <tr><td>Branding lock demand pass</td><td>C</td><td>A</td><td><strong>R</strong></td><td>I</td></tr>
+            <tr><td>Decision Log + Kho know-how</td><td><strong>R/A</strong></td><td>I</td><td>C</td><td>C</td></tr>
+          </tbody>
+        </table>
+        <div class="note">
+          R = Responsible (làm) • A = Accountable (chịu trách nhiệm cuối) • C = Consulted (tham vấn) • I = Informed (cho biết)
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 4. PIPELINE T5 ========== -->
+    <section id="pipeline" class="section">
+      <header class="hero">
+        <h2>📋 Pipeline T5/2026</h2>
+        <div class="subtitle">Demand đang test — đã pass — đã drop — backlog hypothesis cho T6+</div>
+      </header>
+
+      <div class="card">
+        <h3><span class="emoji">🎯</span> 4 chặng test T5 (1 demand/chặng)</h3>
+        <table>
+          <thead><tr>
+            <th>Chặng</th><th>Tuần</th><th>Demand</th><th>Hypothesis</th><th>Pain point</th><th>Service</th><th>Producer</th><th>Status</th>
+          </tr></thead>
+          <tbody>
+            <tr><td><strong>Chặng 1</strong></td><td>04/05 → 10/05</td><td style="background:#fff8dc">[D01 fill từ Daily Collect]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>Vân Hà</td><td><span class="badge testing">Testing</span></td></tr>
+            <tr><td><strong>Chặng 2</strong></td><td>11/05 → 17/05</td><td style="background:#fff8dc">[D02]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>Thanh Hà</td><td><span class="badge testing">Queue</span></td></tr>
+            <tr><td><strong>Chặng 3</strong></td><td>18/05 → 24/05</td><td style="background:#fff8dc">[D03]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>Vân Hà</td><td><span class="badge testing">Queue</span></td></tr>
+            <tr><td><strong>Chặng 4</strong></td><td>25/05 → 31/05</td><td style="background:#fff8dc">[D04]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>Thanh Hà</td><td><span class="badge testing">Queue</span></td></tr>
+            <tr class="section-header"><td colspan="8">DEMAND ĐÃ LOCK (5 ngón cũ + 1 mới)</td></tr>
+            <tr><td>—</td><td>—</td><td><strong>Cắt tóc văn phòng</strong></td><td>Nam 25-40 cần gọn gàng chuyên nghiệp</td><td>Outfit chỉn chu cho meeting</td><td>CTV/CT</td><td>—</td><td><span class="badge locked">Locked</span></td></tr>
+            <tr><td>—</td><td>—</td><td><strong>Lấy ráy tai</strong></td><td>Relax sau giờ làm, USP</td><td>Stress về nhà không thư giãn</td><td>Lấy ráy tai 70K</td><td>—</td><td><span class="badge locked">USP</span></td></tr>
+            <tr><td>—</td><td>—</td><td><strong>KOC look</strong></td><td>Bắt trend creator</td><td>Sợ lỗi mốt, muốn giống idol</td><td>Combo KOC</td><td>—</td><td><span class="badge locked">Locked</span></td></tr>
+            <tr><td>—</td><td>—</td><td><strong>Massage gội</strong></td><td>Coder/banking xả stress giờ trưa</td><td>Stress công sở</td><td>Dưỡng sinh / vai gáy</td><td>—</td><td><span class="badge locked">Locked</span></td></tr>
+            <tr><td>—</td><td>—</td><td><strong>TMXD</strong></td><td>Combo cao cấp khách thân</td><td>Tự thưởng / chăm sóc combo</td><td>TMXD</td><td>—</td><td><span class="badge locked">Locked</span></td></tr>
+            <tr><td>—</td><td>—</td><td><strong>Trẻ hóa / Hack tuổi 🆕</strong></td><td>Nam 35-45 sợ già, muốn thăng tiến</td><td>Diện mạo già hơn tuổi thật</td><td>Cắt + nhuộm + styling</td><td>—</td><td><span class="badge testing">Pass → cần LOCK top-of-mind</span></td></tr>
+            <tr class="section-header"><td colspan="8">BACKLOG HYPOTHESIS (T6+) — Chương cấp từ Radar</td></tr>
+            <tr><td>—</td><td>T6</td><td style="background:#fff8dc">[H01 fill]</td><td style="background:#fff8dc">[hypothesis]</td><td style="background:#fff8dc">[evidence]</td><td style="background:#fff8dc">[map service]</td><td>—</td><td><span class="badge deferred">Backlog</span></td></tr>
+            <tr><td>—</td><td>T6</td><td style="background:#fff8dc">[H02]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>—</td><td><span class="badge deferred">Backlog</span></td></tr>
+            <tr><td>—</td><td>T6</td><td style="background:#fff8dc">[H03]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>—</td><td><span class="badge deferred">Backlog</span></td></tr>
+          </tbody>
+        </table>
+        <div class="note">
+          Demand chặng 1-4 sẽ <strong>auto-fill</strong> từ skill <code>plan-test-demands</code> (đọc Daily Collect 14 ngày + niche research). Hypothesis card backlog do skill <code>collect-daily</code> + manual research của Chương cung cấp.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">📝</span> Hypothesis card template (Chương fill mỗi tháng ≥3)</h3>
+        <table>
+          <thead><tr><th>Field</th><th>Mô tả</th><th>Ví dụ (Trẻ hóa — đã pass)</th></tr></thead>
+          <tbody>
+            <tr><td><strong>ID</strong></td><td>H{nn} hoặc D{nn}</td><td>D-trẻ-hóa</td></tr>
+            <tr><td><strong>Demand statement</strong></td><td>"Tôi tin rằng nhu cầu X đang nổi lên"</td><td>"Nam 35-45 đang chủ động tìm cách hack tuổi để thăng tiến + giữ vợ"</td></tr>
+            <tr><td><strong>Evidence</strong></td><td>Signal cụ thể từ Radar</td><td>VOZ thread "cách trẻ ra 5 tuổi" 800 reply / TikTok hashtag #hacktuoi 50M view / FB Ads competitor 12 page chạy</td></tr>
+            <tr><td><strong>Persona overlap</strong></td><td>Tệp khách 30Shine có khớp không</td><td>Nam 35-45 đi làm văn phòng — 70% overlap với tệp Cắt VP hiện hữu</td></tr>
+            <tr><td><strong>Service map</strong></td><td>Map vào dịch vụ 30Shine có sẵn</td><td>Cắt + nhuộm phủ tóc bạc + styling</td></tr>
+            <tr><td><strong>Suggested angle</strong></td><td>3-5 hook để team content test</td><td>"Trước-sau hack 7 tuổi" / "Sếp tưởng vừa đổi việc" / "Vợ ngỡ ngàng"</td></tr>
+            <tr><td><strong>CPA estimate</strong></td><td>Dự đoán CPA — pass nếu ≤30k tier STAR</td><td>~28k (gần tier KOC)</td></tr>
+            <tr><td><strong>Suggested test</strong></td><td>10 video × 1.6tr/3 ngày, format gì</td><td>10 video before-after + stylist explain, FB-only T5</td></tr>
+            <tr><td><strong>Risk</strong></td><td>Rủi ro nhìn thấy</td><td>Vợ/bạn gái có thể phản đối "chồng làm điệu" — cần phụ tệp F2 dẫn chồng</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ========== 5. TEST ENGINE ========== -->
+    <section id="engine" class="section">
+      <header class="hero">
+        <h2>⚙️ Test Engine — 1.6tr/3 ngày + Decision gate ngày 20</h2>
+        <div class="subtitle">Spend velocity rule + leading metrics 3s/25%/50% + ratio media:ads 1:10</div>
+      </header>
+
+      <div class="card">
+        <h3><span class="emoji">📐</span> Test rule — chị Oanh chốt</h3>
+        <div class="formula">
+          <div class="label">Spend Velocity Rule</div>
+          1 video → 1.6tr ngân sách → 3 ngày<br>
+          spend_at_72h / 1.6tr = velocity<br><br>
+          velocity ≥ 0.95 → <span style="color:#10B981">PASS spend velocity</span><br>
+          velocity 0.80–0.95 → <span style="color:#F59E0B">MARGINAL — review content</span><br>
+          velocity &lt; 0.80 → <span style="color:#F43F5E">FAIL — DROP demand, không cứu</span>
+        </div>
+        <div class="formula">
+          <div class="label">Demand Test Block</div>
+          1 demand = 10 video × 1.6tr × 3 ngày = <strong>16tr/demand</strong><br>
+          1 tháng = 4 demand × 4 chặng = <strong>64tr ngân sách test/tháng</strong><br>
+          Pass rate giả định 30% → ~1.2 demand WIN/tháng → 4 chặng/tháng
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🎬</span> Leading metrics — chỉ số nội dung</h3>
+        <table>
+          <thead><tr><th>Chỉ số</th><th>Baseline T4</th><th>Target T5</th><th>Ngưỡng pass</th><th>Ngưỡng warning</th><th>Ngưỡng drop</th></tr></thead>
+          <tbody>
+            <tr><td><strong>3s view rate</strong></td><td class="baseline-cell">7%</td><td class="target-cell">≥7.5%</td><td>≥7%</td><td>5-7%</td><td>&lt;5% × 3 video liên tiếp</td></tr>
+            <tr><td><strong>25% view rate</strong></td><td class="baseline-cell">—</td><td class="target-cell">track</td><td>≥2.5%</td><td>2-2.5%</td><td>&lt;2%</td></tr>
+            <tr><td><strong>50% view rate</strong></td><td class="baseline-cell">—</td><td class="target-cell">track</td><td>≥1%</td><td>0.8-1%</td><td>&lt;0.8%</td></tr>
+            <tr><td><strong>CTR (link click)</strong></td><td class="baseline-cell">—</td><td class="target-cell">track</td><td>≥1.5%</td><td>1-1.5%</td><td>&lt;1%</td></tr>
+            <tr><td><strong>CPA</strong></td><td class="baseline-cell">—</td><td class="target-cell">≤30k tier STAR</td><td>≤30k</td><td>30-40k</td><td>&gt;40k</td></tr>
+          </tbody>
+        </table>
+        <div class="note">
+          <strong>Logic chị Oanh</strong>: tập trung cải tiến 3s/25%/50% TRƯỚC, vì đây là <em>leading metric</em> (đo trong 3-7 ngày). CPA là <em>lagging</em> (đo cuối kỳ). Khi 3s/25% kém → biết video tệ ở khúc nào (hook? body? CTA?) → fix nhanh hơn.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">⚖️</span> Ratio Media : Ads = 1 : 10</h3>
+        <div class="formula">
+          <div class="label">Quy tắc ngân sách</div>
+          1 đồng booking content (KOC/stylist) = 10 đồng chi ads<br><br>
+          1 video chất lượng → tiêu được <strong>10tr ads</strong><br>
+          90 video/tháng → cần <strong>~40 KOC booking</strong> (T4 chỉ có 20 → thiếu)<br>
+          Action: tăng commission +20% để collect đủ media
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">📅</span> Decision gate — ngày 20 hàng tháng</h3>
+        <table>
+          <thead><tr><th>Hoạt động</th><th>Ngày</th><th>Owner</th><th>Output</th></tr></thead>
+          <tbody>
+            <tr><td>Chặng 1 launch</td><td>T2 đầu tháng</td><td>2 Hà + Huế</td><td>10 video × 1.6tr</td></tr>
+            <tr><td>Chặng 1 review (sau 3 ngày)</td><td>T5 tuần 1</td><td>Chương + Huế</td><td>Spend velocity check + 3s view</td></tr>
+            <tr><td>Chặng 2 launch</td><td>T2 tuần 2</td><td>Thanh Hà</td><td>10 video</td></tr>
+            <tr><td>Chặng 3 launch</td><td>T2 tuần 3</td><td>Vân Hà</td><td>10 video</td></tr>
+            <tr><td>Chặng 4 launch</td><td>T2 tuần 4</td><td>Thanh Hà</td><td>10 video</td></tr>
+            <tr><td><strong>🚦 Decision gate (chốt pass/drop 4 chặng)</strong></td><td><strong>Ngày 20</strong></td><td><strong>Tùng + Chương + 2 Hà</strong></td><td><strong>Decision Log + Kho know-how</strong></td></tr>
+            <tr><td>Plan T+1</td><td>Ngày 25-30</td><td>Chương (Radar) + Tùng</td><td>≥3 hypothesis card cho tháng sau</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ========== 6. TRACKING ========== -->
+    <section id="tracking" class="section">
+      <header class="hero">
+        <h2>📊 Tracking & Đo lường</h2>
+        <div class="subtitle">Dashboard quản trị: số lượng video × ngân sách/video × leading metrics × CPA</div>
+      </header>
+
+      <div class="card">
+        <h3><span class="emoji">📈</span> Dashboard quản trị (cần setup T5)</h3>
+        <table>
+          <thead><tr>
+            <th>Demand</th><th>Số video</th><th>Tổng ngân sách</th><th>TB/video</th><th>3s view</th><th>25%</th><th>50%</th><th>CPA</th><th>Verdict</th>
+          </tr></thead>
+          <tbody>
+            <tr class="section-header"><td colspan="9">5 NGÓN ĐÃ LOCK — duy trì</td></tr>
+            <tr><td><strong>Cắt VP</strong></td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td><span class="badge locked">Stable</span></td></tr>
+            <tr><td><strong>Lấy ráy tai</strong></td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>~22k</td><td><span class="badge locked">USP</span></td></tr>
+            <tr><td><strong>KOC look</strong></td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>~28k</td><td><span class="badge locked">Scaling</span></td></tr>
+            <tr><td><strong>Massage gội</strong></td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td><span class="badge locked">Cluster</span></td></tr>
+            <tr><td><strong>TMXD</strong></td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>~27k</td><td><span class="badge locked">Combo</span></td></tr>
+            <tr><td><strong>Trẻ hóa 🆕</strong></td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td><span class="badge testing">Lock pending</span></td></tr>
+            <tr class="section-header"><td colspan="9">4 CHẶNG TEST T5 — ngón thứ 6</td></tr>
+            <tr><td>D01 (chặng 1)</td><td>10</td><td>16tr</td><td>1.6tr</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">TBD ngày 20</td></tr>
+            <tr><td>D02 (chặng 2)</td><td>10</td><td>16tr</td><td>1.6tr</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">TBD</td></tr>
+            <tr><td>D03 (chặng 3)</td><td>10</td><td>16tr</td><td>1.6tr</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">TBD</td></tr>
+            <tr><td>D04 (chặng 4)</td><td>10</td><td>16tr</td><td>1.6tr</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">TBD</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🗓️</span> Cadence review</h3>
+        <table>
+          <thead><tr><th>Cadence</th><th>Hoạt động</th><th>Owner</th><th>Output</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Daily</strong></td><td>Spend velocity check (T+1, T+2, T+3 mỗi chặng)</td><td>Huế / Khánh</td><td>Slack alert nếu velocity &lt;0.8</td></tr>
+            <tr><td><strong>3 ngày/lần</strong></td><td>Review chặng đang chạy: 3s/25%/CPA</td><td>Chương + Hà</td><td>Pause/continue/iterate</td></tr>
+            <tr><td><strong>Weekly</strong></td><td>Radar weekly — collect-daily quét hypothesis mới</td><td><strong>Chương</strong></td><td>Add hypothesis vào backlog</td></tr>
+            <tr><td><strong>Monthly (ngày 20)</strong></td><td>Decision gate — chốt pass/drop 4 chặng</td><td>Tùng + Chương + 2 Hà</td><td>Decision Log + Kho know-how</td></tr>
+            <tr><td><strong>Monthly (ngày 25-30)</strong></td><td>Plan T+1 + chốt 4 demand cho chặng tháng sau</td><td>Tùng + Chương</td><td>Plan T+1 publish</td></tr>
+            <tr><td><strong>Quarterly</strong></td><td>Review 5 ngón đã lock — share-of-mind, sức khỏe, có ngón nào cần re-test không</td><td>Tùng + Vân Hà + Chương</td><td>Adjust baseline</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ========== 7. RISK & BACKUP ========== -->
+    <section id="risk" class="section">
+      <header class="hero" style="background:linear-gradient(135deg, var(--navy-900) 0%, #B91C1C 50%, var(--rose-500) 100%)">
+        <h2>🛡️ Risk & Backup — Ngưỡng an toàn</h2>
+        <div class="subtitle">Drop bao nhiêu % thì worst case là gì + backup plan như nào (chị Oanh dặn bắt buộc có)</div>
+      </header>
+
+      <div class="card">
+        <h3><span class="emoji">📊</span> Bảng ngưỡng an toàn — tất cả chỉ số chính</h3>
+        <table>
+          <thead><tr>
+            <th style="min-width:140px">Chỉ số</th>
+            <th>Severity</th>
+            <th>Ngưỡng cảnh báo</th>
+            <th>Tình huống xấu</th>
+            <th>Backup plan</th>
+            <th>Trigger</th>
+          </tr></thead>
+          <tbody>
+            <tr class="risk-row s1">
+              <td><strong>Pass rate test demand</strong></td>
+              <td><span class="severity s1">⚠️ S1</span></td>
+              <td>&lt;30% (giả định)<br>Hết tháng &lt;1 demand WIN</td>
+              <td>4 chặng test ra 0-1 demand WIN → không có ngón thứ 6 để lock → bộ ngón đứng yên</td>
+              <td>(1) Quay lại scale 5 ngón cũ + tăng ngân sách bồi đắp<br>(2) Tăng pool hypothesis 3→6/tháng (Chương deep-dive collect-daily-paid)<br>(3) Mở source cross-industry (8 ngành) tìm angle transferable</td>
+              <td>Chương + Tùng review ngày 20</td>
+            </tr>
+            <tr class="risk-row s2">
+              <td><strong>3s view rate sụp</strong></td>
+              <td><span class="severity s2">🚨 S2</span></td>
+              <td>&lt;5% trên 3 video liên tiếp<br>(baseline 7%)</td>
+              <td>Hook tệ → ads burn tiền không có leading metric → CPA sẽ tệ theo, lag 5-7 ngày</td>
+              <td>(1) <strong>PAUSE campaign ngay</strong> sau 3 video fail<br>(2) Audit hook framework (3 giây đầu) — test alt hook<br>(3) Switch creator/format (ASMR → before-after, hoặc đổi KOC)<br>(4) Drop demand nếu fail 5 video liên tiếp</td>
+              <td>Huế Slack alert tự động</td>
+            </tr>
+            <tr class="risk-row s2">
+              <td><strong>Spend velocity fail</strong></td>
+              <td><span class="severity s2">🚨 S2</span></td>
+              <td>spend_at_72h / 1.6tr &lt; 0.80</td>
+              <td>Demand không có hấp lực thị trường — fail cứng. Tiếp tục cố cứu = vứt tiền</td>
+              <td><strong>DROP demand ngay sau 72h</strong>, không cứu, không gia hạn ngân sách. Ghi vào Kho know-how (signal nào sai, hypothesis sai chỗ nào). Đẩy chặng tiếp theo lên sớm.</td>
+              <td>Velocity check tự động T+3</td>
+            </tr>
+            <tr class="risk-row s2">
+              <td><strong>CPA demand đã lock tăng vọt</strong></td>
+              <td><span class="severity s2">🚨 S2</span></td>
+              <td>+30% so với baseline trong 14 ngày<br>(VD: ráy tai 22k → &gt;28.6k)</td>
+              <td>Demand mất sức hút / đối thủ chen vào / bão hòa creative → mất chỗ đứng top-of-mind dần</td>
+              <td>(1) Reposition angle — refresh creative pool<br>(2) Refresh KOC pool — bring stylist mới<br>(3) Test sub-angle mới trong cùng demand (vd ráy tai → ráy tai cho dân nhậu)<br>(4) Branding sprint nếu sau 30 ngày vẫn fail</td>
+              <td>Huế daily monitor</td>
+            </tr>
+            <tr class="risk-row s2">
+              <td><strong>Booking KOC thiếu</strong></td>
+              <td><span class="severity s2">🚨 S2</span></td>
+              <td>&lt;30 booking/tháng<br>(target 40)</td>
+              <td>Thiếu chất liệu media → 90 video/tháng không đủ → ads đói video → CPA tăng</td>
+              <td>(1) Tăng commission +20% (đề xuất chị Oanh ngay)<br>(2) Mở pool stylist nội bộ — kích MMO (theo plan Huế)<br>(3) Mua UGC từ external (Anchor sales / TikTok creator nano)<br>(4) Tăng tỷ lệ "xào lại" tạm thời (giảm % video gốc 1 tháng)</td>
+              <td>Vân Hà weekly check</td>
+            </tr>
+            <tr class="risk-row s1">
+              <td><strong>Backlog hypothesis cạn</strong></td>
+              <td><span class="severity s1">⚠️ S1</span></td>
+              <td>&lt;3 hypothesis card cho tháng sau (tới ngày 25)</td>
+              <td>Pipeline khô → tháng sau không có ngón thứ 6 để test → 4 chặng trống</td>
+              <td>(1) Trigger Radar deep-dive: collect-daily 14 ngày + niche research 4-layer<br>(2) Bật collect-daily-paid (Apify $0.45/run) — pull competitor barber + VOZ quote<br>(3) Cross-industry scan 8 ngành (Same Customer Any Industry)<br>(4) Reuse hypothesis đã drop nếu có signal mới</td>
+              <td>Chương ngày 25 mỗi tháng</td>
+            </tr>
+            <tr class="risk-row s2">
+              <td><strong>Ngân sách test vượt cap</strong></td>
+              <td><span class="severity s2">🚨 S2</span></td>
+              <td>&gt;120% cap (64tr × 1.2 = 76.8tr)</td>
+              <td>Cash burn không kiểm soát — Khánh/Huế cứu demand fail bằng cách đổ thêm tiền</td>
+              <td><strong>HARD CAP</strong>: ngân sách test = 64tr/tháng. Vượt = STOP toàn bộ test, escalate Tùng. Demand fail 72h = drop, KHÔNG đổ thêm tiền cứu.</td>
+              <td>Huế daily check ngân sách</td>
+            </tr>
+            <tr class="risk-row s3">
+              <td><strong>Share-of-mind ngón đã lock sụp</strong></td>
+              <td><span class="severity s3">🆘 S3</span></td>
+              <td>-15% YoY trên brand lift / share-of-voice social</td>
+              <td>Đối thủ chiếm thị phần ngón đó (vd Coolmate ăn cluster Transition / brand X ăn ráy tai) → mất top-of-mind dần</td>
+              <td>(1) Trigger <strong>Branding Sprint khẩn cấp</strong>: KOC fan-club + content series + paid amplification 3-6 tuần<br>(2) Reposition messaging — đào sâu USP (vd ráy tai → "an toàn y tế" vs "lạnh nhanh")<br>(3) Defensive ads: chạy keyword đối thủ trên FB/TikTok<br>(4) Escalate chị Oanh + CEO nếu sau 6 tuần không hồi</td>
+              <td>Quarterly brand survey</td>
+            </tr>
+            <tr class="risk-row s1">
+              <td><strong>Demand "Trẻ hóa" lock fail</strong></td>
+              <td><span class="severity s1">⚠️ S1</span></td>
+              <td>Sau 3 tháng lock, share-of-mind không tăng / CPA tier &gt;30k</td>
+              <td>Đã pass test nhưng không lock được top-of-mind → coi như chưa pass thực sự</td>
+              <td>(1) Re-classify thành "pending re-test" — không tính trong 6 ngón<br>(2) Đào sâu sub-angle (trẻ hóa cho ai? sếp / chồng / FA?) → chia 2-3 demand con<br>(3) Hold branding 1 tháng, tập trung performance trước</td>
+              <td>Tùng + Vân Hà T8 review</td>
+            </tr>
+            <tr class="risk-row s2">
+              <td><strong>Ratio Media:Ads lệch</strong></td>
+              <td><span class="severity s2">🚨 S2</span></td>
+              <td>&gt;1:15 (booking quá rẻ vs ads quá nhiều)<br>hoặc &lt;1:6 (booking quá đắt)</td>
+              <td>1:15 → media chất lượng kém kéo CPA xuống / 1:6 → đốt tiền content không tiêu hết ads</td>
+              <td>(1) Re-balance: tăng booking commission (lệch &gt;1:15) hoặc giảm số booking (lệch &lt;1:6)<br>(2) Audit chất lượng video — chấm 3s view rate per creator<br>(3) Cut creator có 3s view &lt;5% trong 5 video</td>
+              <td>Huế weekly</td>
+            </tr>
+            <tr class="risk-row s1">
+              <td><strong>Decision Log không có entry</strong></td>
+              <td><span class="severity s1">⚠️ S1</span></td>
+              <td>0 entry trong tháng (tháng 20 không log)</td>
+              <td>Test xong không log = không nhân rộng được, fail repeat → vô nghĩa</td>
+              <td>(1) Hard rule: <strong>không có log = demand không được tính pass/drop</strong><br>(2) Chương assigned R/A — Tùng accountability<br>(3) Template Notion ngắn (5 field): demand / signal / verdict / why / next action</td>
+              <td>Tùng kiểm ngày 20</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="note">
+          <strong>Ý chính</strong>: 3 cấp severity — S1 (cảnh báo, fix trong tuần) / S2 (nguy hiểm, fix trong 72h) / S3 (khẩn cấp, escalate ngay). Mỗi chỉ số chính có ngưỡng + worst case + backup cụ thể, không nói chung chung "review lại".
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🚨</span> Escalation matrix</h3>
+        <table>
+          <thead><tr><th>Cấp</th><th>Ngưỡng</th><th>Người escalate</th><th>SLA</th></tr></thead>
+          <tbody>
+            <tr><td><span class="severity s1">S1</span></td><td>Cảnh báo — chỉ số chệch 10-30%</td><td>Tùng (QL trực tiếp)</td><td>Fix trong tuần</td></tr>
+            <tr><td><span class="severity s2">S2</span></td><td>Nguy hiểm — chỉ số chệch &gt;30% / spend velocity fail / CPA tăng vọt</td><td>Tùng + Khánh/Huế (Performance lead)</td><td>Fix trong 72h</td></tr>
+            <tr><td><span class="severity s3">S3</span></td><td>Khẩn cấp — share-of-mind sụp / ngón locked mất thị phần</td><td>Chị Oanh (sếp lớn) + Vân Hà (Branding) + CEO nếu cần</td><td>Họp ngay trong ngày</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🛟</span> Fallback master plan — kịch bản xấu nhất</h3>
+        <p style="color:var(--slate-700);margin-bottom:14px">
+          Nếu sau 3 tháng (T5-T6-T7) <strong>nhiều rủi ro xảy ra cùng lúc</strong> — pass rate &lt;20%, share-of-mind 1-2 ngón locked sụp, backlog cạn:
+        </p>
+        <ol style="margin-left:20px;color:var(--navy-700);line-height:1.9">
+          <li><strong>Freeze test ngón thứ 6</strong> 1 tháng — dồn toàn bộ ngân sách bồi đắp 5 ngón cũ + lock chặt "Trẻ hóa".</li>
+          <li><strong>Branding sprint 6 tuần</strong> cho ngón yếu nhất — KOC fan-club + content series + paid amplification.</li>
+          <li><strong>Re-define baseline</strong> — Chương + Tùng + Vân Hà rà lại 5 ngón, có thể merge / split / remove (vd massage gội + ráy tai gộp thành "Cluster Relax").</li>
+          <li><strong>Pivot framework</strong> nếu cần — escalate chị Oanh + CEO. Có thể không phải lúc test ngón thứ 6, mà là lúc đào sâu 5 ngón hiện hữu.</li>
+          <li><strong>Communication nội bộ</strong> — không giấu kết quả, công bố decision log + kho know-how cho team toàn marketing để học.</li>
+        </ol>
+      </div>
+    </section>
+
+    </main>
+  </div>
+  <script>
+function showSection(sid) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.sidebar nav a').forEach(a => a.classList.remove('active'));
+  const target = document.getElementById(sid);
+  const link = document.querySelector(`[data-target="${sid}"]`);
+  if (target) target.classList.add('active');
+  if (link) link.classList.add('active');
+  window.scrollTo(0, 0);
+  localStorage.setItem('demand-dash-tab', sid);
+}
+window.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('demand-dash-tab');
+  showSection(saved || 'overview');
+});
+</script>
+</body>
+</html>
