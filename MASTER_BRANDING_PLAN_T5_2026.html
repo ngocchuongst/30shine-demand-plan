@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Branding Plan — 30Shine T5/2026</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy-900: #0F172A;
+  --navy-800: #1E293B;
+  --navy-700: #334155;
+  --indigo-500: #6366F1;
+  --indigo-600: #4F46E5;
+  --teal-400: #2DD4BF;
+  --teal-500: #14B8A6;
+  --emerald-500: #10B981;
+  --emerald-100: #D1FAE5;
+  --amber-500: #F59E0B;
+  --amber-100: #FEF3C7;
+  --rose-500: #F43F5E;
+  --rose-100: #FFE4E6;
+  --slate-50: #F8FAFC;
+  --slate-100: #F1F5F9;
+  --slate-200: #E2E8F0;
+  --slate-400: #94A3B8;
+  --slate-500: #64748B;
+  --slate-600: #475569;
+  --shadow-sm: 0 1px 3px rgba(15,23,42,.06), 0 1px 2px rgba(15,23,42,.04);
+  --shadow-md: 0 4px 12px rgba(15,23,42,.08), 0 2px 4px rgba(15,23,42,.04);
+  --shadow-lg: 0 10px 30px rgba(15,23,42,.10), 0 4px 8px rgba(15,23,42,.04);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  background: linear-gradient(180deg, #EEF2FF 0%, #F8FAFC 30%, #F8FAFC 100%);
+  background-attachment: fixed;
+  color: var(--navy-800);
+  line-height: 1.6;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.app { display: flex; min-height: 100vh; }
+
+.sidebar {
+  width: 280px;
+  background: linear-gradient(180deg, var(--navy-900) 0%, #1E1B4B 100%);
+  color: #fff;
+  padding: 28px 0 0;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: 4px 0 24px rgba(15,23,42,.12);
+  z-index: 10;
+}
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); border-radius: 4px; }
+
+.sidebar h1 {
+  font-size: 18px;
+  font-weight: 800;
+  padding: 0 24px 20px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  letter-spacing: -.3px;
+}
+.sidebar h1 .badge {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--teal-400);
+  margin-top: 6px;
+  letter-spacing: .3px;
+}
+.sidebar nav { padding: 8px 0; }
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 24px;
+  color: rgba(255,255,255,.75);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  border-left: 3px solid transparent;
+  transition: all .25s cubic-bezier(.4,0,.2,1);
+  cursor: pointer;
+  position: relative;
+}
+.sidebar nav a:hover { background: rgba(255,255,255,.05); color: #fff; padding-left: 28px; }
+.sidebar nav a.active {
+  background: linear-gradient(90deg, rgba(45,212,191,.15) 0%, transparent 100%);
+  border-left-color: var(--teal-400);
+  color: #fff;
+  font-weight: 600;
+}
+.sidebar nav a.active::after {
+  content: '';
+  position: absolute;
+  right: 16px;
+  width: 6px;
+  height: 6px;
+  background: var(--teal-400);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--teal-400);
+}
+.sidebar nav a .num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background: rgba(255,255,255,.08);
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255,255,255,.6);
+  flex-shrink: 0;
+}
+.sidebar nav a.active .num { background: var(--teal-500); color: #fff; }
+
+.main {
+  margin-left: 280px;
+  flex: 1;
+  padding: 36px 44px 60px;
+  max-width: calc(100vw - 280px);
+}
+
+.section { display: none; animation: slideUp .35s cubic-bezier(.4,0,.2,1); }
+.section.active { display: block; }
+@keyframes slideUp { from { opacity: 0; transform: translateY(8px);} to { opacity: 1; transform: none;} }
+
+.hero {
+  background: linear-gradient(135deg, var(--navy-900) 0%, var(--indigo-600) 60%, var(--teal-500) 100%);
+  border-radius: 20px;
+  padding: 32px 36px;
+  margin-bottom: 28px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,.12) 0%, transparent 60%);
+}
+.hero h2 { font-size: 28px; font-weight: 800; margin-bottom: 8px; letter-spacing: -.5px; position: relative; }
+.hero .subtitle { font-size: 15px; opacity: .85; font-weight: 400; position: relative; }
+
+.main > .section > header:not(.hero) {
+  background: #fff;
+  padding: 22px 28px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 24px;
+  border-left: 4px solid var(--indigo-500);
+}
+.main > .section > header:not(.hero) h2 { font-size: 22px; color: var(--navy-900); margin-bottom: 6px; font-weight: 700; letter-spacing: -.3px; }
+.main > .section > header:not(.hero) .subtitle { color: var(--slate-500); font-size: 13px; }
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 22px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow .25s, transform .25s;
+}
+.card:hover { box-shadow: var(--shadow-md); }
+.card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy-900);
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--slate-100);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: -.2px;
+}
+.card h3 .emoji { font-size: 22px; }
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+.kpi-card {
+  background: linear-gradient(135deg, #fff 0%, var(--slate-50) 100%);
+  border: 1px solid var(--slate-200);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  transition: all .3s cubic-bezier(.4,0,.2,1);
+}
+.kpi-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--indigo-500), var(--teal-500));
+  opacity: 0;
+  transition: opacity .3s;
+}
+.kpi-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--indigo-500); }
+.kpi-card:hover::before { opacity: 1; }
+.kpi-card .label { font-size: 11px; color: var(--slate-500); margin-bottom: 8px; text-transform: uppercase; letter-spacing: .8px; font-weight: 600; }
+.kpi-card .value { font-size: 24px; font-weight: 800; color: var(--navy-900); letter-spacing: -.5px; line-height: 1.2; }
+.kpi-card .delta { font-size: 12px; color: var(--emerald-500); margin-top: 6px; font-weight: 600; }
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 13px;
+  box-shadow: 0 0 0 1px var(--slate-200);
+}
+th {
+  background: var(--navy-900);
+  color: #fff;
+  text-align: left;
+  padding: 14px 14px;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  position: sticky;
+  top: 0;
+}
+td { padding: 12px 14px; border-bottom: 1px solid var(--slate-100); vertical-align: top; transition: background .15s; }
+tr:hover td { background: var(--slate-50); }
+tr:last-child td { border-bottom: none; }
+
+.target-cell { background: var(--emerald-100) !important; color: #047857; font-weight: 700; text-align: center; }
+.baseline-cell { color: var(--rose-500); font-weight: 700; text-align: center; }
+.section-header td {
+  background: linear-gradient(90deg, var(--indigo-600) 0%, var(--indigo-500) 100%) !important;
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: .3px;
+  padding: 14px !important;
+}
+.section-header td:hover { background: linear-gradient(90deg, var(--indigo-600) 0%, var(--indigo-500) 100%) !important; }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .2px;
+}
+.badge.urgent { background: var(--rose-100); color: #BE123C; }
+.badge.warning { background: var(--amber-100); color: #B45309; }
+.badge.deferred { background: var(--slate-100); color: var(--slate-600); }
+.badge.locked { background: var(--emerald-100); color: #047857; }
+.badge.testing { background: linear-gradient(135deg, var(--amber-100), #FEF9C3); color: #B45309; border: 1px solid var(--amber-500); }
+.badge.protect { background: var(--rose-100); color: #BE123C; border: 1px solid var(--rose-500); }
+.badge.maintain { background: var(--slate-100); color: var(--slate-600); }
+
+.note {
+  background: linear-gradient(135deg, #F0FDFA 0%, #ECFEFF 100%);
+  border-left: 3px solid var(--teal-500);
+  padding: 14px 18px;
+  font-style: italic;
+  color: var(--slate-600);
+  font-size: 13px;
+  margin-top: 16px;
+  border-radius: 0 8px 8px 0;
+}
+
+.bucket-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.bucket {
+  background: linear-gradient(180deg, #fff 0%, var(--slate-50) 100%);
+  border: 1px solid var(--slate-200);
+  border-radius: 14px;
+  padding: 20px;
+  position: relative;
+  transition: all .25s;
+}
+.bucket:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--indigo-500); }
+.bucket .pill {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .8px;
+  background: var(--emerald-500);
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+.bucket.boost { border: 2px solid var(--emerald-500); background: linear-gradient(180deg, #ECFDF5 0%, #F0FDFA 100%); }
+.bucket.boost .pill { background: var(--emerald-500); }
+.bucket.protect { border: 2px solid var(--rose-500); background: linear-gradient(180deg, #FFF1F2 0%, #FEF2F2 100%); }
+.bucket.protect .pill { background: var(--rose-500); }
+.bucket.maintain { border: 1px dashed var(--slate-400); }
+.bucket.maintain .pill { background: var(--slate-500); }
+.bucket h4 { font-size: 16px; font-weight: 800; color: var(--navy-900); margin-bottom: 6px; letter-spacing: -.2px; }
+.bucket .persona { font-size: 12px; color: var(--slate-500); margin-bottom: 12px; font-style: italic; }
+.bucket .metric { font-size: 12px; color: var(--navy-700); padding: 4px 0; border-top: 1px dashed var(--slate-200); }
+.bucket .metric strong { color: var(--indigo-600); }
+
+/* Phase timeline */
+.phases {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.phase {
+  background: #fff;
+  border: 1px solid var(--slate-200);
+  border-top: 4px solid var(--indigo-500);
+  border-radius: 12px;
+  padding: 18px;
+  position: relative;
+}
+.phase.p2 { border-top-color: var(--amber-500); }
+.phase.p3 { border-top-color: var(--rose-500); }
+.phase .num {
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--indigo-500);
+  opacity: .25;
+  line-height: 1;
+  position: absolute;
+  right: 14px;
+  top: 8px;
+}
+.phase.p2 .num { color: var(--amber-500); }
+.phase.p3 .num { color: var(--rose-500); }
+.phase h4 { font-size: 14px; font-weight: 800; color: var(--navy-900); margin-bottom: 8px; letter-spacing: -.2px; }
+.phase .when { font-size: 11px; color: var(--teal-500); font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+.phase ul { font-size: 12px; color: var(--slate-600); margin-left: 16px; margin-top: 6px; line-height: 1.7; }
+
+/* Pillar split */
+.pillars {
+  display: grid;
+  grid-template-columns: 60fr 35fr 5fr;
+  gap: 4px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px 0;
+  font-weight: 700;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+}
+.pillars div { padding: 14px 8px; }
+.pillars .p1 { background: linear-gradient(135deg, var(--indigo-600), var(--indigo-500)); }
+.pillars .p2 { background: linear-gradient(135deg, var(--amber-500), #F59E0B); }
+.pillars .p3 { background: linear-gradient(135deg, var(--teal-500), var(--teal-400)); }
+
+.severity {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  letter-spacing: .3px;
+}
+.severity.s1 { background: #FEF3C7; color: #B45309; border: 1px solid #FCD34D; }
+.severity.s2 { background: #FECACA; color: #B91C1C; border: 1px solid #F87171; }
+.severity.s3 { background: #1F2937; color: #fff; border: 1px solid #111827; }
+.risk-row.s1 td:first-child { border-left: 4px solid var(--amber-500); }
+.risk-row.s2 td:first-child { border-left: 4px solid var(--rose-500); }
+.risk-row.s3 td:first-child { border-left: 4px solid var(--navy-900); }
+
+.formula {
+  background: linear-gradient(135deg, var(--navy-900) 0%, #1E1B4B 100%);
+  color: #fff;
+  padding: 18px 24px;
+  border-radius: 12px;
+  font-family: 'JetBrains Mono', "SF Mono", monospace;
+  font-size: 14px;
+  margin: 14px 0;
+  letter-spacing: .2px;
+  box-shadow: var(--shadow-md);
+}
+.formula .label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--teal-400);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.koc-script {
+  background: #fff;
+  border: 1px solid var(--slate-200);
+  border-left: 4px solid var(--indigo-500);
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 12px;
+  transition: all .25s;
+}
+.koc-script:hover { transform: translateX(2px); box-shadow: var(--shadow-md); border-left-color: var(--teal-500); }
+.koc-script .num-pill {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--navy-900), var(--indigo-600));
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: .3px;
+}
+.koc-script h4 { font-size: 15px; font-weight: 800; color: var(--navy-900); margin-bottom: 8px; }
+.koc-script .hook { font-style: italic; color: var(--slate-600); padding: 10px 14px; background: var(--slate-50); border-radius: 8px; margin: 8px 0; font-size: 13px; border-left: 3px solid var(--teal-400); }
+.koc-script .meta { font-size: 12px; color: var(--slate-500); }
+
+@media (max-width: 1024px) {
+  .sidebar { width: 240px; }
+  .main { margin-left: 240px; max-width: calc(100vw - 240px); padding: 24px; }
+  .hero { padding: 24px; }
+  .hero h2 { font-size: 22px; }
+  .phases { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .sidebar { width: 100%; position: relative; height: auto; }
+  .main { margin-left: 0; max-width: 100%; padding: 16px; }
+  .kpi-grid { grid-template-columns: 1fr 1fr; }
+  .pillars { grid-template-columns: 1fr; }
+}
+
+@media print {
+  body { background: #fff; }
+  .sidebar { display: none; }
+  .main { margin-left: 0; max-width: 100%; padding: 0; }
+  .section { display: block !important; page-break-after: always; }
+  .hero { background: var(--navy-900) !important; -webkit-print-color-adjust: exact; }
+  .card, table { box-shadow: none; border: 1px solid var(--slate-200); }
+}
+</style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h1>🏆 Master Branding Plan
+        <span class="badge">30Shine • T5/2026</span>
+      </h1>
+      <nav>
+        <a data-target="overview" onclick="showSection('overview')"><span class="num">1</span>🎯 Tổng quan & KPI</a>
+        <a data-target="root" onclick="showSection('root')"><span class="num">2</span>🌳 Gốc quản trị — 3 việc</a>
+        <a data-target="boost" onclick="showSection('boost')"><span class="num">3</span>🧬 Lock Trẻ hóa</a>
+        <a data-target="worldcup" onclick="showSection('worldcup')"><span class="num">4</span>⚽ WorldCup 2026</a>
+        <a data-target="alwayson" onclick="showSection('alwayson')"><span class="num">5</span>📰 Always-on + KOC</a>
+        <a data-target="tracking" onclick="showSection('tracking')"><span class="num">6</span>📊 Tracking & Đo lường</a>
+        <a data-target="risk" onclick="showSection('risk')"><span class="num">7</span>🛡️ Risk & Backup</a>
+      </nav>
+      <div style="padding:20px;font-size:11px;opacity:.6;border-top:1px solid rgba(255,255,255,.15);margin-top:20px">
+        Generated: 07/05/2026<br>
+        Owner: Tùng (Brand Manager)<br>
+        Framework: chị Oanh — Họp Plan T5
+      </div>
+    </aside>
+    <main class="main">
+
+    <!-- ========== 1. OVERVIEW ========== -->
+    <section id="overview" class="section">
+      <header class="hero">
+        <h2>🏆 MASTER BRANDING PLAN — 30SHINE T5/2026</h2>
+        <div class="subtitle">Bồi đắp Trẻ hóa (top-of-mind) + Bảo vệ 2 main yếu + WorldCup chất liệu (21/5 → 19/7) — 0.8% doanh thu</div>
+      </header>
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="label">Ngân sách Content + Distribution</div>
+          <div class="value">600tr</div>
+          <div class="delta">5 tuyến — Test Demand + KOC + TMXD xào + Hoàng Sao + Salon</div>
+        </div>
+        <div class="kpi-card">
+          <div class="label">Việc 1: BỒI ĐẮP</div>
+          <div class="value">Trẻ hóa</div>
+          <div class="delta">Ngón thứ 6 mới pass → lock top-of-mind</div>
+        </div>
+        <div class="kpi-card">
+          <div class="label">Việc 2: BẢO VỆ 2 main yếu</div>
+          <div class="value">[TBD] + [TBD]</div>
+          <div class="delta">Tùng + Vân Hà chốt cụ thể đầu T5</div>
+        </div>
+        <div class="kpi-card">
+          <div class="label">Việc 3: DUY TRÌ 3 main còn lại</div>
+          <div class="value">Organic</div>
+          <div class="delta">1 bài/ngày × ~25 bài — không tốn force</div>
+        </div>
+        <div class="kpi-card">
+          <div class="label">Sản phẩm phụ — F1→F2 MVP</div>
+          <div class="value">3 chặng × 10 ngày</div>
+          <div class="delta">Setup → Kiểm thử → Kết luận (Tùng-led)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="label">WorldCup chất liệu</div>
+          <div class="value">21/5 → 19/7</div>
+          <div class="delta">3 phase — bồi đắp demand stress + phong độ</div>
+        </div>
+      </div>
+      <div class="note" style="margin-bottom:24px">
+        <strong>Logic 3 việc</strong>: 30Shine có 6 ngón (5 cũ + 1 mới Trẻ hóa). Branding tháng 5 = <strong>1 bồi đắp + 2 bảo vệ + 3 duy trì = 6 ngón</strong>. Mỗi ngón được phân loại theo trạng thái sức khỏe → action branding tương ứng. Không liệt kê việc rời rạc kiểu "làm campaign A, B, C".
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🔄</span> Cross-link với plan khác — 3 plan liên thông</h3>
+        <table>
+          <thead><tr><th>Plan</th><th>Liên kết với Branding ở đâu</th><th>File</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Demand Master Plan</strong></td><td>5 ngón hiện hữu + 1 ngón thứ 6 (Trẻ hóa) — branding bồi đắp/bảo vệ/duy trì theo từng ngón. Demand pass test → branding lock top-of-mind</td><td><code>DEMAND_MASTER_PLAN_T5-T10_2026.html</code></td></tr>
+            <tr><td><strong>SEO Master Plan</strong></td><td>SEO web là 1 trong 4 trụ branding cho Trẻ hóa (signature visual + KOC fan-club + content series + SEO cluster). 24 bài blog map vào 6 ngón demand</td><td><code>SEO_MASTER_PLAN_T5-T10_2026.html</code></td></tr>
+            <tr><td><strong>Mục Tiêu Sản Xuất MKT T5</strong></td><td>Bảng phân bổ video × nhân sự + lịch air theo tuần — đã tích hợp vào Section 5 (Always-on + KOC) và Section 4 (WorldCup)</td><td><code>Mục Tiêu Sản Xuất MKT 30Shine T5_2026.docx</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">📋</span> Executive Summary</h3>
+        <table>
+          <tbody>
+            <tr><td style="width:200px"><strong>Mục tiêu chính</strong></td><td>Lock <strong>"Trẻ hóa"</strong> thành top-of-mind 30Shine + bảo vệ 2 main đang mất share-of-mind. WorldCup 2026 dùng làm <strong>chất liệu bồi đắp</strong>, KHÔNG phải campaign khuyến mãi rời.</td></tr>
+            <tr><td><strong>Logic chị Oanh chốt</strong></td><td>Branding = bồi đắp <strong>5 ngón hiện hữu + 1 ngón mới (Trẻ hóa)</strong>. Top-of-mind: khi nam 35-45 nghĩ "tôi cần hack tuổi" → 30Shine là lựa chọn đầu tiên (như Haidilao = lẩu vui vẻ).</td></tr>
+            <tr><td><strong>Ngân sách</strong></td><td><strong>0.8% doanh thu</strong> ≈ 182tr/tháng — cover toàn bộ branding (KOC + WorldCup + always-on + Hoàng Sao + signature visual).</td></tr>
+            <tr><td><strong>Mục tiêu KPI</strong></td><td>Reach/social/share-of-mind. <strong>Không phải chuyển đổi</strong> — chuyển đổi là job của Performance.</td></tr>
+            <tr><td><strong>Window</strong></td><td>T5/2026 (07-31/05) — riêng WorldCup 21/5 → 19/7 (3 phase trải dài)</td></tr>
+            <tr><td><strong>Phụ trách</strong></td><td>Tùng (Brand Manager — A) • Vân Hà (always-on — R) • Thanh Hà (KOC — R) • Hoàng (đại sứ — R) • Chương (Brand Intelligence — C)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🎯</span> KPI tháng 5 — Mục tiêu cốt lõi</h3>
+        <table>
+          <thead><tr><th>Chỉ số</th><th>Baseline T4</th><th>Target T5</th><th>Loại</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Share-of-mind "Trẻ hóa"</strong></td><td class="baseline-cell">0 (chưa đo)</td><td class="target-cell">Setup baseline</td><td>Branding lock</td></tr>
+            <tr><td>Số bài always-on</td><td class="baseline-cell">~25</td><td class="target-cell">≥25</td><td>Cadence</td></tr>
+            <tr><td>Số KOC booking</td><td class="baseline-cell">20</td><td class="target-cell">≥40</td><td>Production</td></tr>
+            <tr><td>Số video gốc Hoàng Sao</td><td class="baseline-cell">0 (chỉ xào)</td><td class="target-cell">≥1 video gốc + 3 bài fan-club</td><td>Đại sứ</td></tr>
+            <tr><td>3s view rate TB</td><td class="baseline-cell">7%</td><td class="target-cell">≥7.5%</td><td>Leading</td></tr>
+            <tr><td>25% view rate</td><td class="baseline-cell">—</td><td class="target-cell">track</td><td>Engagement</td></tr>
+            <tr><td>STAR content (25% view &gt;6%)</td><td class="baseline-cell">—</td><td class="target-cell">≥3 bài</td><td>Quality</td></tr>
+            <tr><td>WorldCup phase 1 (chuẩn bị)</td><td class="baseline-cell">—</td><td class="target-cell">Done 20/5</td><td>Milestone</td></tr>
+            <tr><td>Pet 30Shine follower</td><td class="baseline-cell">[fill]</td><td class="target-cell">+15%</td><td>Brand voice</td></tr>
+            <tr><td>Ngân sách branding</td><td class="baseline-cell">—</td><td class="target-cell">≤182tr (0.8%)</td><td>Hard cap</td></tr>
+          </tbody>
+        </table>
+        <div class="note">
+          <strong>Logic chị Oanh</strong>: branding KHÔNG đo CPA. Đo reach/social/share-of-mind/brand voice. Nếu branding làm tốt → demand sức khỏe lên → Performance quy đổi thành CPA tốt hơn (lagging effect).
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 2. GỐC QUẢN TRỊ ========== -->
+    <section id="root" class="section">
+      <header class="hero">
+        <h2>🌳 Gốc quản trị — 3 việc branding T5</h2>
+        <div class="subtitle">Bồi đắp main mới + Bảo vệ 2 main rủi ro + Duy trì 3 main còn lại — không liệt kê việc rời rạc</div>
+      </header>
+
+      <div class="card">
+        <h3><span class="emoji">🧠</span> Logic chị Oanh chốt</h3>
+        <p style="color:var(--slate-700);margin-bottom:12px">
+          Branding KHÔNG phải "tìm trend / làm campaign rời". Branding = quản trị bộ <strong>"giỏ nhu cầu" (5 ngón + 1 ngón thứ 6)</strong>. Mỗi tháng phải nói rõ:
+        </p>
+        <ol style="margin-left:20px;color:var(--navy-700);line-height:1.9">
+          <li><strong>Tháng này khai thác main nào</strong> (đang chạy 5 main + thí nghiệm ngón thứ 6 nào)</li>
+          <li><strong>Bồi đắp gì</strong> (main mới chưa có top-of-mind)</li>
+          <li><strong>Cover rủi ro gì</strong> (main đang mất share-of-mind cần bảo vệ)</li>
+        </ol>
+        <div class="note">
+          <strong>Câu Oanh chê thẳng</strong>: "Pet 30Shine còn kém nick cá nhân của chị (230k follower). Plan branding cũ không cắm vào gốc, làm để gì cũng không rõ." → đây là plan v2 sửa theo feedback đó.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">✋</span> Phân loại 6 main theo branding action</h3>
+        <div class="bucket-grid">
+          <div class="bucket boost">
+            <span class="pill">🚀 BỒI ĐẮP — 1 main</span>
+            <h4>🧬 Trẻ hóa / Hack tuổi</h4>
+            <div class="persona">Nam 35-45 — sợ già, muốn thăng tiến</div>
+            <div class="metric">Status: <strong>Mới pass ngón thứ 6</strong></div>
+            <div class="metric">Branding: <strong>Lock top-of-mind</strong> — signature visual + KOC fan-club + content series</div>
+            <div class="metric">Mục tiêu: 30Shine = lựa chọn đầu tiên khi nam 35-45 nghĩ "hack tuổi"</div>
+          </div>
+          <div class="bucket protect">
+            <span class="pill">🛡️ BẢO VỆ — Main 1 (TBD)</span>
+            <h4 style="color:#fff8dc;background:#94A3B8;padding:6px 8px;border-radius:6px;display:inline-block">[Tùng + Vân Hà chốt]</h4>
+            <div class="persona" style="margin-top:8px">Main đang mất share-of-mind</div>
+            <div class="metric">Status: <strong>Cần defensive sprint</strong></div>
+            <div class="metric">Branding: counter content + paid amplification + refresh creative</div>
+            <div class="metric">Trigger: -10% YoY share-of-voice</div>
+          </div>
+          <div class="bucket protect">
+            <span class="pill">🛡️ BẢO VỆ — Main 2 (TBD)</span>
+            <h4 style="color:#fff8dc;background:#94A3B8;padding:6px 8px;border-radius:6px;display:inline-block">[Tùng + Vân Hà chốt]</h4>
+            <div class="persona" style="margin-top:8px">Main đang bị đối thủ chen vào</div>
+            <div class="metric">Status: <strong>Cần defensive sprint</strong></div>
+            <div class="metric">Branding: defensive ads keyword đối thủ + KOC switch</div>
+            <div class="metric">Trigger: -10% YoY share-of-voice</div>
+          </div>
+          <div class="bucket maintain">
+            <span class="pill">⚙️ DUY TRÌ — Main 3</span>
+            <h4>👔 Cắt tóc văn phòng</h4>
+            <div class="persona">Nam 25-40 — gọn gàng, chuyên nghiệp</div>
+            <div class="metric">Status: <strong>Stable</strong></div>
+            <div class="metric">Branding: organic always-on, 1 bài/ngày tỷ trọng pillar</div>
+          </div>
+          <div class="bucket maintain">
+            <span class="pill">⚙️ DUY TRÌ — Main 4</span>
+            <h4>👂 Lấy ráy tai (USP)</h4>
+            <div class="persona">Nam 28-45 — relax sau giờ làm</div>
+            <div class="metric">Status: <strong>USP mạnh</strong></div>
+            <div class="metric">Branding: SEO cluster ráy tai (Chương) + KOC ASMR</div>
+          </div>
+          <div class="bucket maintain">
+            <span class="pill">⚙️ DUY TRÌ — Main 5</span>
+            <h4>🎬 KOC look</h4>
+            <div class="persona">Nam 22-35 — bắt trend creator</div>
+            <div class="metric">Status: <strong>Đang scale</strong></div>
+            <div class="metric">Branding: theo dòng KOC active, không tách riêng</div>
+          </div>
+        </div>
+        <div class="note">
+          <strong>⚠️ Cần Tùng + Vân Hà chốt T5</strong>: 2 main rủi ro mất thị phần = main nào trong (Massage gội xả stress / TMXD / Cắt VP / Lấy ráy tai / KOC look)? Cần baseline share-of-voice/share-of-mind để biết. Không có data = đoán mò.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">💰</span> Phân bổ ngân sách — bản v4 (sửa theo 3 nhận xét chị Oanh trong docx (1))</h3>
+        <p style="color:var(--slate-700);margin-bottom:12px">
+          Chị Oanh đã comment trong file <code>Mục Tiêu Sản Xuất MKT 30Shine T5_2026 (1).docx</code>: <strong>TMXD xào KOC</strong> — bỏ ra khỏi plan content (bản chất Performance tự xào để tiêu tiền, không tạo media mới); <strong>Test Demand</strong> — phải là phần quản trị demand chiến lược, không nhét vào plan content. Bảng dưới đã tách rõ.
+        </p>
+        <table>
+          <thead><tr><th>Tuyến</th><th>Loại</th><th>%</th><th>Ngân sách</th><th>CPA dự kiến</th><th>Note</th></tr></thead>
+          <tbody>
+            <tr class="section-header"><td colspan="6">📰 PLAN CONTENT THỰC SỰ — 258tr (3 tuyến)</td></tr>
+            <tr><td><strong>KOC Booking</strong></td><td><span class="badge locked">Content</span></td><td class="target-cell">25%</td><td>150tr</td><td>23.000đ</td><td>40 KOC/tháng — commission +20%. <strong>Cần calendar + checklist takecare + post-mortem (Oanh comment #1)</strong></td></tr>
+            <tr><td><strong>Salon (content nội bộ)</strong></td><td><span class="badge locked">Content</span></td><td>10%</td><td>60tr</td><td>—</td><td>Stylist + decor + UGC khách thật</td></tr>
+            <tr><td><strong>Hoàng Sao + KO Sao (đại sứ)</strong></td><td><span class="badge locked">Content</span></td><td>8%</td><td>48tr</td><td>23.000đ</td><td>1 video gốc + 3 fan-club + KO Sao cover 8</td></tr>
+            <tr class="section-header"><td colspan="6">🚫 OANH BỎ RA KHỎI PLAN CONTENT — vẫn có ngân sách nhưng KHÔNG nằm trong "content production"</td></tr>
+            <tr><td><strong>TMXD — Xào từ suộc KOC, video win</strong></td><td><span class="badge urgent">Performance — không phải content</span></td><td>42%</td><td>252tr</td><td>15.000đ</td><td><strong>Oanh comment #2</strong>: "việc Performance tự xào tiêu tiền, không tạo media mới" → tách sang plan của Huế/Khánh, không phải tuyến content branding</td></tr>
+            <tr><td><strong>Test Demand</strong></td><td><span class="badge testing">Demand mgmt strategic</span></td><td>15%</td><td>90tr</td><td>15.000đ</td><td><strong>Oanh comment #3</strong>: "phải là phần quản trị demand đang quản lý + research làm mới" → tách sang <code>DEMAND_MASTER_PLAN_T5-T10_2026.html</code></td></tr>
+            <tr><td colspan="3"><strong>TỔNG xlsx 5 tuyến</strong></td><td><strong>600tr</strong></td><td colspan="2">Trong đó: <strong>258tr content branding</strong> + 252tr Performance amp + 90tr Demand mgmt</td></tr>
+          </tbody>
+        </table>
+        <div class="note">
+          <strong>Logic mới (sau Oanh feedback)</strong>:<br>
+          • Plan branding T5 chỉ quản trị <strong>258tr content thực sự</strong> (KOC Booking + Salon + Hoàng Sao).<br>
+          • TMXD xào 252tr → tách sang plan Performance (Huế chủ trì xào AI/copy paste để tiêu tiền).<br>
+          • Test Demand 90tr → tách sang Demand Master Plan (chiến lược 5 ngón + 1 ngón thứ 6).<br>
+          • So với 0.8% × 24B = 182tr Oanh chốt họp: <strong>258tr vẫn lệch ~+76tr</strong> → Tùng + Oanh cần thống nhất.
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 3. LOCK TRẺ HÓA ========== -->
+    <section id="boost" class="section">
+      <header class="hero" style="background:linear-gradient(135deg, var(--navy-900) 0%, var(--emerald-500) 60%, var(--teal-400) 100%)">
+        <h2>🧬 Lock Top-of-mind: Trẻ hóa / Hack tuổi</h2>
+        <div class="subtitle">Việc branding chính T5 — biến demand đã pass thành lựa chọn đầu tiên trong đầu nam 35-45</div>
+      </header>
+
+      <div class="card">
+        <h3><span class="emoji">🎯</span> Câu hỏi định hướng</h3>
+        <p style="color:var(--slate-700);font-size:15px;line-height:1.7;margin-bottom:14px">
+          <strong>Câu hỏi đúng (Oanh)</strong>: "Khi nam 35-45 nghĩ <em>'tôi cần hack tuổi'</em> thì 30Shine có phải lựa chọn đầu tiên không?"<br>
+          <strong>Câu hỏi sai (cũ)</strong>: "Trẻ hóa có ra khách không?" — đó là job Performance, không phải Branding.
+        </p>
+        <div class="note">
+          Trẻ hóa đã pass test ngón thứ 6 → đã chứng minh có demand thật. <strong>Next step không phải tìm thêm trend trẻ hóa</strong>, mà là biến Trẻ hóa thành <strong>top-of-mind</strong>. Nếu sau 3 tháng share-of-mind không tăng = lock fail = demand chưa thực sự pass.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🏗️</span> 4 trụ branding cho Trẻ hóa</h3>
+        <table>
+          <thead><tr><th>Trụ</th><th>Mục tiêu</th><th>Output T5</th><th>Owner</th></tr></thead>
+          <tbody>
+            <tr><td><strong>1. Signature visual</strong></td><td>Tạo nhận diện hình ảnh "trẻ hóa 30Shine" — màu sắc, font, before/after layout, watermark</td><td>1 brand kit + 5 template</td><td>Tùng</td></tr>
+            <tr><td><strong>2. KOC fan-club</strong></td><td>3-5 KOC nam 35-45 có persona "đã hack tuổi thành công" — kể chuyện thật, không catalog</td><td>3 KOC ký kết + 5 video before/after</td><td>Thanh Hà</td></tr>
+            <tr><td><strong>3. Content series</strong></td><td>Series "Hack tuổi 30Shine" — episode hằng tuần, mỗi tập 1 góc nhìn (sếp tưởng đổi việc / vợ ngỡ ngàng / khách hàng nghĩ trẻ hơn)</td><td>4 episode T5 + storyboard 8 episode T6-T7</td><td>Vân Hà</td></tr>
+            <tr><td><strong>4. Đo share-of-mind</strong></td><td>Setup baseline share-of-voice social + brand search "trẻ hóa nam"</td><td>Dashboard baseline + tracking weekly</td><td>Chương</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">📅</span> Roadmap 3 tháng — Lock Trẻ hóa</h3>
+        <div class="phases">
+          <div class="phase">
+            <div class="num">1</div>
+            <div class="when">T5 — XÂY NỀN</div>
+            <h4>Setup signature + KOC + content series</h4>
+            <ul>
+              <li>Brand kit Trẻ hóa (Tùng)</li>
+              <li>3 KOC ký kết + brief (Thanh Hà)</li>
+              <li>4 episode series + 5 before/after (Vân Hà)</li>
+              <li>Baseline share-of-voice (Chương)</li>
+            </ul>
+          </div>
+          <div class="phase p2">
+            <div class="num">2</div>
+            <div class="when">T6 — KHẲNG ĐỊNH</div>
+            <h4>Đẩy bài + paid amplification</h4>
+            <ul>
+              <li>4 episode series tiếp + KOC video gốc</li>
+              <li>Paid amplification top STAR content</li>
+              <li>Cross-link với cluster Cắt VP (overlap 70%)</li>
+              <li>Đo share-of-mind +5% baseline</li>
+            </ul>
+          </div>
+          <div class="phase p3">
+            <div class="num">3</div>
+            <div class="when">T7 — DECISION</div>
+            <h4>Đánh giá lock thực sự</h4>
+            <ul>
+              <li>Brand survey share-of-mind</li>
+              <li>Pass: +10% YoY → lock chính thức</li>
+              <li>Fail: hold + re-classify pending</li>
+              <li>Báo cáo Oanh + CEO</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🎬</span> Angle storyboard cho content series</h3>
+        <table>
+          <thead><tr><th>#</th><th>Episode</th><th>Hook</th><th>Demographic</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td><strong>"Sếp tưởng tôi vừa đổi việc"</strong></td><td>Nam 38, đến 30Shine sau 2 năm "vô hình" trong công ty — về meeting sếp ngợ ngỡ ngàng "làm gì mà tươi vậy?"</td><td>Manager văn phòng 35-42</td></tr>
+            <tr><td>2</td><td><strong>"Vợ tưởng có người thứ 3"</strong></td><td>Hài hước — vợ thấy chồng tự nhiên chăm sóc bản thân, nghi ngờ → cuối là 30Shine</td><td>Nam đã có gia đình 35-45</td></tr>
+            <tr><td>3</td><td><strong>"Khách hàng tưởng tôi mới ra trường"</strong></td><td>Sales/BD 40 tuổi, gặp khách trẻ → tự tin hơn, deal thành công</td><td>Sales/BD 38-45</td></tr>
+            <tr><td>4</td><td><strong>"Hack 7 năm trong 60 phút"</strong></td><td>Demo before/after timeline — thật, không filter</td><td>Cross persona</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ========== 4. WORLDCUP ========== -->
+    <section id="worldcup" class="section">
+      <header class="hero" style="background:linear-gradient(135deg, var(--navy-900) 0%, #B45309 60%, var(--amber-500) 100%)">
+        <h2>⚽ WorldCup 2026 — "Trạm tiếp phong độ"</h2>
+        <div class="subtitle">3 phase trải dài 21/5 → 19/7 — chất liệu bồi đắp demand "xả stress" / "phong độ đàn ông", KHÔNG phải khuyến mãi rời</div>
+      </header>
+
+      <div class="card">
+        <h3><span class="emoji">🧠</span> Logic chị Oanh sửa cho Tùng</h3>
+        <p style="color:var(--slate-700);margin-bottom:12px">
+          Trong họp Plan T5, Oanh chỉnh thẳng: <strong>"Đừng coi WorldCup là campaign rời."</strong> Mà là <strong>chất liệu</strong> — mượn sự sôi động / thức đêm / bóng đá của thế giới để bồi đắp demand sẵn có:
+        </p>
+        <ul style="margin-left:20px;color:var(--navy-700);line-height:1.9">
+          <li>Demand "<strong>Massage gội xả stress</strong>" — sếp đi làm cả ngày, đêm thức xem bóng → cần "trạm sạc"</li>
+          <li>Demand "<strong>Phong độ đàn ông</strong>" — fan thật sẽ muốn nhìn ngầu như cầu thủ idol</li>
+          <li>Demand "<strong>Cắt VP</strong>" — sáng đi làm phải tỉnh táo dù đêm thức cả 90 phút + hiệp phụ</li>
+        </ul>
+        <div class="note">
+          <strong>Mục tiêu KPI</strong>: reach/social/tương tác — KHÔNG phải chuyển đổi. Chuyển đổi là job của Performance, branding làm chất liệu để nó dễ chuyển đổi hơn.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">📅</span> 3 phase WorldCup (theo Tùng đề xuất, Oanh duyệt)</h3>
+        <div class="phases">
+          <div class="phase">
+            <div class="num">1</div>
+            <div class="when">PHASE 1 — 20/5</div>
+            <h4>CHUẨN BỊ NGUYÊN LIỆU</h4>
+            <ul>
+              <li>Ghi hình KOC mặc áo đội tuyển VN</li>
+              <li>Chụp ảnh sign áo (asset cho 2 phase sau)</li>
+              <li>Brief stylist cắt kiểu cầu thủ (Ronaldo, Bellingham, Saka, Văn Hậu...)</li>
+              <li>Setup salon decor: poster, đèn LED, TV</li>
+              <li>Hoàng Sao quay 1 video gốc "tôi luyện trạm tiếp phong độ"</li>
+            </ul>
+          </div>
+          <div class="phase p2">
+            <div class="num">2</div>
+            <div class="when">21/5 → 11/6</div>
+            <h4>SẢN XUẤT (3 tuần)</h4>
+            <ul>
+              <li>Quay clip "cắt tóc kiểu cầu thủ" — 5-7 stylist demo</li>
+              <li>Series "đêm xem WC, sáng đi làm" — POV nhân viên văn phòng</li>
+              <li>Meme bóng đá + 30Shine (tỷ trọng pillar 2)</li>
+              <li>Hoàng Sao 3 bài fan-club đồng hành</li>
+              <li>Xào lại theo TikTok / FB Reels / Stories</li>
+            </ul>
+          </div>
+          <div class="phase p3">
+            <div class="num">3</div>
+            <div class="when">12/6 → 19/7</div>
+            <h4>ĐẨY BÀI ĐỒNG HÀNH SỰ KIỆN</h4>
+            <ul>
+              <li>Lịch lên bài bám vòng loại / tứ kết / bán kết / chung kết</li>
+              <li>"Cắt tóc kiểu nhà vô địch" sau mỗi vòng</li>
+              <li>Reactive content — phản ứng theo highlight thật</li>
+              <li>Paid amplification cho top STAR content</li>
+              <li>Đo reach/share/engagement — KHÔNG đo CPA</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🏆</span> Chuỗi "Cắt tóc theo sao" — 20 cầu thủ tiêu biểu</h3>
+        <p style="color:var(--slate-700);margin-bottom:12px">
+          20 cầu thủ chọn lọc dựa trên <strong>độ nổi tiếng toàn cầu + phong cách tóc đặc trưng + tiềm năng viral</strong>. Quay tại salon Nguyễn Trãi (HN) — decor WC, áo đội tuyển, 20 người mẫu/PG.
+        </p>
+        <table>
+          <thead><tr><th>Nhóm</th><th>Cầu thủ tiêu biểu (gợi ý)</th><th>Đặc trưng tóc</th><th>Note</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Siêu sao toàn cầu</strong></td><td>Ronaldo • Messi • Bellingham • Mbappé • Haaland</td><td>Mỗi người 1 dấu ấn rõ rệt — fade slick / curtain / undercut</td><td>Reach lớn nhất, nên quay đầu</td></tr>
+            <tr><td><strong>Trẻ trending</strong></td><td>Yamal • Saka • Musiala • Rodrygo • Vinicius Jr</td><td>KOC look hợp với nam 22-30</td><td>Synergy với cluster KOC look</td></tr>
+            <tr><td><strong>Châu Á + VN</strong></td><td>Son Heung-min • Mitoma • Văn Hậu • Quang Hải • Tiến Linh</td><td>Tóc đơn giản, dễ áp dụng cho khách Á</td><td>Tăng relevance VN</td></tr>
+            <tr><td><strong>Stylish thủ môn / vai phụ</strong></td><td>Courtois • Donnarumma • Lloris • Neuer • Alisson</td><td>Tóc dài / râu chỉn chu</td><td>Catalog đa dạng cho khách lớn tuổi hơn</td></tr>
+          </tbody>
+        </table>
+        <div class="note">
+          Danh sách 20 chính thức cần Hoàng + Tùng chốt theo lịch thi đấu T6 (đội nào vào sâu thì ưu tiên cầu thủ đó).
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">⚡</span> Real-time content theo lịch thi đấu — Chương phụ trách</h3>
+        <p style="color:var(--slate-700);margin-bottom:12px">
+          Bài bám diễn biến trận đấu phải ra trong <strong>2-3 giờ sau kết thúc</strong>. Cần template + workflow tự động vì không thể viết tay từng bài đêm khuya.
+        </p>
+        <table>
+          <thead><tr><th>Vai trò</th><th>Người</th><th>Hoạt động</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Setup template</strong></td><td><strong>Chương (em)</strong></td><td>Chuẩn bị template Canva/AI cho 20 kịch bản: thắng / hòa / thua / vào tứ kết / ghi bàn / ngôi sao trận đấu / kết quả bất ngờ. Hoàng tự thao tác đêm khuya không cần Chương trực.</td></tr>
+            <tr><td><strong>Cập nhật real-time</strong></td><td><strong>Chương</strong></td><td>Sau mỗi trận: feed dữ liệu (tỷ số, ghi bàn, sự kiện nổi bật) vào template → Hoàng customize và đăng</td></tr>
+            <tr><td><strong>Sản xuất nội dung</strong></td><td>Hoàng</td><td>Apply template + thêm angle 30Shine (cắt tóc giống cầu thủ vừa ghi bàn / kiểu tóc cầu thủ thắng giải...)</td></tr>
+            <tr><td><strong>Research kịch bản tương tác</strong></td><td>Thanh Hà + Chương</td><td>Soạn kịch bản tương tác fanpage — quote, polls, prediction</td></tr>
+          </tbody>
+        </table>
+        <div class="note">
+          <strong>Cốt lõi vai trò Chương</strong> trong WC: build pipeline template để team không phải reactive thủ công mỗi đêm. Đây là dạng "AI-driven" branding — tự động hóa branded content theo signal real-time.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🎯</span> Mục tiêu KPI WorldCup</h3>
+        <table>
+          <thead><tr><th>Chỉ số</th><th>Phase 1 (T5)</th><th>Phase 2 (T6)</th><th>Phase 3 (T6-T7)</th></tr></thead>
+          <tbody>
+            <tr><td>Số nguyên liệu (clip + ảnh)</td><td class="target-cell">≥30 asset</td><td class="target-cell">≥80 asset</td><td>—</td></tr>
+            <tr><td>Số bài đẩy</td><td>—</td><td class="target-cell">≥40</td><td class="target-cell">≥80</td></tr>
+            <tr><td>Reach trung bình/bài</td><td>—</td><td class="target-cell">≥10k</td><td class="target-cell">≥25k</td></tr>
+            <tr><td>Engagement rate</td><td>—</td><td class="target-cell">≥3%</td><td class="target-cell">≥4%</td></tr>
+            <tr><td>STAR content (25% view &gt;6%)</td><td>—</td><td class="target-cell">≥3</td><td class="target-cell">≥6</td></tr>
+            <tr><td>Mention 30Shine + bóng đá</td><td>—</td><td class="target-cell">track</td><td class="target-cell">+50% YoY</td></tr>
+          </tbody>
+        </table>
+        <div class="note">
+          <strong>WorldCup = chất liệu, không phải mục tiêu</strong>. Sau 19/7, chất liệu phải để lại được: stylist biết cắt kiểu cầu thủ → bồi đắp main "Phong độ đàn ông" lâu dài. Không phải "xong WC thì hết content".
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 5. ALWAYS-ON + KOC ========== -->
+    <section id="alwayson" class="section">
+      <header class="hero">
+        <h2>📰 Always-on + KOC Production</h2>
+        <div class="subtitle">1 bài/ngày × ~25 bài/tháng — pillar 60-35-5 — KOC quay gốc → team xào đa kênh</div>
+      </header>
+
+      <div class="card">
+        <h3><span class="emoji">📊</span> Ma trận nội dung pillar (Vân Hà lead)</h3>
+        <div class="pillars">
+          <div class="p1">P1 — Trải nghiệm (Video Reels POV) • 60% • ~15 bài</div>
+          <div class="p2">P2 — Meme/viral • 35% • ~9 bài</div>
+          <div class="p3">P3 — Tip stylist • 5% • ~1 bài</div>
+        </div>
+        <table>
+          <thead><tr><th>Pillar</th><th>Loại nội dung</th><th>Mục tiêu</th><th>Cadence</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Pillar 1 — Trải nghiệm</strong></td><td>Video Reels/TikTok POV — "thèm nghỉ ngơi", "trạm sạc"</td><td>Cảm xúc + nhận diện experience</td><td>~15 bài/tháng</td></tr>
+            <tr><td><strong>Pillar 2 — Meme viral</strong></td><td>Ảnh chế công sở + chuyện đàn ông + bóng đá (T6+)</td><td>Tương tác, tag bạn bè, viral</td><td>~9 bài/tháng</td></tr>
+            <tr><td><strong>Pillar 3 — Chuyên môn</strong></td><td>Tip nhanh từ stylist (cắt theo kiểu mặt, dưỡng tóc...)</td><td>Uy tín thương hiệu</td><td>~1-2 bài/tháng</td></tr>
+          </tbody>
+        </table>
+        <div class="note">
+          Tỷ trọng 60-35-5 chuẩn FB/TikTok algo. Nếu chỉ chạy Pillar 3 (chuyên môn) → reach kém vì "khô"; chỉ chạy Pillar 2 → reach cao nhưng không nhận diện experience 30Shine.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🎬</span> KOC Production Flow (Thanh Hà + Tùng)</h3>
+        <div class="formula">
+          <div class="label">Flow chuẩn</div>
+KOC quay clip gốc (60-90s) — Thanh Hà brief
+        ↓
+1 clip gốc → Team Xào (Chương + Khánh + Huế)
+        ↓
+   ┌────────┬────────┬────────┬────────┐
+   ↓        ↓        ↓        ↓
+TikTok   FB Reels Stories   Insta
+15-30s   30-60s   10-15s    fit-platform
+        </div>
+        <table>
+          <thead><tr><th>Hạng mục</th><th>Số lượng T5</th><th>Note</th></tr></thead>
+          <tbody>
+            <tr><td>KOC booking</td><td>≥40 (T4 chỉ 20)</td><td>Tăng commission +20% — đề xuất Oanh duyệt</td></tr>
+            <tr><td>Clip gốc/tháng</td><td>≥40 (1/KOC)</td><td>Persona ưu tiên: nam 35-45 (Trẻ hóa), nam VP (Cắt VP)</td></tr>
+            <tr><td>Biến thể video xào</td><td>≥160 (4/clip gốc)</td><td>Chương + Khánh + Huế distribute</td></tr>
+            <tr><td>Hoàng Sao gốc</td><td>≥1 video gốc + 3 fan-club</td><td>KHÔNG xào 8 clip cũ</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🛡️</span> KOC Operations — Calendar + Checklist + Post-mortem (Oanh comment #1)</h3>
+        <p style="color:var(--slate-700);margin-bottom:12px">
+          Chị Oanh nhấn mạnh trong comment file (1).docx: KOC <strong>không chỉ booking xong là xong</strong>. Cần calendar timeline thực sự + checklist takecare (bằng chứng confirm không có sự cố — vì "KOC có thể gây nguy hiểm nếu xử lý không OK trong trải nghiệm") + báo cáo review cuối tháng <strong>vòng xoay học hỏi</strong>: đánh điểm → kết quả → đối chiếu xem có như bộ đánh điểm không → rút bài.
+        </p>
+
+        <h4 style="margin-top:14px;margin-bottom:10px;color:var(--navy-900);font-size:14px">📅 Calendar timeline — mỗi KOC</h4>
+        <table>
+          <thead><tr><th>Mốc</th><th>D-day offset</th><th>Việc</th><th>Owner</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Score & chọn KOC</strong></td><td>D-14</td><td>Đánh điểm theo rubric (persona / engagement / fit demand) — ghi vào sheet KOC scoring</td><td>Thanh Hà + Chương</td></tr>
+            <tr><td><strong>Brief & ký kết</strong></td><td>D-10</td><td>Brief script + đề bài + thỏa thuận commission. KOC confirm bằng văn bản</td><td>Thanh Hà</td></tr>
+            <tr><td><strong>Takecare trước quay</strong></td><td>D-3</td><td>Nhắn tin xác nhận lịch + địa điểm + dụng cụ. Reminder 24h và 2h trước quay</td><td>Thanh Hà / staff</td></tr>
+            <tr><td><strong>Quay tại salon</strong></td><td>D-day</td><td>Đón tận nơi nếu cần, đảm bảo trải nghiệm 5 sao tại salon</td><td>Salon manager + stylist</td></tr>
+            <tr><td><strong>Takecare sau quay</strong></td><td>D+1</td><td>Cảm ơn + xin feedback + share link bài đăng khi up</td><td>Thanh Hà</td></tr>
+            <tr><td><strong>Theo dõi performance</strong></td><td>D+3, D+7, D+14</td><td>Đo metric video (3s view / 25% / CPA) → đối chiếu với điểm KOC</td><td>Chương + Huế</td></tr>
+            <tr><td><strong>Báo cáo cá nhân</strong></td><td>D+30</td><td>Gửi KOC kết quả + cảm ơn → giữ relationship cho lần sau</td><td>Thanh Hà</td></tr>
+          </tbody>
+        </table>
+
+        <h4 style="margin-top:18px;margin-bottom:10px;color:var(--navy-900);font-size:14px">✅ Checklist takecare — bằng chứng "không có sự cố"</h4>
+        <table>
+          <thead><tr><th>Checkpoint</th><th>Tin nhắn / hành động</th><th>Lưu trữ</th></tr></thead>
+          <tbody>
+            <tr><td>D-3 reminder</td><td>"Anh A ơi, em xác nhận thứ X em sẽ đón anh tại Y lúc Z. Anh cần dụng cụ gì thêm không ạ?"</td><td>Screenshot Zalo/Messenger lưu folder KOC</td></tr>
+            <tr><td>D-1 reminder cuối</td><td>"Em xác nhận lịch ngày mai. Anh có vướng mắc gì cần em chuẩn bị thêm không?"</td><td>Screenshot</td></tr>
+            <tr><td>D-day arrival</td><td>"Anh đến rồi nhé, em đón anh ở quầy lễ tân"</td><td>Check-in note</td></tr>
+            <tr><td>D-day post-shoot</td><td>"Cảm ơn anh đã hợp tác. Trải nghiệm hôm nay anh thấy thế nào ạ? Em ghi nhận để cải thiện"</td><td>Feedback log</td></tr>
+            <tr><td>D+1 follow-up</td><td>"Bài đã lên link X. Có gì anh cần em điều chỉnh không?"</td><td>Screenshot share link</td></tr>
+            <tr><td>D+30 closing</td><td>"Bài của anh đã đạt [metric]. Em cảm ơn anh, hẹn dịp sau ạ"</td><td>Screenshot kết quả</td></tr>
+          </tbody>
+        </table>
+
+        <h4 style="margin-top:18px;margin-bottom:10px;color:var(--navy-900);font-size:14px">🔄 Post-mortem cuối tháng — vòng xoay học hỏi (Oanh nhấn)</h4>
+        <table>
+          <thead><tr><th>Cột</th><th>Nội dung</th><th>Câu hỏi học</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Điểm chấm trước (D-14)</strong></td><td>Persona match X/10, engagement X/10, fit demand X/10, total X/30</td><td>—</td></tr>
+            <tr><td><strong>Kết quả thực (D+14)</strong></td><td>3s view / 25% / 50% / CPA / Tier (STAR/WIN/OK/CUT)</td><td>—</td></tr>
+            <tr><td><strong>Đối chiếu</strong></td><td>Điểm cao + kết quả tốt = ✅ rubric đúng • Điểm cao + kết quả tệ = ❌ rubric sai (sửa)</td><td>Bộ đánh điểm có chính xác không?</td></tr>
+            <tr><td><strong>Bài học</strong></td><td>3 KOC top + 3 KOC tệ → tìm pattern (persona / format / hook)</td><td>Lần sau chấm khác đi như thế nào?</td></tr>
+            <tr><td><strong>Cập nhật rubric</strong></td><td>Thêm/bớt criteria, đổi trọng số, đổi điểm pass</td><td>Rubric tháng sau khác chỗ nào?</td></tr>
+            <tr><td><strong>Sự cố nếu có</strong></td><td>Liệt kê từng sự cố + cách xử lý + có để lại bằng chứng takecare không</td><td>Có gì có thể "gây nguy hiểm" nếu không khéo?</td></tr>
+          </tbody>
+        </table>
+
+        <div class="note" style="margin-top:14px">
+          <strong>Tinh thần Oanh</strong>: KOC booking không phải transaction một lần, mà là <strong>vòng xoay đánh điểm → triển khai → đối chiếu → học → tinh chỉnh</strong>. Mỗi tháng rubric chấm KOC phải tốt hơn tháng trước. Mỗi sự cố phải có bằng chứng takecare lưu lại để bảo vệ team khi có rủi ro.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🎁</span> 5 kịch bản KOC "Escape Giờ Trưa" (reuse từ MD cũ)</h3>
+        <p style="color:var(--slate-500);margin-bottom:12px">
+          5 kịch bản này phục vụ main <strong>"Massage gội xả stress"</strong> (1 trong 5 ngón hiện hữu). KHÔNG phải concept rời, mà là chất liệu nuôi cluster Relax.
+        </p>
+        <div class="koc-script">
+          <span class="num-pill">KỊCH BẢN 1</span>
+          <h4>NGHỆ SĨ THOÁT HIỂM (POV)</h4>
+          <div class="hook">"Sếp vừa giao deadline lúc 11h30, và đây là cách tôi 'biến mất' 45 phút để sống sót qua buổi chiều..."</div>
+          <div class="meta"><strong>Angle</strong>: trốn deadline, nạp năng lượng nhanh • <strong>Key scene</strong>: rón rén rời văn phòng → nằm thư giãn 30Shine → quay lại tỉnh táo</div>
+        </div>
+        <div class="koc-script">
+          <span class="num-pill">KỊCH BẢN 2</span>
+          <h4>THỬ THÁCH 60 PHÚT</h4>
+          <div class="hook">"Cắt tóc + Gội đầu + Massage + Lấy ráy tai trong đúng 1 tiếng nghỉ trưa, liệu có kịp không?"</div>
+          <div class="meta"><strong>Angle</strong>: tốc độ + tiện lợi • <strong>Key scene</strong>: bấm giờ App → combo nhanh gọn → kịp giờ làm</div>
+        </div>
+        <div class="koc-script">
+          <span class="num-pill">KỊCH BẢN 3</span>
+          <h4>DỊCH VỤ GÂY NGHIỆN</h4>
+          <div class="hook">"Có một thứ còn gây nghiện hơn cả cafe đối với dân văn phòng..."</div>
+          <div class="meta"><strong>Angle</strong>: USP lấy ráy tai • <strong>Key scene</strong>: cận cảnh ASMR + biểu cảm thư giãn</div>
+        </div>
+        <div class="koc-script">
+          <span class="num-pill">KỊCH BẢN 4</span>
+          <h4>BÍ KÍP PITCHING</h4>
+          <div class="hook">"Chiều nay có buổi họp quan trọng với sếp lớn, nhưng nhìn gương mặt uể oải này xem..."</div>
+          <div class="meta"><strong>Angle</strong>: diện mạo lãnh đạo, tự tin • <strong>Key scene</strong>: stylist tư vấn kiểu Leader → lột xác sau combo</div>
+        </div>
+        <div class="koc-script">
+          <span class="num-pill">KỊCH BẢN 5</span>
+          <h4>VỢ THEO DÕI (HUMOR)</h4>
+          <div class="hook">"Dạo này thấy ông xã cứ đến 12h trưa là mất tích, tôi quyết định đi theo dõi và cái kết..."</div>
+          <div class="meta"><strong>Angle</strong>: hài hước, viral, đồng cảm • <strong>Key scene</strong>: vợ bắt gặp chồng đang ngủ khò khò khi massage</div>
+        </div>
+        <div class="note">
+          <strong>Brief KOC</strong>: ưu tiên ánh sáng tự nhiên + âm thanh ASMR tại salon để tăng tính chân thực.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">📦</span> Mục tiêu sản xuất content T5 (theo doc Mục Tiêu Sản Xuất MKT)</h3>
+        <p style="color:var(--slate-700);margin-bottom:12px">
+          Hiệu lực từ tuần 11/05/2026. Phân bổ số lượng video × nhân sự — chốt cùng Tùng (lịch air theo tuần ở section WorldCup + Always-on).
+        </p>
+        <table>
+          <thead><tr><th>Loại nội dung</th><th>Số lượng T5</th><th>Người phụ trách</th><th>Note</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Always-on (Pillar 1+2+3)</strong></td><td>~25 bài</td><td>Vân Hà</td><td>1 bài/ngày × ~25 ngày</td></tr>
+            <tr><td><strong>KOC clip gốc</strong></td><td>≥40 clip</td><td>Thanh Hà + Tùng</td><td>1 clip/KOC, target 40 KOC booking</td></tr>
+            <tr><td><strong>KOC video xào (biến thể)</strong></td><td>≥160 video</td><td>Chương + Khánh + Huế</td><td>4 biến thể/clip gốc (TikTok/FB Reels/Stories/Insta)</td></tr>
+            <tr><td><strong>Hoàng Sao đại sứ</strong></td><td>1 video gốc + 3 fan-club</td><td>Hoàng + Vân Hà</td><td>KHÔNG xào 8 clip cũ</td></tr>
+            <tr><td><strong>WC chuẩn bị (chặng 1: 05-20/5)</strong></td><td>20-30 nguyên liệu</td><td>Thanh Hà + Tùng + Hoàng</td><td>Decor, áo, người mẫu, kịch bản, template</td></tr>
+            <tr><td><strong>WC sản xuất (chặng 2: 21-31/5 phần T5)</strong></td><td>≥5 clip "cắt tóc theo sao"</td><td>Hoàng + Thanh Hà</td><td>5/20 cầu thủ trong T5, 15/20 còn lại trong T6</td></tr>
+            <tr><td><strong>WC template realtime</strong></td><td>20 kịch bản template</td><td><strong>Chương (em)</strong></td><td>Canva/AI để Hoàng tự thao tác đêm khuya</td></tr>
+            <tr><td><strong>Trẻ hóa content series (4 episode)</strong></td><td>4 video</td><td>Vân Hà + 3 KOC ký kết</td><td>Lock top-of-mind ngón thứ 6</td></tr>
+            <tr><td colspan="2"><strong>TỔNG video T5</strong></td><td colspan="2"><strong>~250+ video/asset</strong></td></tr>
+          </tbody>
+        </table>
+        <div class="note">
+          Bảng này tổng hợp theo doc <code>Mục Tiêu Sản Xuất MKT 30Shine T5_2026.docx</code>. Nếu doc gốc có phân bổ chi tiết hơn (image table chưa đọc được), cần Tùng update.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">⚖️</span> Ratio Media : Ads = 1 : 10</h3>
+        <div class="formula">
+          <div class="label">Quy tắc ngân sách</div>
+1 đồng booking content (KOC/stylist) = 10 đồng chi ads<br><br>
+1 video chất lượng → tiêu được <strong>10tr ads</strong><br>
+~90 video/tháng → cần <strong>≥40 KOC booking</strong> (T4 chỉ 20 → thiếu)<br>
+Action: tăng commission +20% — đề xuất Oanh duyệt
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 6. TRACKING ========== -->
+    <section id="tracking" class="section">
+      <header class="hero">
+        <h2>📊 Tracking & Đo lường</h2>
+        <div class="subtitle">Branding đo reach/social/share-of-mind — không đo CPA. Bộ khung STAR/WIN/CUT + 3s/25%/50%</div>
+      </header>
+
+      <div class="card">
+        <h3><span class="emoji">⭐</span> Bộ khung tier — FB + TikTok (4 tier, từ sheet Benchmark CPM-CPV)</h3>
+        <p style="color:var(--slate-700);margin-bottom:12px">
+          Quy trình test 2 phase: <strong>Phase A — Spend gate</strong> (video tiêu hết 1.6tr trong 3 ngày = PASS, không hết = DROP, không cứu) → <strong>Phase B — Tier theo CPM/CPV</strong> (chỉ chạy khi PASS phase A).
+        </p>
+        <h4 style="margin-top:14px;margin-bottom:10px;color:var(--navy-900);font-size:14px">📘 Benchmark FACEBOOK</h4>
+        <table>
+          <thead><tr><th>Tier</th><th>CPM (VND)</th><th>Action</th><th>Note</th></tr></thead>
+          <tbody>
+            <tr><td><span class="badge locked">⭐ STAR</span></td><td class="target-cell">≤ 9.000</td><td><strong>Scale mạnh</strong></td><td>Performance vượt benchmark — push budget</td></tr>
+            <tr><td><span class="badge testing">🏆 WIN</span></td><td>9.000 – 15.000</td><td>Scale có kiểm soát</td><td>Scale từng bước, theo dõi CPA</td></tr>
+            <tr><td><span class="badge warning">✅ OK</span></td><td>15.000 – 18.000</td><td>Giữ + tối ưu hook/offer</td><td>Borderline — tối ưu trước khi scale</td></tr>
+            <tr><td><span class="badge urgent">● CUT</span></td><td>&gt; 20.000</td><td><strong>Stop ngay</strong></td><td>Cost quá cao — kill, học bài học</td></tr>
+          </tbody>
+        </table>
+        <h4 style="margin-top:18px;margin-bottom:10px;color:var(--navy-900);font-size:14px">📕 Benchmark TIKTOK (yêu cầu AND tất cả 4 metric)</h4>
+        <table>
+          <thead><tr><th>Tier</th><th>Tỷ lệ xem 25%</th><th>CPM</th><th>CPV 100%</th><th>CPV 75%</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td><span class="badge locked">⭐ STAR</span></td><td class="target-cell">&gt; 6%</td><td class="target-cell">&lt; 15k</td><td class="target-cell">&lt; 800đ</td><td class="target-cell">&lt; 300đ</td><td><strong>Scale mạnh</strong></td></tr>
+            <tr><td><span class="badge testing">🏆 WIN</span></td><td>&gt; 5%</td><td>&lt; 15k</td><td>&lt; 1.500đ</td><td>&lt; 1.000đ</td><td>Scale có kiểm soát</td></tr>
+            <tr><td><span class="badge warning">✅ OK</span></td><td>&gt; 3%</td><td>&lt; 15k</td><td>&lt; 3.000đ</td><td>&lt; 1.000đ</td><td>Giữ + tối ưu hook/offer</td></tr>
+            <tr><td><span class="badge urgent">● CUT</span></td><td>&lt; 3%</td><td>&gt; 18k</td><td>&gt; 3.000đ</td><td>&gt; 2.000đ</td><td><strong>Stop ngay</strong></td></tr>
+          </tbody>
+        </table>
+        <div class="note">
+          <strong>4 ghi chú vận hành</strong>:<br>
+          1. Check tier sau khi PASS Phase A. Video DROP = kill ngay, không cần tier.<br>
+          2. TikTok yêu cầu <strong>AND</strong> tất cả 4 metric — chỉ 1 metric fail = tụt tier.<br>
+          3. STAR + WIN: scale với budget 2-5x, audience rộng hơn. Nếu CPA giữ STAR/WIN sau 5-7 ngày → continue scale.<br>
+          4. OK: tối ưu hook (re-cut opening, đổi thumbnail, đổi CTA) trước khi scale. Test variation với budget tương đương.<br>
+          5. CUT: stop ngay, ghi root cause (sai pain / sai hook / sai audience / wrong format) vào Decision Log.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🎬</span> Leading metrics — chỉ số nội dung</h3>
+        <table>
+          <thead><tr><th>Chỉ số</th><th>Baseline T4</th><th>Target T5</th><th>Ngưỡng pass</th><th>Ngưỡng warning</th><th>Ngưỡng drop</th></tr></thead>
+          <tbody>
+            <tr><td><strong>3s view rate</strong></td><td class="baseline-cell">7%</td><td class="target-cell">≥7.5%</td><td>≥7%</td><td>5-7%</td><td>&lt;5% × 3 video liên tiếp</td></tr>
+            <tr><td><strong>25% view rate</strong></td><td class="baseline-cell">—</td><td class="target-cell">track</td><td>≥2.5%</td><td>2-2.5%</td><td>&lt;2%</td></tr>
+            <tr><td><strong>50% view rate</strong></td><td class="baseline-cell">—</td><td class="target-cell">track</td><td>≥1%</td><td>0.8-1%</td><td>&lt;0.8%</td></tr>
+            <tr><td><strong>CTR (link click)</strong></td><td class="baseline-cell">—</td><td class="target-cell">track</td><td>≥1.5%</td><td>1-1.5%</td><td>&lt;1%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🎴</span> CRM F1 → F2 — MVP framework (chị Oanh chốt họp Plan T5)</h3>
+        <p style="color:var(--slate-700);margin-bottom:12px">
+          Mục tiêu T5: tìm <strong>1 loại thẻ "winner"</strong> có case study thực tế, sẵn sàng nhân rộng toàn hệ thống từ T6. Owner: Tùng. Em (Chương) support tính toán nếu được nhờ.
+        </p>
+        <div class="note" style="margin-bottom:14px">
+          <strong>Rule chị Oanh chốt</strong>: <strong>KHÔNG xem data cũ</strong> (6 tháng qua chỉ bán được thẻ 50k → data lỗi thời). Bắt đầu lại từ đầu bằng MVP — test nhanh, học nhanh.
+        </div>
+
+        <h4 style="margin-top:14px;margin-bottom:10px;color:var(--navy-900);font-size:14px">📋 3 chặng × 10 ngày — MVP timeline</h4>
+        <table>
+          <thead><tr><th>Chặng</th><th>10 ngày</th><th>Việc</th><th>Output</th><th>Owner</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Chặng 1 — SETUP</strong></td><td>~05/05 → 14/05</td><td>Chốt thẻ MVP (giá / hạn / dịch vụ) • Script bán cho stylist • Training salon test • POS/app config</td><td>2 thẻ MVP ready + 3-5 salon test</td><td>Tùng (lead) + Hải (CRM)</td></tr>
+            <tr><td><strong>Chặng 2 — KIỂM THỬ</strong></td><td>~15/05 → 24/05</td><td>Bán thử 2 thẻ tại salon test • Đo conversion F1→F2 mỗi 3 ngày • Audit lý do từ chối / chốt</td><td>Data: tỉ lệ chốt, AOV, thẻ nào win</td><td>Tùng + Hải + salon manager</td></tr>
+            <tr><td><strong>Chặng 3 — KẾT LUẬN</strong></td><td>~25/05 → 03/06</td><td>Chốt thẻ winner • Soạn case study • Plan nhân rộng T6 toàn hệ thống • Hand-off ops</td><td>Thẻ winner + roll-out plan T6</td><td>Tùng + Oanh duyệt</td></tr>
+          </tbody>
+        </table>
+
+        <h4 style="margin-top:18px;margin-bottom:10px;color:var(--navy-900);font-size:14px">🎴 2 thẻ MVP đề xuất (idea ban đầu — Tùng có thể adjust)</h4>
+        <table>
+          <thead><tr><th>Idea thẻ test (WC-themed)</th><th>Giá</th><th>Giá/lần</th><th>Hạn dùng</th><th>Phục vụ ngón nào</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Thẻ 200K — 2 lần Cắt + Gội</strong></td><td>200K</td><td>~100K</td><td>1 tháng</td><td>Cắt VP + Massage gội (giữ tần suất ngắn)</td></tr>
+            <tr><td><strong>Thẻ 290K — 3 lần Cắt + Gội</strong></td><td>290K</td><td>~97K</td><td><strong>2 tháng</strong></td><td>Cắt VP — gói cam kết quay lại trong 2 tháng (đúng window WC)</td></tr>
+          </tbody>
+        </table>
+
+        <h4 style="margin-top:18px;margin-bottom:10px;color:var(--navy-900);font-size:14px">📅 2 lịch quan trọng (Oanh nhấn)</h4>
+        <table>
+          <thead><tr><th>Mốc</th><th>Ngày</th><th>Quyết định</th></tr></thead>
+          <tbody>
+            <tr><td><strong>1. Chốt thẻ MVP</strong></td><td>~14/05/2026</td><td>2 thẻ + giá + hạn + dịch vụ + script bán → ready launch chặng 2</td></tr>
+            <tr><td><strong>2. Review giữa kỳ</strong></td><td><strong>Sau 7-10 ngày bán</strong> (~22-24/05)</td><td>Có dấu hiệu winner chưa? Pivot thẻ / pivot giá / pivot script — không chờ hết chặng 2 mới sửa</td></tr>
+          </tbody>
+        </table>
+
+        <h4 style="margin-top:18px;margin-bottom:10px;color:var(--navy-900);font-size:14px">🎯 Tiêu chí WIN MVP</h4>
+        <table>
+          <thead><tr><th>Chỉ số</th><th>Ngưỡng</th><th>Nếu đạt</th><th>Nếu không</th></tr></thead>
+          <tbody>
+            <tr><td>Tỉ lệ F1 mua thẻ</td><td>≥ 15% khách F1 chốt thẻ</td><td>Pass — vào chặng 3</td><td>Fail — pivot script hoặc giá</td></tr>
+            <tr><td>Quay lại lần 2 trong hạn</td><td>≥ 70% chủ thẻ quay lại đúng hạn</td><td>Thẻ thực sự convert F2</td><td>Hạn quá dài / nhu cầu chưa đủ</td></tr>
+            <tr><td>NPS sau lần 2</td><td>≥ 8/10</td><td>Sẵn sàng nhân rộng T6</td><td>Cần fix experience trước scale</td></tr>
+          </tbody>
+        </table>
+
+        <div class="note" style="margin-top:16px">
+          <strong>Branding role</strong> trong MVP: cung cấp <em>branded experience</em> để khách F1 thấy giá trị thẻ — content "đồng hành cùng mùa WC", testimonial F2 thực tế. KHÔNG đẩy ads thẻ trên FB/TikTok (làm conversion job, không phải branding job). Cross-promote ngầm: thẻ 290K hạn 2 tháng = 1 mùa WC → messaging "đăng ký gói = đồng hành 30Shine cả mùa giải".
+        </div>
+
+        <div class="note" style="margin-top:14px;background:linear-gradient(135deg,#FEF3C7 0%,#FFFBEB 100%);border-left-color:var(--amber-500)">
+          <strong>Áp tinh thần Oanh comment trong file (1).docx vào MVP F1→F2</strong>:<br>
+          • <strong>Vòng xoay học hỏi</strong> (giống KOC ops): chấm điểm thẻ trước (giá / hạn / fit khách) → bán thử → đối chiếu kết quả → chấm lại rubric. Thẻ winner không phải lúc chốt là xong, mà là sau khi rubric chấm thẻ ổn định.<br>
+          • <strong>Báo cáo review cuối chặng</strong>: mỗi 10 ngày phải có post-mortem riêng — không kéo dài đến cuối T5 mới review.<br>
+          • <strong>Bằng chứng takecare khách F1</strong>: lưu screenshot tin nhắn chăm sóc khách F1 sau khi mua thẻ — phòng tranh chấp nếu khách phàn nàn về thẻ.<br>
+          • <strong>Quản trị chiến lược, không nhét vào content</strong>: F1→F2 thẻ MVP là <em>sản phẩm/CRM</em>, branding chỉ cung cấp messaging hỗ trợ. KHÔNG biến thẻ thành "campaign content" để chạy ads riêng.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🧠</span> Share-of-mind tracking (Chương — Brand Intelligence)</h3>
+        <table>
+          <thead><tr><th>Source</th><th>Cadence</th><th>Mục đích</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Brand search "30Shine + [main]"</strong></td><td>Weekly</td><td>Đo top-of-mind theo từng main</td></tr>
+            <tr><td><strong>Share-of-voice social (mention)</strong></td><td>Weekly</td><td>30Shine vs đối thủ trong từng giỏ demand</td></tr>
+            <tr><td><strong>Pet 30Shine follower growth</strong></td><td>Weekly</td><td>Brand voice strength</td></tr>
+            <tr><td><strong>Hoàng Sao engagement</strong></td><td>Weekly</td><td>Đại sứ effectiveness</td></tr>
+            <tr><td><strong>Brand lift survey</strong></td><td>Quarterly</td><td>Top-of-mind chính thức (T7+)</td></tr>
+            <tr><td><strong>VOZ/Tinhte mention monitoring</strong></td><td>Weekly</td><td>Tiếng nói thật về 30Shine</td></tr>
+          </tbody>
+        </table>
+        <div class="note">
+          Setup baseline T5, đo hằng tuần. T7 review chính thức để chốt lock Trẻ hóa pass/fail.
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 7. RISK & BACKUP ========== -->
+    <section id="risk" class="section">
+      <header class="hero" style="background:linear-gradient(135deg, var(--navy-900) 0%, #B91C1C 50%, var(--rose-500) 100%)">
+        <h2>🛡️ Risk & Backup — Ngưỡng an toàn</h2>
+        <div class="subtitle">Drop bao nhiêu % thì worst case là gì + backup plan như nào</div>
+      </header>
+
+      <div class="card">
+        <h3><span class="emoji">📊</span> Bảng ngưỡng an toàn — branding T5</h3>
+        <table>
+          <thead><tr>
+            <th style="min-width:160px">Chỉ số</th>
+            <th>Severity</th>
+            <th>Ngưỡng cảnh báo</th>
+            <th>Tình huống xấu</th>
+            <th>Backup plan</th>
+            <th>Trigger</th>
+          </tr></thead>
+          <tbody>
+            <tr class="risk-row s2">
+              <td><strong>Trẻ hóa share-of-mind không tăng</strong></td>
+              <td><span class="severity s2">🚨 S2</span></td>
+              <td>Sau 3 tháng (T5-T7) flat hoặc -5% YoY</td>
+              <td>Lock fail → demand chưa thực sự pass → 6 ngón thực ra vẫn là 5 ngón</td>
+              <td>(1) Re-classify "pending re-test" — không tính ngón thứ 6<br>(2) Đào sâu sub-angle (trẻ hóa cho ai? sếp / chồng / FA?) → chia 2-3 demand con<br>(3) Hold branding 1 tháng, tập trung Performance trước<br>(4) Escalate Oanh + CEO</td>
+              <td>Brand survey T7</td>
+            </tr>
+            <tr class="risk-row s2">
+              <td><strong>WorldCup hết hot trước 19/7</strong></td>
+              <td><span class="severity s2">🚨 S2</span></td>
+              <td>Engagement giảm &gt;40% sau 11/6 (kết thúc vòng bảng VN)</td>
+              <td>Phase 3 đẩy bài flop, ngân sách đã chi 80% nguyên liệu</td>
+              <td>(1) Pivot focus sang highlight cầu thủ ngôi sao (Bellingham, Ronaldo) thay vì đội tuyển VN<br>(2) Tận dụng meme bóng đá có sẵn — không phụ thuộc kết quả VN<br>(3) Re-purpose nguyên liệu cho Asian Cup / European Cup<br>(4) Switch focus sang main "Massage gội xả stress" (ăn theo "thức đêm xem WC")</td>
+              <td>Tùng + Vân Hà weekly</td>
+            </tr>
+            <tr class="risk-row s2">
+              <td><strong>2 main yếu tiếp tục mất share</strong></td>
+              <td><span class="severity s2">🚨 S2</span></td>
+              <td>-15% YoY share-of-voice trong 30 ngày</td>
+              <td>Mất ngón → 5 ngón thành 4 → cần bồi đắp gấp ngón mới (ngược nguyên tắc)</td>
+              <td>(1) Branding sprint khẩn cấp 6 tuần (KOC fan-club + content series)<br>(2) Defensive ads — chạy keyword đối thủ trên FB/TikTok<br>(3) Refresh creative pool — bring stylist mới<br>(4) Reposition messaging — đào sâu USP<br>(5) Escalate Oanh + CEO</td>
+              <td>Chương weekly check share-of-voice</td>
+            </tr>
+            <tr class="risk-row s2">
+              <td><strong>Pet 30Shine không lên reach</strong></td>
+              <td><span class="severity s2">🚨 S2</span></td>
+              <td>Follower &lt;10k sau 3 tháng / engagement &lt;1%</td>
+              <td>Brand voice yếu, không có vũ khí top-of-mind — Oanh từng chê pet kém nick cá nhân chị</td>
+              <td>(1) Switch creator pet content<br>(2) Hợp tác KOC nano (50k-100k follower) làm "ambassador"<br>(3) Hoàng Sao tăng tần suất 1 video gốc → 2/tháng<br>(4) Cross-promote với cá nhân Oanh (230k) — đề xuất riêng</td>
+              <td>Chương weekly</td>
+            </tr>
+            <tr class="risk-row s2">
+              <td><strong>KOC booking không đủ</strong></td>
+              <td><span class="severity s2">🚨 S2</span></td>
+              <td>&lt;30 booking/tháng (target 40)</td>
+              <td>Thiếu chất liệu media → ads đói video → CPA tăng → dây chuyền</td>
+              <td>(1) Tăng commission +20% (đề xuất Oanh ngay)<br>(2) Mở pool stylist nội bộ — kích MMO theo plan Huế<br>(3) Mua UGC từ external (TikTok creator nano)<br>(4) Tăng tỷ lệ "xào lại" tạm thời 1 tháng</td>
+              <td>Vân Hà weekly check</td>
+            </tr>
+            <tr class="risk-row s2">
+              <td><strong>3s view rate sụp</strong></td>
+              <td><span class="severity s2">🚨 S2</span></td>
+              <td>&lt;5% trên 3 video liên tiếp (baseline 7%)</td>
+              <td>Hook tệ → ads burn tiền không có leading metric → CPA tệ theo (lag 5-7 ngày)</td>
+              <td>(1) PAUSE campaign sau 3 video fail<br>(2) Audit hook framework (3 giây đầu)<br>(3) Switch creator/format (ASMR → before-after)<br>(4) Drop content nếu fail 5 video liên tiếp</td>
+              <td>Huế Slack alert tự động</td>
+            </tr>
+            <tr class="risk-row s2">
+              <td><strong>Ngân sách branding vượt cap 0.8%</strong></td>
+              <td><span class="severity s2">🚨 S2</span></td>
+              <td>Chi &gt;220tr/tháng (cap 182tr × 1.2)</td>
+              <td>Cash burn không kiểm soát, không tuân thủ commit Oanh</td>
+              <td><strong>HARD CAP 182tr</strong>. Vượt = stop chi nhánh chưa critical (buffer + Hoàng Sao xuống xếp sau). Escalate Tùng + Oanh nếu cần thêm.</td>
+              <td>Tùng daily check</td>
+            </tr>
+            <tr class="risk-row s1">
+              <td><strong>Hoàng Sao không output đủ</strong></td>
+              <td><span class="severity s1">⚠️ S1</span></td>
+              <td>&lt;1 video gốc + &lt;3 bài fan-club/tháng</td>
+              <td>Tuyến đại sứ flop, không có brand voice nhân vật</td>
+              <td>(1) Backup KOC alternate (3 KOC nam ký kết riêng)<br>(2) Mua UGC stylist nội bộ<br>(3) Reduce ngân sách Hoàng Sao 10% → 5%, dồn sang Trẻ hóa</td>
+              <td>Vân Hà weekly</td>
+            </tr>
+            <tr class="risk-row s3">
+              <td><strong>Main bị đối thủ ăn (Coolmate / brand X)</strong></td>
+              <td><span class="severity s3">🆘 S3</span></td>
+              <td>-20% YoY share-of-mind trong 60 ngày</td>
+              <td>Mất thị phần thật sự, không cứu được trong tháng — thiệt hại doanh thu</td>
+              <td>(1) Escalate Oanh + CEO ngay<br>(2) Branding sprint khẩn 6 tuần + paid amplification<br>(3) Defensive content "tại sao 30Shine vẫn là số 1" — counter narrative<br>(4) Có thể cần re-launch main đó với positioning mới</td>
+              <td>Quarterly brand survey + weekly social listening</td>
+            </tr>
+            <tr class="risk-row s1">
+              <td><strong>STAR content quá ít</strong></td>
+              <td><span class="severity s1">⚠️ S1</span></td>
+              <td>&lt;2 STAR/tháng (target ≥3)</td>
+              <td>Content trung bình, không có "vũ khí" để paid amplification</td>
+              <td>(1) Audit hook + body của top 10 content tháng trước<br>(2) Train Vân Hà + Thanh Hà + Hoàng theo gold standard JTBD<br>(3) Brief KOC kỹ hơn — gửi reference cụ thể<br>(4) A/B test 3 angle/kịch bản trước khi commit ngân sách</td>
+              <td>Tùng monthly review</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="note">
+          <strong>3 cấp severity</strong> — S1 (cảnh báo, fix trong tuần) / S2 (nguy hiểm, fix trong 72h) / S3 (khẩn cấp, escalate ngay).
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🚨</span> Escalation matrix</h3>
+        <table>
+          <thead><tr><th>Cấp</th><th>Ngưỡng</th><th>Người escalate</th><th>SLA</th></tr></thead>
+          <tbody>
+            <tr><td><span class="severity s1">S1</span></td><td>Cảnh báo — chỉ số chệch 10-30%</td><td>Tùng (Brand Manager)</td><td>Fix trong tuần</td></tr>
+            <tr><td><span class="severity s2">S2</span></td><td>Nguy hiểm — chỉ số chệch &gt;30% / share-of-mind sụp / WC hết hot</td><td>Tùng + Vân Hà + Khánh/Huế</td><td>Fix trong 72h</td></tr>
+            <tr><td><span class="severity s3">S3</span></td><td>Khẩn cấp — main bị đối thủ ăn / thiệt hại doanh thu</td><td>Chị Oanh + CEO + Brand + Legal nếu cần</td><td>Họp ngay trong ngày</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🛟</span> Fallback master plan — kịch bản xấu nhất</h3>
+        <p style="color:var(--slate-700);margin-bottom:14px">
+          Nếu sau 3 tháng (T5-T6-T7) <strong>nhiều rủi ro xảy ra cùng lúc</strong> — Trẻ hóa lock fail, 2 main yếu mất share, WorldCup flop:
+        </p>
+        <ol style="margin-left:20px;color:var(--navy-700);line-height:1.9">
+          <li><strong>Freeze branding ngón thứ 6</strong> — dồn toàn bộ ngân sách bồi đắp 5 ngón hiện hữu, tập trung defensive.</li>
+          <li><strong>Branding sprint 6 tuần</strong> cho 2 main yếu nhất — KOC fan-club + content series + paid amplification.</li>
+          <li><strong>Re-define baseline 5 ngón</strong> — Tùng + Vân Hà + Chương rà lại, có thể merge / split / remove.</li>
+          <li><strong>Pivot framework</strong> nếu cần — escalate Oanh + CEO. Có thể không phải lúc test ngón thứ 6.</li>
+          <li><strong>Communication nội bộ</strong> — không giấu kết quả, công bố decision log + kho know-how cho team toàn marketing để học.</li>
+        </ol>
+      </div>
+    </section>
+
+    </main>
+  </div>
+  <script>
+function showSection(sid) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.sidebar nav a').forEach(a => a.classList.remove('active'));
+  const target = document.getElementById(sid);
+  const link = document.querySelector(`[data-target="${sid}"]`);
+  if (target) target.classList.add('active');
+  if (link) link.classList.add('active');
+  window.scrollTo(0, 0);
+  localStorage.setItem('branding-dash-tab', sid);
+}
+window.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('branding-dash-tab');
+  showSection(saved || 'overview');
+});
+</script>
+</body>
+</html>

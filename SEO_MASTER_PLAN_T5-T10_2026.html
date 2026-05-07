@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO Master Plan — 30Shine T5-T10/2026</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy-900: #0F172A;
+  --navy-800: #1E293B;
+  --navy-700: #334155;
+  --indigo-500: #6366F1;
+  --indigo-600: #4F46E5;
+  --teal-400: #2DD4BF;
+  --teal-500: #14B8A6;
+  --emerald-500: #10B981;
+  --emerald-100: #D1FAE5;
+  --amber-500: #F59E0B;
+  --amber-100: #FEF3C7;
+  --rose-500: #F43F5E;
+  --rose-100: #FFE4E6;
+  --slate-50: #F8FAFC;
+  --slate-100: #F1F5F9;
+  --slate-200: #E2E8F0;
+  --slate-400: #94A3B8;
+  --slate-500: #64748B;
+  --slate-600: #475569;
+  --shadow-sm: 0 1px 3px rgba(15,23,42,.06), 0 1px 2px rgba(15,23,42,.04);
+  --shadow-md: 0 4px 12px rgba(15,23,42,.08), 0 2px 4px rgba(15,23,42,.04);
+  --shadow-lg: 0 10px 30px rgba(15,23,42,.10), 0 4px 8px rgba(15,23,42,.04);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  background: linear-gradient(180deg, #EEF2FF 0%, #F8FAFC 30%, #F8FAFC 100%);
+  background-attachment: fixed;
+  color: var(--navy-800);
+  line-height: 1.6;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.app { display: flex; min-height: 100vh; }
+
+/* === Sidebar === */
+.sidebar {
+  width: 280px;
+  background: linear-gradient(180deg, var(--navy-900) 0%, #1E1B4B 100%);
+  color: #fff;
+  padding: 28px 0 0;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: 4px 0 24px rgba(15,23,42,.12);
+  z-index: 10;
+}
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); border-radius: 4px; }
+
+.sidebar h1 {
+  font-size: 18px;
+  font-weight: 800;
+  padding: 0 24px 20px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  letter-spacing: -.3px;
+}
+.sidebar h1 .badge {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--teal-400);
+  margin-top: 6px;
+  letter-spacing: .3px;
+}
+.sidebar nav { padding: 8px 0; }
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 24px;
+  color: rgba(255,255,255,.75);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  border-left: 3px solid transparent;
+  transition: all .25s cubic-bezier(.4,0,.2,1);
+  cursor: pointer;
+  position: relative;
+}
+.sidebar nav a:hover {
+  background: rgba(255,255,255,.05);
+  color: #fff;
+  padding-left: 28px;
+}
+.sidebar nav a.active {
+  background: linear-gradient(90deg, rgba(45,212,191,.15) 0%, transparent 100%);
+  border-left-color: var(--teal-400);
+  color: #fff;
+  font-weight: 600;
+}
+.sidebar nav a.active::after {
+  content: '';
+  position: absolute;
+  right: 16px;
+  width: 6px;
+  height: 6px;
+  background: var(--teal-400);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--teal-400);
+}
+.sidebar nav a .num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background: rgba(255,255,255,.08);
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255,255,255,.6);
+  flex-shrink: 0;
+}
+.sidebar nav a.active .num {
+  background: var(--teal-500);
+  color: #fff;
+}
+.sidebar .footer-info {
+  padding: 20px 24px;
+  font-size: 11px;
+  color: rgba(255,255,255,.4);
+  border-top: 1px solid rgba(255,255,255,.08);
+  margin-top: 24px;
+  line-height: 1.7;
+}
+
+/* === Main === */
+.main {
+  margin-left: 280px;
+  flex: 1;
+  padding: 36px 44px 60px;
+  max-width: calc(100vw - 280px);
+}
+
+.section { display: none; animation: slideUp .35s cubic-bezier(.4,0,.2,1); }
+.section.active { display: block; }
+@keyframes slideUp { from { opacity: 0; transform: translateY(8px);} to { opacity: 1; transform: none;} }
+
+/* Hero header */
+.hero {
+  background: linear-gradient(135deg, var(--navy-900) 0%, var(--indigo-600) 60%, var(--teal-500) 100%);
+  border-radius: 20px;
+  padding: 32px 36px;
+  margin-bottom: 28px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,.12) 0%, transparent 60%);
+}
+.hero h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  letter-spacing: -.5px;
+  position: relative;
+}
+.hero .subtitle {
+  font-size: 15px;
+  opacity: .85;
+  font-weight: 400;
+  position: relative;
+}
+
+/* Standard header (non-hero pages) */
+.main > .section > header:not(.hero) {
+  background: #fff;
+  padding: 22px 28px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 24px;
+  border-left: 4px solid var(--indigo-500);
+}
+.main > .section > header:not(.hero) h2 {
+  font-size: 22px;
+  color: var(--navy-900);
+  margin-bottom: 6px;
+  font-weight: 700;
+  letter-spacing: -.3px;
+}
+.main > .section > header:not(.hero) .subtitle {
+  color: var(--slate-500);
+  font-size: 13px;
+}
+
+/* === Cards === */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 22px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow .25s, transform .25s;
+}
+.card:hover { box-shadow: var(--shadow-md); }
+.card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy-900);
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--slate-100);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: -.2px;
+}
+.card h3 .emoji { font-size: 22px; }
+
+/* === KPI grid === */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+.kpi-card {
+  background: linear-gradient(135deg, #fff 0%, var(--slate-50) 100%);
+  border: 1px solid var(--slate-200);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  transition: all .3s cubic-bezier(.4,0,.2,1);
+}
+.kpi-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--indigo-500), var(--teal-500));
+  opacity: 0;
+  transition: opacity .3s;
+}
+.kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--indigo-500);
+}
+.kpi-card:hover::before { opacity: 1; }
+.kpi-card .label {
+  font-size: 11px;
+  color: var(--slate-500);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  font-weight: 600;
+}
+.kpi-card .value {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--navy-900);
+  letter-spacing: -.5px;
+  line-height: 1.2;
+}
+.kpi-card .delta {
+  font-size: 12px;
+  color: var(--emerald-500);
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+/* === Tables === */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 13px;
+  box-shadow: 0 0 0 1px var(--slate-200);
+}
+th {
+  background: var(--navy-900);
+  color: #fff;
+  text-align: left;
+  padding: 14px 14px;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  position: sticky;
+  top: 0;
+}
+td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--slate-100);
+  vertical-align: top;
+  transition: background .15s;
+}
+tr:hover td { background: var(--slate-50); }
+tr:last-child td { border-bottom: none; }
+
+.target-cell {
+  background: var(--emerald-100) !important;
+  color: #047857;
+  font-weight: 700;
+  text-align: center;
+}
+.baseline-cell {
+  color: var(--rose-500);
+  font-weight: 700;
+  text-align: center;
+}
+.section-header td {
+  background: linear-gradient(90deg, var(--indigo-600) 0%, var(--indigo-500) 100%) !important;
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: .3px;
+  padding: 14px !important;
+}
+.section-header td:hover { background: linear-gradient(90deg, var(--indigo-600) 0%, var(--indigo-500) 100%) !important; }
+
+/* === Badges === */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .2px;
+}
+.badge.urgent { background: var(--rose-100); color: #BE123C; }
+.badge.warning { background: var(--amber-100); color: #B45309; }
+.badge.deferred { background: var(--slate-100); color: var(--slate-600); }
+.badge.new { background: linear-gradient(135deg, var(--amber-100), #FEF9C3); color: #B45309; border: 1px solid var(--amber-500); }
+
+/* === Out of scope === */
+.out-of-scope {
+  background: linear-gradient(135deg, var(--rose-100) 0%, #FFF1F2 100%);
+  border-left: 4px solid var(--rose-500);
+}
+.out-of-scope ul { list-style: none; }
+.out-of-scope li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(244,63,94,.12);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.out-of-scope li:last-child { border-bottom: none; }
+
+/* === Suggestion (đề xuất bổ sung) === */
+.suggestion-row td {
+  background: linear-gradient(90deg, var(--amber-100) 0%, #FEFBEB 100%) !important;
+  border-left: 3px solid var(--amber-500);
+}
+
+/* === Slide cards === */
+.slide {
+  background: #fff;
+  border: 1px solid var(--slate-200);
+  border-left: 4px solid var(--indigo-500);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: all .25s;
+}
+.slide:hover {
+  transform: translateX(2px);
+  box-shadow: var(--shadow-md);
+  border-left-color: var(--teal-500);
+}
+.slide .slide-name {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--navy-900), var(--indigo-600));
+  color: #fff;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  letter-spacing: .3px;
+  box-shadow: 0 2px 8px rgba(99,102,241,.25);
+}
+.slide pre {
+  font-family: 'JetBrains Mono', "SF Mono", "Monaco", "Consolas", monospace;
+  font-size: 13px;
+  white-space: pre-wrap;
+  background: var(--slate-50);
+  padding: 16px 18px;
+  border-radius: 10px;
+  line-height: 1.7;
+  overflow-x: auto;
+  color: var(--navy-800);
+  border: 1px solid var(--slate-200);
+}
+
+/* === Schema sections === */
+.schema-section { margin-bottom: 24px; }
+.schema-section .section-title {
+  background: linear-gradient(135deg, var(--indigo-600), var(--indigo-500));
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 10px 10px 0 0;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: .3px;
+}
+.schema-section table { border-radius: 0 0 10px 10px; box-shadow: 0 0 0 1px var(--slate-200); }
+
+/* === Note === */
+.note {
+  background: linear-gradient(135deg, #F0FDFA 0%, #ECFEFF 100%);
+  border-left: 3px solid var(--teal-500);
+  padding: 14px 18px;
+  font-style: italic;
+  color: var(--slate-600);
+  font-size: 13px;
+  margin-top: 16px;
+  border-radius: 0 8px 8px 0;
+}
+
+/* === Timeline dots === */
+.timeline-dot {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  line-height: 22px;
+  border-radius: 50%;
+}
+.timeline-dot.active {
+  color: #fff;
+  background: var(--emerald-500);
+  font-size: 12px;
+  font-weight: 700;
+}
+.timeline-dot.inactive { color: var(--slate-400); font-size: 14px; }
+
+/* === Footer === */
+.dashboard-footer {
+  margin-top: 40px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  text-align: center;
+  color: var(--slate-500);
+  font-size: 12px;
+  border: 1px solid var(--slate-200);
+}
+.dashboard-footer a {
+  color: var(--indigo-600);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+  .sidebar { width: 240px; }
+  .main { margin-left: 240px; max-width: calc(100vw - 240px); padding: 24px; }
+  .hero { padding: 24px; }
+  .hero h2 { font-size: 22px; }
+}
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+  .main { margin-left: 0; max-width: 100%; padding: 16px; }
+  .kpi-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* === Print === */
+@media print {
+  body { background: #fff; }
+  .sidebar { display: none; }
+  .main { margin-left: 0; max-width: 100%; padding: 0; }
+  .section { display: block !important; page-break-after: always; }
+  .hero { background: var(--navy-900) !important; -webkit-print-color-adjust: exact; }
+  .card, table { box-shadow: none; border: 1px solid var(--slate-200); }
+}
+</style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h1>🏆 SEO Master Plan
+        <span class="badge">30Shine • T5-T10/2026</span>
+      </h1>
+      <nav><a data-target="overview" onclick="showSection('overview')"><span class="num">1</span>🎯 Tổng quan & KPI</a><a data-target="demand-map" onclick="showSection('demand-map')"><span class="num">2</span>🔗 SEO ↔ Demand Mapping</a><a data-target="wheel" onclick="showSection('wheel')"><span class="num">3</span>🎡 Hệ sinh thái (Wheel)</a><a data-target="checklist" onclick="showSection('checklist')"><span class="num">4</span>📋 Checklist công việc</a><a data-target="planning" onclick="showSection('planning')"><span class="num">5</span>📅 Hoạch định T5</a><a data-target="onpage" onclick="showSection('onpage')"><span class="num">6</span>✅ On-page checklist</a><a data-target="keywords" onclick="showSection('keywords')"><span class="num">7</span>🔑 Bộ từ khóa</a><a data-target="tracking" onclick="showSection('tracking')"><span class="num">8</span>📊 Tracking & Đo lường</a><a data-target="wf1" onclick="showSection('wf1')"><span class="num">9</span>🤖 WF1 Prompt Template</a><a data-target="entity" onclick="showSection('entity')"><span class="num">10</span>🛡️ Entity & Trust</a></nav>
+      <div style="padding:20px;font-size:11px;opacity:.6;border-top:1px solid rgba(255,255,255,.15);margin-top:20px">
+        Generated: 07/05/2026<br>
+        Owner: Chương (T-5)<br>
+        Plan: 6 tháng SEO on-page
+      </div>
+    </aside>
+    <main class="main">
+    <section id="overview" class="section">
+      <header class="hero">
+        <h2>🏆 SEO MASTER PLAN — 30SHINE</h2>
+        <div class="subtitle">T5/2026 → T10/2026 • 6 tháng • Team 1 người + Automation-first • 0đ chi phí</div>
+      </header>
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="label">Ráy tai an toàn</div>
+          <div class="value">#6 → #3</div>
+          <div class="delta">Quick win T5</div>
+        </div>
+        <div class="kpi-card">
+          <div class="label">Bài mới publish T5</div>
+          <div class="value">≥ 4 bài</div>
+          <div class="delta">1 bài/tuần (2 pillar + 2 supporting)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="label">Entity Score</div>
+          <div class="value">0 → ≥20</div>
+          <div class="delta">Schema deploy</div>
+        </div>
+        <div class="kpi-card">
+          <div class="label">Rankmath score/bài</div>
+          <div class="value">≥ 85/100</div>
+          <div class="delta">Per-article QC</div>
+        </div>
+        <div class="kpi-card">
+          <div class="label">PageSpeed mobile</div>
+          <div class="value">≥ 75</div>
+          <div class="delta">WebP + cache</div>
+        </div>
+        <div class="kpi-card">
+          <div class="label">Organic clicks</div>
+          <div class="value">+20% T6</div>
+          <div class="delta">vs T4 baseline</div>
+        </div></div>
+      <div class="card">
+        <h3><span class="emoji">🔑</span> Thông tin đăng nhập & tài khoản</h3>
+        
+    <table>
+      <thead><tr><th>Tài khoản / Tool</th><th>Link / API key</th><th>Note</th></tr></thead>
+      <tbody><tr><td><strong>Website (WordPress)</strong></td><td>https://30shine.com/blog</td><td>Có sẵn</td></tr><tr><td><strong>Google Analytics 4</strong></td><td>[NEEDS_INPUT]</td><td>Có sẵn</td></tr><tr><td><strong>Google Search Console</strong></td><td>[NEEDS_INPUT]</td><td>Cần verify domain</td></tr><tr><td><strong>Google Tag Manager</strong></td><td>[NEEDS_INPUT]</td><td>Có sẵn</td></tr><tr><td><strong>Ahrefs / SEMrush</strong></td><td>[NEEDS_INPUT]</td><td>Option khi cần</td></tr><tr><td><strong>N8N Automation</strong></td><td>[NEEDS_INPUT]</td><td>Self-host</td></tr><tr><td><strong>Notion (Content Review)</strong></td><td>[NEEDS_INPUT]</td><td>✅ Có sẵn</td></tr><tr><td><strong>Claude API (Anthropic)</strong></td><td>[NEEDS_INPUT]</td><td>✅ Có sẵn</td></tr><tr><td><strong>Gemini API</strong></td><td>[NEEDS_INPUT]</td><td>✅ Có sẵn</td></tr></tbody>
+    </table>
+      </div>
+      <div class="card">
+        <h3><span class="emoji">🎯</span> KPI tổng thể — Mục tiêu 6 tháng</h3>
+        
+    <table>
+      <thead><tr>
+        <th>Chỉ số</th><th>Ghi chú</th><th>Baseline (W16/T4)</th>
+        <th>T5/2026</th><th>T6/2026</th><th>T7/2026</th><th>T8/2026</th><th>T9/2026</th><th>T10/2026</th>
+      </tr></thead>
+      <tbody><tr><td>'Ráy tai an toàn' rank</td><td>Quick win on-page fix</td><td class="baseline-cell">#6</td><td class="target-cell">#3</td><td class="target-cell">#2</td><td class="target-cell">Top 3</td><td class="target-cell">Top 3</td><td class="target-cell">Top 3</td><td class="target-cell">#1 stretch</td></tr><tr><td>'Kiểu tóc nam văn phòng' rank</td><td>Pillar 2 vs Coolmate</td><td class="baseline-cell">—</td><td class="target-cell">—</td><td class="target-cell">Top 50</td><td class="target-cell">Top 20</td><td class="target-cell">Top 10</td><td class="target-cell">Top 5</td><td class="target-cell">Top 3</td></tr><tr><td>'45 phút escape nam công sở' rank</td><td>Pillar 1 informational</td><td class="baseline-cell">—</td><td class="target-cell">—</td><td class="target-cell">Top 100</td><td class="target-cell">Top 50</td><td class="target-cell">Top 20</td><td class="target-cell">Top 10</td><td class="target-cell">Top 5</td></tr><tr><td>Số bài mới publish (cumulative)</td><td>1 bài/tuần = 4/tháng (2 pillar + 2 supporting)</td><td class="baseline-cell">0</td><td class="target-cell">≥ 4</td><td class="target-cell">≥ 8</td><td class="target-cell">≥ 12</td><td class="target-cell">≥ 16</td><td class="target-cell">≥ 20</td><td class="target-cell">≥ 24</td></tr><tr><td>  • Pillar dài (≥1500 từ)</td><td>2/tháng — keyword chính primary</td><td class="baseline-cell">0</td><td class="target-cell">≥ 2</td><td class="target-cell">≥ 4</td><td class="target-cell">≥ 6</td><td class="target-cell">≥ 8</td><td class="target-cell">≥ 10</td><td class="target-cell">≥ 12</td></tr><tr><td>  • Supporting (800-1000 từ)</td><td>2/tháng — LSI + long-tail, link về pillar</td><td class="baseline-cell">0</td><td class="target-cell">≥ 2</td><td class="target-cell">≥ 4</td><td class="target-cell">≥ 6</td><td class="target-cell">≥ 8</td><td class="target-cell">≥ 10</td><td class="target-cell">≥ 12</td></tr><tr><td>Entity Score homepage</td><td>JSON-LD deploy</td><td class="baseline-cell">0</td><td class="target-cell">≥ 20</td><td class="target-cell">≥ 35</td><td class="target-cell">≥ 50</td><td class="target-cell">≥ 60</td><td class="target-cell">≥ 70</td><td class="target-cell">≥ 75</td></tr><tr><td>Organic clicks (Search Console)</td><td>Tổng click blog vs T4</td><td class="baseline-cell">—</td><td class="target-cell">—</td><td class="target-cell">+20%</td><td class="target-cell">+40%</td><td class="target-cell">+70%</td><td class="target-cell">+100%</td><td class="target-cell">+130%</td></tr><tr><td>PageSpeed mobile score</td><td>WebP + cache optimize</td><td class="baseline-cell">—</td><td class="target-cell">≥ 75</td><td class="target-cell">≥ 80</td><td class="target-cell">≥ 85</td><td class="target-cell">≥ 85</td><td class="target-cell">≥ 85</td><td class="target-cell">≥ 90</td></tr><tr><td>Rankmath score TB/bài</td><td>Per-article on-page</td><td class="baseline-cell">—</td><td class="target-cell">≥ 85</td><td class="target-cell">≥ 90</td><td class="target-cell">≥ 90</td><td class="target-cell">≥ 90</td><td class="target-cell">≥ 90</td><td class="target-cell">≥ 90</td></tr><tr class="suggestion-row"><td>Indexed pages 🆕</td><td>Đề xuất bổ sung</td><td class="baseline-cell">—</td><td class="target-cell">Track</td><td class="target-cell">+5</td><td class="target-cell">+10</td><td class="target-cell">+15</td><td class="target-cell">+20</td><td class="target-cell">+25</td></tr><tr class="suggestion-row"><td>AI Overview presence (5 kw) 🆕</td><td>Đề xuất bổ sung</td><td class="baseline-cell">0/5</td><td class="target-cell">0/5</td><td class="target-cell">1/5</td><td class="target-cell">2/5</td><td class="target-cell">3/5</td><td class="target-cell">3/5</td><td class="target-cell">4/5</td></tr></tbody>
+    </table>
+      </div>
+      
+    <div class="card out-of-scope">
+      <h3><span class="emoji">⛔</span> OUT OF SCOPE T5 — DEFER / ESCALATE</h3>
+      <ul><li><strong>Backlink outreach</strong> — Defer T6 — focus on-page trước <span class='badge deferred'>T6+</span></li><li><strong>GMB manual (58 cơ sở)</strong> — Escalate → Salon Manager + Ops Lead <span class='badge deferred'>T6+</span></li><li><strong>PR báo correction (4 bài nói xấu)</strong> — Escalate → Brand Manager + Legal <span class='badge deferred'>T7+</span></li><li><strong>Guest post LinkedIn / Glints</strong> — Escalate → CEO / Head of Style <span class='badge deferred'>T6+</span></li><li><strong>Wikipedia article 30Shine</strong> — Escalate → Brand Manager (notability) <span class='badge deferred'>T7+</span></li><li><strong>Pillar Insecurity (hói/lão hoá)</strong> — Defer T7 — sau Relax cluster stable <span class='badge deferred'>T7+</span></li></ul>
+    </div>
+    </section>
+    <section id="demand-map" class="section">
+      <header class="hero" style="background:linear-gradient(135deg, var(--navy-900) 0%, var(--emerald-500) 60%, var(--teal-400) 100%)">
+        <h2>🔗 SEO ↔ Demand Mapping</h2>
+        <div class="subtitle">SEO không chạy tách rời — mỗi cluster phục vụ 1 ngón demand. 24 bài blog T5-T10 = bồi đắp 6 ngón.</div>
+      </header>
+
+      <div class="card">
+        <h3><span class="emoji">🧠</span> Logic alignment (chị Oanh chốt họp Plan T5)</h3>
+        <p style="color:var(--slate-700);margin-bottom:12px">
+          SEO web là <strong>1 trong các kênh branding lock top-of-mind</strong> cho từng giỏ demand. Khi nam search "kiểu tóc nam văn phòng" trên Google → 30Shine top 1 = top-of-mind kênh search cho ngón "Cắt VP". Tương tự mỗi cluster SEO = 1 ngón demand cụ thể.
+        </p>
+        <div class="note">
+          Nguyên tắc: <strong>không viết blog cho keyword không có demand bucket tương ứng</strong>. Nếu keyword không phục vụ ngón nào trong 6 ngón → defer hoặc drop. Tránh chạy SEO theo trend rời rạc như cũ.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🎯</span> Mapping 6 ngón demand → SEO cluster → Blog topic</h3>
+        <table>
+          <thead><tr>
+            <th>#</th><th>Ngón demand</th><th>Status</th><th>SEO Cluster</th><th>Keywords chính</th><th>Blog topic T5-T10</th><th>Owner</th>
+          </tr></thead>
+          <tbody>
+            <tr><td>1</td><td><strong>👔 Cắt tóc văn phòng</strong></td><td><span class="badge locked">Locked</span></td><td>Transition / Career</td><td>kiểu tóc nam văn phòng • kiểu tóc nam mùa hè 2026</td><td>"Kiểu tóc nam văn phòng 2026" (pillar) • "Kiểu tóc theo dáng mặt cho dân văn phòng" (supporting)</td><td>Chương + Vân Hà</td></tr>
+            <tr><td>2</td><td><strong>👂 Lấy ráy tai (USP)</strong></td><td><span class="badge locked">USP</span></td><td>Ráy tai (USP)</td><td>ráy tai an toàn • lấy ráy tai có an toàn không • cách lấy ráy tai đúng cách</td><td>"Lấy ráy tai an toàn" (pillar #6→#3) • "Khác biệt ráy tai 30Shine vs spa" (supporting) • "Tần suất lấy ráy tai" (long-tail)</td><td>Chương + Vân Hà</td></tr>
+            <tr><td>3</td><td><strong>🎬 KOC look</strong></td><td><span class="badge locked">Locked</span></td><td>KOC / Trend (🆕 cần thêm)</td><td>kiểu tóc giống [KOC] • cách cắt tóc giống idol K-pop</td><td>"Kiểu tóc nam K-pop 2026" (supporting) • "Cách yêu cầu stylist cắt giống KOC" (long-tail)</td><td>Chương + Thanh Hà</td></tr>
+            <tr><td>4</td><td><strong>💆 Massage gội xả stress</strong></td><td><span class="badge locked">Cluster Relax</span></td><td>Relax / Escape</td><td>45 phút escape nam công sở • gội đầu dưỡng sinh • massage đầu vai gáy</td><td>"45 phút escape giờ trưa cho nam công sở" (pillar) • "Massage đầu có lợi gì" (supporting) • "Escape ngắn cho dân văn phòng HN" (long-tail)</td><td>Chương + Vân Hà</td></tr>
+            <tr><td>5</td><td><strong>✨ TMXD (combo cao cấp)</strong></td><td><span class="badge locked">Locked</span></td><td>Premium / Combo (🆕 cần thêm)</td><td>chăm sóc tóc nam toàn diện • combo cao cấp 30shine</td><td>"TMXD 30Shine khác gì" (supporting) • "Chăm sóc tóc nam combo cao cấp" (long-tail)</td><td>Chương + Vân Hà</td></tr>
+            <tr><td>6</td><td><strong>🧬 Trẻ hóa / Hack tuổi 🆕</strong></td><td><span class="badge testing">Just passed — cần lock SEO</span></td><td><strong>Trẻ hóa (🆕 cần thêm pillar mới T5)</strong></td><td>cách trẻ hóa nam 35-45 • kiểu tóc che bạc • hack tuổi với tóc</td><td><strong>"Hack 7 tuổi với 1 lần cắt tóc — nam 35-45" (pillar mới T5)</strong> • "Kiểu tóc che bạc cho nam trung niên" (supporting) • "Trẻ hóa nam giới qua diện mạo" (long-tail)</td><td>Chương + Vân Hà</td></tr>
+            <tr class="section-header"><td colspan="7">SEO HỖ TRỢ — không gắn ngón cụ thể</td></tr>
+            <tr><td>L</td><td>Local search (cross-cutting)</td><td>—</td><td>Local HN / Local TP</td><td>cắt tóc nam hà nội • salon tóc nam gần đây</td><td>Local landing page (theo cluster Local Hà Nội)</td><td>Chương</td></tr>
+            <tr><td>B</td><td>Brand SERP (defensive)</td><td>—</td><td>Brand / YMYL</td><td>30shine có tốt không • review dịch vụ 30shine</td><td>Counter narrative — phòng thủ brand SERP khi có 4 bài nói xấu</td><td>Chương + Brand Manager</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">📐</span> Quy tắc 24 bài blog (T5-T10) phân bổ theo ngón</h3>
+        <table>
+          <thead><tr><th>Ngón demand</th><th>Trạng thái branding</th><th>% blog</th><th>Số bài 6 tháng</th><th>Logic phân bổ</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Trẻ hóa (mới)</strong></td><td><span class="badge testing">Bồi đắp top-of-mind</span></td><td class="target-cell">25%</td><td class="target-cell">6 bài</td><td>Cao — vì cần lock kênh search ngay khi demand vừa pass</td></tr>
+            <tr><td><strong>Lấy ráy tai (USP)</strong></td><td><span class="badge locked">USP — bảo vệ #1</span></td><td class="target-cell">25%</td><td class="target-cell">6 bài</td><td>Cao — keyword đã rank #6 → top 3, cần củng cố cluster</td></tr>
+            <tr><td><strong>Cắt tóc văn phòng</strong></td><td><span class="badge locked">Stable</span></td><td>17%</td><td>4 bài</td><td>TB — tệp lớn, cần kiên trì lên rank dần</td></tr>
+            <tr><td><strong>Massage gội xả stress</strong></td><td><span class="badge locked">Cluster Relax</span></td><td>17%</td><td>4 bài</td><td>TB — synergy với WC chất liệu (T6-T7)</td></tr>
+            <tr><td><strong>KOC look</strong></td><td><span class="badge locked">Scaling</span></td><td>8%</td><td>2 bài</td><td>Thấp — KOC đã có brand voice qua creator, SEO bổ trợ</td></tr>
+            <tr><td><strong>TMXD (combo cao cấp)</strong></td><td><span class="badge locked">Combo</span></td><td>8%</td><td>2 bài</td><td>Thấp — niche, ít search volume</td></tr>
+            <tr><td colspan="2"><strong>TỔNG</strong></td><td><strong>100%</strong></td><td><strong>24 bài</strong></td><td>≈ 1 bài/tuần × 24 tuần</td></tr>
+          </tbody>
+        </table>
+        <div class="note">
+          <strong>Phân bổ này khác bản cũ</strong>: trước SEO chạy theo 14 keyword research mà không cân nhắc demand priority. Giờ <strong>Trẻ hóa được +25%</strong> vì là ngón mới cần lock branding gấp; <strong>Local + Brand SERP</strong> tách riêng (defensive, không tính trong 24 bài).
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🔄</span> Cross-link với plan khác</h3>
+        <table>
+          <thead><tr><th>Plan</th><th>Liên kết với SEO ở đâu</th><th>File</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Demand Master Plan</strong></td><td>Mỗi ngón demand → cluster SEO tương ứng. Khi demand pass test → SEO tự động kích hoạt cluster cho ngón đó (ví dụ: Trẻ hóa pass → mở pillar "Hack tuổi 30Shine")</td><td><code>DEMAND_MASTER_PLAN_T5-T10_2026.html</code></td></tr>
+            <tr><td><strong>Master Branding Plan</strong></td><td>SEO = 1 trong 4 trụ branding cho Trẻ hóa (signature visual + KOC fan-club + content series + <strong>SEO cluster</strong>). Branding spend → SEO content KPI tăng</td><td><code>MASTER_BRANDING_PLAN_T5_2026.html</code></td></tr>
+            <tr><td><strong>Plan Test Demands</strong></td><td>Demand đang test → SEO chưa làm pillar cho đến khi pass. Pass = unlock SEO cluster ngân sách</td><td><code>PLAN_TEST_DEMANDS_T5_2026_v3-DE-XUAT.xlsx</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="wheel" class="section">
+      <header class="hero">
+        <h2>🎡 Hệ sinh thái SEO 30Shine</h2>
+        <div class="subtitle">Tổng quan 1 ảnh — 4 layers Foundation → Content → Automation → Trust + 4 callouts</div>
+      </header>
+      <div class="card" style="background:linear-gradient(180deg,#FFF7ED 0%,#FEF3C7 50%,#FFF7ED 100%);padding:20px">
+        <svg viewBox="0 0 1280 1080" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif" style="max-width:100%;height:auto">
+<text x="640" y="50" text-anchor="middle" font-size="32" font-weight="900" fill="#0F172A" letter-spacing="-.5">HỆ SINH THÁI SEO — 30Shine</text>
+<text x="640" y="80" text-anchor="middle" font-size="14" fill="#475569">Tổng quan kế hoạch toàn diện T5/2026 → T10/2026</text>
+<path d="M 640.00 130.00 A 410 410 0 0 1 995.07 335.00 L 925.79 375.00 A 330 330 0 0 0 640.00 210.00 Z" fill="#FEF3C7" stroke="#fff" stroke-width="2"/>
+<g transform="translate(825.0,219.6)"><text text-anchor="middle" font-size="11" font-weight="700" fill="#0F172A" y="-6">Author Bio</text><text text-anchor="middle" font-size="9" fill="#475569" y="8">Stylist profile</text></g>
+<path d="M 995.07 335.00 A 410 410 0 0 1 995.07 745.00 L 925.79 705.00 A 330 330 0 0 0 925.79 375.00 Z" fill="#FEF3C7" stroke="#fff" stroke-width="2"/>
+<g transform="translate(1010.0,540.0)"><text text-anchor="middle" font-size="11" font-weight="700" fill="#0F172A" y="-6">Expert quotes</text><text text-anchor="middle" font-size="9" fill="#475569" y="8">Per bài</text></g>
+<path d="M 995.07 745.00 A 410 410 0 0 1 640.00 950.00 L 640.00 870.00 A 330 330 0 0 0 925.79 705.00 Z" fill="#FEF3C7" stroke="#fff" stroke-width="2"/>
+<g transform="translate(825.0,860.4)"><text text-anchor="middle" font-size="11" font-weight="700" fill="#0F172A" y="-6">Trust links</text><text text-anchor="middle" font-size="9" fill="#475569" y="8">vinmec / hellobacsi</text></g>
+<path d="M 640.00 950.00 A 410 410 0 0 1 284.93 745.00 L 354.21 705.00 A 330 330 0 0 0 640.00 870.00 Z" fill="#FEF3C7" stroke="#fff" stroke-width="2"/>
+<g transform="translate(455.0,860.4)"><text text-anchor="middle" font-size="11" font-weight="700" fill="#0F172A" y="-6">Internal links</text><text text-anchor="middle" font-size="9" fill="#475569" y="8">≥3 link/bài</text></g>
+<path d="M 284.93 745.00 A 410 410 0 0 1 284.93 335.00 L 354.21 375.00 A 330 330 0 0 0 354.21 705.00 Z" fill="#FEF3C7" stroke="#fff" stroke-width="2"/>
+<g transform="translate(270.0,540.0)"><text text-anchor="middle" font-size="11" font-weight="700" fill="#0F172A" y="-6">Breadcrumb</text><text text-anchor="middle" font-size="9" fill="#475569" y="8">Hierarchy nav</text></g>
+<path d="M 284.93 335.00 A 410 410 0 0 1 640.00 130.00 L 640.00 210.00 A 330 330 0 0 0 354.21 375.00 Z" fill="#FEF3C7" stroke="#fff" stroke-width="2"/>
+<g transform="translate(455.0,219.6)"><text text-anchor="middle" font-size="11" font-weight="700" fill="#0F172A" y="-6">Service schema</text><text text-anchor="middle" font-size="9" fill="#475569" y="8">Per dịch vụ</text></g>
+<path d="M 640.00 210.00 A 330 330 0 0 1 970.00 540.00 L 890.00 540.00 A 250 250 0 0 0 640.00 290.00 Z" fill="#FB923C" stroke="#fff" stroke-width="2"/>
+<g transform="translate(845.1,334.9)"><text text-anchor="middle" font-size="11" font-weight="700" fill="#0F172A" y="-6">WF1 — AI Draft</text><text text-anchor="middle" font-size="9" fill="#475569" y="8">Claude API + N8N</text></g>
+<path d="M 970.00 540.00 A 330 330 0 0 1 640.00 870.00 L 640.00 790.00 A 250 250 0 0 0 890.00 540.00 Z" fill="#FB923C" stroke="#fff" stroke-width="2"/>
+<g transform="translate(845.1,745.1)"><text text-anchor="middle" font-size="11" font-weight="700" fill="#0F172A" y="-6">WF2 — Rank Tracker</text><text text-anchor="middle" font-size="9" fill="#475569" y="8">Search Console weekly</text></g>
+<path d="M 640.00 870.00 A 330 330 0 0 1 310.00 540.00 L 390.00 540.00 A 250 250 0 0 0 640.00 790.00 Z" fill="#FB923C" stroke="#fff" stroke-width="2"/>
+<g transform="translate(434.9,745.1)"><text text-anchor="middle" font-size="11" font-weight="700" fill="#0F172A" y="-6">WF3 — UTM Builder</text><text text-anchor="middle" font-size="9" fill="#475569" y="8">Auto-tag links</text></g>
+<path d="M 310.00 540.00 A 330 330 0 0 1 640.00 210.00 L 640.00 290.00 A 250 250 0 0 0 390.00 540.00 Z" fill="#FB923C" stroke="#fff" stroke-width="2"/>
+<g transform="translate(434.9,334.9)"><text text-anchor="middle" font-size="11" font-weight="700" fill="#0F172A" y="-6">WF4 — Notion Review</text><text text-anchor="middle" font-size="9" fill="#475569" y="8">Content QC queue</text></g>
+<path d="M 640.00 290.00 A 250 250 0 0 1 856.51 415.00 L 787.22 455.00 A 170 170 0 0 0 640.00 370.00 Z" fill="#FED7AA" stroke="#fff" stroke-width="2"/>
+<g transform="translate(745.0,358.1)"><text text-anchor="middle" font-size="11" font-weight="700" fill="#0F172A" y="-6">Pillar dài</text><text text-anchor="middle" font-size="9" fill="#475569" y="8">≥1500 từ — 2/tháng</text></g>
+<path d="M 856.51 415.00 A 250 250 0 0 1 856.51 665.00 L 787.22 625.00 A 170 170 0 0 0 787.22 455.00 Z" fill="#FED7AA" stroke="#fff" stroke-width="2"/>
+<g transform="translate(850.0,540.0)"><text text-anchor="middle" font-size="11" font-weight="700" fill="#0F172A" y="-6">Supporting</text><text text-anchor="middle" font-size="9" fill="#475569" y="8">800-1000 từ — 2/tháng</text></g>
+<path d="M 856.51 665.00 A 250 250 0 0 1 640.00 790.00 L 640.00 710.00 A 170 170 0 0 0 787.22 625.00 Z" fill="#FED7AA" stroke="#fff" stroke-width="2"/>
+<g transform="translate(745.0,721.9)"><text text-anchor="middle" font-size="11" font-weight="700" fill="#0F172A" y="-6">Cluster Ráy tai</text><text text-anchor="middle" font-size="9" fill="#475569" y="8">USP keyword</text></g>
+<path d="M 640.00 790.00 A 250 250 0 0 1 423.49 665.00 L 492.78 625.00 A 170 170 0 0 0 640.00 710.00 Z" fill="#FED7AA" stroke="#fff" stroke-width="2"/>
+<g transform="translate(535.0,721.9)"><text text-anchor="middle" font-size="11" font-weight="700" fill="#0F172A" y="-6">Cluster Relax</text><text text-anchor="middle" font-size="9" fill="#475569" y="8">Escape giờ trưa</text></g>
+<path d="M 423.49 665.00 A 250 250 0 0 1 423.49 415.00 L 492.78 455.00 A 170 170 0 0 0 492.78 625.00 Z" fill="#FED7AA" stroke="#fff" stroke-width="2"/>
+<g transform="translate(430.0,540.0)"><text text-anchor="middle" font-size="11" font-weight="700" fill="#0F172A" y="-6">Cluster Transition</text><text text-anchor="middle" font-size="9" fill="#475569" y="8">Counter Coolmate</text></g>
+<path d="M 423.49 415.00 A 250 250 0 0 1 640.00 290.00 L 640.00 370.00 A 170 170 0 0 0 492.78 455.00 Z" fill="#FED7AA" stroke="#fff" stroke-width="2"/>
+<g transform="translate(535.0,358.1)"><text text-anchor="middle" font-size="11" font-weight="700" fill="#0F172A" y="-6">Quick Win</text><text text-anchor="middle" font-size="9" fill="#475569" y="8">#6 → top 3</text></g>
+<path d="M 640.00 370.00 A 170 170 0 0 1 810.00 540.00 L 730.00 540.00 A 90 90 0 0 0 640.00 450.00 Z" fill="#FDE68A" stroke="#fff" stroke-width="2"/>
+<g transform="translate(731.9,448.1)"><text text-anchor="middle" font-size="11" font-weight="700" fill="#0F172A" y="-6">Schema JSON-LD</text><text text-anchor="middle" font-size="9" fill="#475569" y="8">Org / WebSite / FAQ</text></g>
+<path d="M 810.00 540.00 A 170 170 0 0 1 640.00 710.00 L 640.00 630.00 A 90 90 0 0 0 730.00 540.00 Z" fill="#FDE68A" stroke="#fff" stroke-width="2"/>
+<g transform="translate(731.9,631.9)"><text text-anchor="middle" font-size="11" font-weight="700" fill="#0F172A" y="-6">On-page 17 items</text><text text-anchor="middle" font-size="9" fill="#475569" y="8">Title / Meta / H1 / Schema</text></g>
+<path d="M 640.00 710.00 A 170 170 0 0 1 470.00 540.00 L 550.00 540.00 A 90 90 0 0 0 640.00 630.00 Z" fill="#FDE68A" stroke="#fff" stroke-width="2"/>
+<g transform="translate(548.1,631.9)"><text text-anchor="middle" font-size="11" font-weight="700" fill="#0F172A" y="-6">Site Architecture</text><text text-anchor="middle" font-size="9" fill="#475569" y="8">Pillar → Cluster Silo</text></g>
+<path d="M 470.00 540.00 A 170 170 0 0 1 640.00 370.00 L 640.00 450.00 A 90 90 0 0 0 550.00 540.00 Z" fill="#FDE68A" stroke="#fff" stroke-width="2"/>
+<g transform="translate(548.1,448.1)"><text text-anchor="middle" font-size="11" font-weight="700" fill="#0F172A" y="-6">Keyword Research</text><text text-anchor="middle" font-size="9" fill="#475569" y="8">14 keyword target</text></g>
+<circle cx="640" cy="540" r="90" fill="#0F172A" stroke="#fff" stroke-width="3"/>
+<circle cx="640" cy="540" r="82" fill="none" stroke="#FBBF24" stroke-width="2" stroke-dasharray="4 4" opacity=".3"/>
+<text x="640" y="518" text-anchor="middle" font-size="11" font-weight="700" fill="#FBBF24" letter-spacing="1.2">SEO GOAL</text>
+<text x="640" y="542" text-anchor="middle" font-size="20" font-weight="900" fill="#fff">30Shine</text>
+<text x="640" y="564" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">Top Google</text>
+<text x="640" y="582" text-anchor="middle" font-size="11" fill="#94A3B8">+ AI Search</text>
+<g transform="translate(631.1,438.4)"><rect x="-50" y="-12" width="100" height="24" rx="12" fill="#D97706" stroke="#fff" stroke-width="2"/><text text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="800" fill="#fff" letter-spacing=".5">NỀN TẢNG</text></g>
+<g transform="translate(624.1,358.7)"><rect x="-50" y="-12" width="100" height="24" rx="12" fill="#EA580C" stroke="#fff" stroke-width="2"/><text text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="800" fill="#fff" letter-spacing=".5">NỘI DUNG</text></g>
+<g transform="translate(617.2,279.0)"><rect x="-50" y="-12" width="100" height="24" rx="12" fill="#C2410C" stroke="#fff" stroke-width="2"/><text text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="800" fill="#fff" letter-spacing=".5">TỰ ĐỘNG HOÁ</text></g>
+<g transform="translate(610.2,199.3)"><rect x="-50" y="-12" width="100" height="24" rx="12" fill="#92400E" stroke="#fff" stroke-width="2"/><text text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="800" fill="#fff" letter-spacing=".5">TRUST &amp; E-E-A-T</text></g>
+<rect x="60" y="200" width="300" height="138" rx="12" fill="#fff" stroke="#10B981" stroke-width="2"/>
+<rect x="60" y="200" width="300" height="6" rx="3" fill="#10B981"/>
+<text x="78" y="230" font-size="13" font-weight="800" fill="#0F172A">📦 NGUỒN LỰC</text>
+<text x="78" y="255" font-size="12" fill="#334155">👤 1 người (Chương)</text>
+<text x="78" y="277" font-size="12" fill="#334155">💰 0đ chi phí cứng</text>
+<text x="78" y="299" font-size="12" fill="#334155">⏱️ ~9h work/tháng</text>
+<text x="78" y="321" font-size="12" fill="#334155">🛠️ Notion + Claude + N8N</text>
+<rect x="920" y="200" width="300" height="160" rx="12" fill="#fff" stroke="#3B82F6" stroke-width="2"/>
+<rect x="920" y="200" width="300" height="6" rx="3" fill="#3B82F6"/>
+<text x="938" y="230" font-size="13" font-weight="800" fill="#0F172A">🛠️ TECH STACK</text>
+<text x="938" y="255" font-size="12" fill="#334155">Claude API (AI draft)</text>
+<text x="938" y="277" font-size="12" fill="#334155">N8N (automation)</text>
+<text x="938" y="299" font-size="12" fill="#334155">Search Console (rank)</text>
+<text x="938" y="321" font-size="12" fill="#334155">Rankmath (on-page)</text>
+<text x="938" y="343" font-size="12" fill="#334155">WordPress (CMS)</text>
+<rect x="60" y="720" width="300" height="138" rx="12" fill="#fff" stroke="#F59E0B" stroke-width="2"/>
+<rect x="60" y="720" width="300" height="6" rx="3" fill="#F59E0B"/>
+<text x="78" y="750" font-size="13" font-weight="800" fill="#0F172A">⚡ CHECKPOINT</text>
+<text x="78" y="775" font-size="12" fill="#334155">30 ngày: Ráy tai top 5</text>
+<text x="78" y="797" font-size="12" fill="#334155">60 ngày: Pillar có impressions</text>
+<text x="78" y="819" font-size="12" fill="#334155">90 ngày: ≥2 keyword top 10</text>
+<text x="78" y="841" font-size="12" fill="#334155">Fail → pivot strategy</text>
+<rect x="920" y="720" width="300" height="160" rx="12" fill="#fff" stroke="#EF4444" stroke-width="2"/>
+<rect x="920" y="720" width="300" height="6" rx="3" fill="#EF4444"/>
+<text x="938" y="750" font-size="13" font-weight="800" fill="#0F172A">⛔ OUT OF SCOPE T5</text>
+<text x="938" y="775" font-size="12" fill="#334155">❌ Backlink outreach</text>
+<text x="938" y="797" font-size="12" fill="#334155">❌ 58 GMB manual</text>
+<text x="938" y="819" font-size="12" fill="#334155">❌ PR 4 báo nói xấu</text>
+<text x="938" y="841" font-size="12" fill="#334155">❌ Wikipedia</text>
+<text x="938" y="863" font-size="12" fill="#334155">→ Defer T6+ / Escalate</text>
+<rect x="60" y="980" width="1160" height="60" rx="12" fill="#0F172A"/>
+<text x="640" y="998" text-anchor="middle" font-size="11" font-weight="700" fill="#FBBF24" letter-spacing="1.5">6-MONTH KPI</text>
+<text x="176.0" y="1018" text-anchor="middle" font-size="14" font-weight="800" fill="#fff">Ráy tai #6 → #3</text>
+<text x="176.0" y="1034" text-anchor="middle" font-size="10" fill="#94A3B8">Quick win T5</text>
+<text x="408.0" y="1018" text-anchor="middle" font-size="14" font-weight="800" fill="#fff">0 → 24 bài</text>
+<text x="408.0" y="1034" text-anchor="middle" font-size="10" fill="#94A3B8">1 bài/tuần</text>
+<text x="640.0" y="1018" text-anchor="middle" font-size="14" font-weight="800" fill="#fff">Entity 0 → 70/100</text>
+<text x="640.0" y="1034" text-anchor="middle" font-size="10" fill="#94A3B8">Schema deploy</text>
+<text x="872.0" y="1018" text-anchor="middle" font-size="14" font-weight="800" fill="#fff">Organic +130%</text>
+<text x="872.0" y="1034" text-anchor="middle" font-size="10" fill="#94A3B8">T10 vs T4</text>
+<text x="1104.0" y="1018" text-anchor="middle" font-size="14" font-weight="800" fill="#fff">AI Overview 0/5 → 4/5</text>
+<text x="1104.0" y="1034" text-anchor="middle" font-size="10" fill="#94A3B8">5 keyword</text>
+<text x="640" y="1065" text-anchor="middle" font-size="14" font-weight="800" fill="#0F172A" letter-spacing="3">30SHINE • SEO MASTER PLAN T5-T10/2026</text>
+</svg>
+      </div>
+    </section>
+    <section id="checklist" class="section">
+      <header>
+        <h2>📋 KẾ HOẠCH CÔNG VIỆC SEO</h2>
+        <div class="subtitle">T5 → T10/2026 — Timeline 7 tháng</div>
+      </header>
+      <div class="card">
+        <table>
+          <thead><tr>
+            <th>#</th><th>Nội dung</th><th>Công việc cụ thể</th><th>SL/Tần suất</th>
+            <th>Người</th><th>Công cụ</th><th>Deadline T5</th>
+            <th>T5</th><th>T6</th><th>T7</th><th>T8</th><th>T9</th><th>T10</th><th>T11</th>
+          </tr></thead>
+          <tbody><tr class="section-header"><td colspan="14">A — CHUẨN BỊ &amp; FOUNDATION (One-time — tháng đầu)</td></tr>
+            <tr>
+              <td>1</td>
+              <td><strong>Website Audit baseline</strong></td>
+              <td>Technical audit: PageSpeed, Core Web Vitals, canonical, robots</td>
+              <td>1 lần</td>
+              <td>Chương</td>
+              <td>Ahrefs + PageSpeed</td>
+              <td><strong style="color:#c0392b">12/05</strong></td>
+              <td class="timeline-dot active">●</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><strong>Keyword Research sheet</strong></td>
+              <td>Tổng hợp keywords từ Search Console + Google KP + Ahrefs</td>
+              <td>1 lần</td>
+              <td>Chương</td>
+              <td>Search Console + KP</td>
+              <td><strong style="color:#c0392b">12/05</strong></td>
+              <td class="timeline-dot active">●</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><strong>Competitor Analysis</strong></td>
+              <td>So sánh DA / backlinks / content depth: 30shine vs Coolmate vs top 3</td>
+              <td>1 lần</td>
+              <td>Chương</td>
+              <td>Ahrefs / SERPstat</td>
+              <td><strong style="color:#c0392b">16/05</strong></td>
+              <td class="timeline-dot active">●</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><strong>Site Architecture &amp; Silo Map</strong></td>
+              <td>Sơ đồ pillar-cluster: homepage → pillar → cluster</td>
+              <td>1 lần</td>
+              <td>Chương</td>
+              <td>Figma / Drawio</td>
+              <td><strong style="color:#c0392b">16/05</strong></td>
+              <td class="timeline-dot active">●</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td><strong>Setup Tracking Tools</strong></td>
+              <td>Verify Search Console + Setup GA4 event (scroll, CTA click)</td>
+              <td>1 lần</td>
+              <td>Chương</td>
+              <td>GA4 + N8N + SC</td>
+              <td><strong style="color:#c0392b">16/05</strong></td>
+              <td class="timeline-dot active">●</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td>
+            </tr><tr class="section-header"><td colspan="14">B.I — ON-PAGE SEO</td></tr>
+            <tr>
+              <td>6</td>
+              <td><strong>Quick win 'Ráy tai an toàn'</strong></td>
+              <td>Fix title + H1 + meta + schema HowTo + 5 internal links</td>
+              <td>1 bài</td>
+              <td>Chương</td>
+              <td>WordPress + Rankmath</td>
+              <td><strong style="color:#c0392b">12/05</strong></td>
+              <td class="timeline-dot active">●</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td><strong>Deploy Schema + OG Homepage</strong></td>
+              <td>Org + WebSite + SameAs + BreadcrumbList vào &lt;head&gt;</td>
+              <td>1 lần</td>
+              <td>Chương</td>
+              <td>WordPress theme</td>
+              <td><strong style="color:#c0392b">13/05</strong></td>
+              <td class="timeline-dot active">●</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td><strong>Pillar 1 — Bài viết mới</strong></td>
+              <td>Draft AI (WF1) → Chương edit ≥1500 từ → Schema → Publish</td>
+              <td>1 bài</td>
+              <td>Chương</td>
+              <td>Claude API + N8N</td>
+              <td><strong style="color:#c0392b">23/05 draft / 30/05 publish</strong></td>
+              <td class="timeline-dot active">●</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td><strong>Pillar 2 — Bài viết mới</strong></td>
+              <td>Counter Coolmate 'kiểu tóc nam văn phòng'</td>
+              <td>1 bài</td>
+              <td>Chương</td>
+              <td>Claude API + N8N</td>
+              <td><strong style="color:#c0392b">30/05 draft / 06/06 publish</strong></td>
+              <td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td><strong>On-page audit bài cũ (refresh) 🆕</strong></td>
+              <td>Review 3-5 bài impressions cao, CTR thấp → re-optimize</td>
+              <td>3-5/tháng</td>
+              <td>Chương</td>
+              <td>Search Console</td>
+              <td><strong style="color:#c0392b">Mỗi T2</strong></td>
+              <td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot inactive">—</td>
+            </tr><tr class="section-header"><td colspan="14">B.II — AI AUTOMATION (N8N + Claude API)</td></tr>
+            <tr>
+              <td>11</td>
+              <td><strong>WF1 — AI Draft Pipeline</strong></td>
+              <td>SERP data + outline + persona → Claude API → HTML clean → Notion → WP</td>
+              <td>Per bài</td>
+              <td>Chương</td>
+              <td>N8N + Claude + Notion + WP</td>
+              <td><strong style="color:#c0392b">16/05 setup</strong></td>
+              <td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot inactive">—</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td><strong>WF2 — Rank Tracker</strong></td>
+              <td>Cron T6 + Search Console API → update Sheets + email summary</td>
+              <td>Auto T6</td>
+              <td>N8N</td>
+              <td>N8N + SC API</td>
+              <td><strong style="color:#c0392b">16/05 setup</strong></td>
+              <td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot inactive">—</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td><strong>WF3 — UTM Builder</strong></td>
+              <td>Manual paste link → N8N tag UTM → Sheets log</td>
+              <td>Khi cần</td>
+              <td>Chương</td>
+              <td>N8N + Sheets</td>
+              <td><strong style="color:#c0392b">16/05 setup</strong></td>
+              <td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot inactive">—</td>
+            </tr><tr class="section-header"><td colspan="14">B.III — ENTITY &amp; TRUST</td></tr>
+            <tr>
+              <td>14</td>
+              <td><strong>Schema JSON-LD Homepage</strong></td>
+              <td>Org + WebSite + LocalBusiness + BreadcrumbList 🆕</td>
+              <td>1 lần</td>
+              <td>Chương</td>
+              <td>JSON-LD + WP</td>
+              <td><strong style="color:#c0392b">13/05</strong></td>
+              <td class="timeline-dot active">●</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td><strong>Schema per bài blog</strong></td>
+              <td>Article + FAQPage + Person + Service 🆕</td>
+              <td>Mỗi bài</td>
+              <td>Chương</td>
+              <td>Rankmath Pro + JSON-LD</td>
+              <td><strong style="color:#c0392b">Per bài</strong></td>
+              <td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot inactive">—</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td><strong>Author Bio &amp; E-E-A-T</strong></td>
+              <td>Stylist author pages: bio + chứng chỉ + ảnh</td>
+              <td>1 lần + cập nhật</td>
+              <td>Chương</td>
+              <td>WP + Schema</td>
+              <td><strong style="color:#c0392b">T6</strong></td>
+              <td class="timeline-dot inactive">—</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td>
+            </tr>
+            <tr>
+              <td>17</td>
+              <td><strong>Social Trust Signals</strong></td>
+              <td>GBP + YouTube + LinkedIn brand pages</td>
+              <td>1 lần</td>
+              <td>Chương</td>
+              <td>GBP + GTM</td>
+              <td><strong style="color:#c0392b">T6</strong></td>
+              <td class="timeline-dot inactive">—</td><td class="timeline-dot active">●</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td>
+            </tr><tr class="section-header"><td colspan="14">B.IV — OFF-PAGE (Defer T6+ — không phải scope T5)</td></tr>
+            <tr>
+              <td>18</td>
+              <td><strong>Guest Post outreach</strong></td>
+              <td>Liên hệ blog lifestyle/grooming, anchor natural dofollow</td>
+              <td>2-3/tháng</td>
+              <td>TBD</td>
+              <td>Ahrefs</td>
+              <td><strong style="color:#c0392b">T6+</strong></td>
+              <td class="timeline-dot inactive">—</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot inactive">—</td>
+            </tr>
+            <tr>
+              <td>19</td>
+              <td><strong>Backlink Forum/Social</strong></td>
+              <td>Reddit, Webtretho, VOZ — mention tự nhiên không spam</td>
+              <td>5-10/tháng</td>
+              <td>TBD</td>
+              <td>—</td>
+              <td><strong style="color:#c0392b">T6+</strong></td>
+              <td class="timeline-dot inactive">—</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot inactive">—</td>
+            </tr>
+            <tr>
+              <td>20</td>
+              <td><strong>PR báo correction</strong></td>
+              <td>Liên hệ tòa soạn 4 bài báo xấu</td>
+              <td>—</td>
+              <td>Brand Mgr</td>
+              <td>—</td>
+              <td><strong style="color:#c0392b">T7+</strong></td>
+              <td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot active">●</td><td class="timeline-dot active">●</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td>
+            </tr></tbody>
+        </table>
+      </div>
+    </section>
+    <section id="planning" class="section">
+      <header>
+        <h2>📅 HOẠCH ĐỊNH T5/2026</h2>
+        <div class="subtitle">Tuần chi tiết W19 → W22 (07-30/05)</div>
+      </header>
+      <div class="card">
+        <table>
+          <thead><tr>
+            <th>Đầu công việc</th><th>Công việc cụ thể</th>
+            <th>W19 (07-11/05)</th><th>W20 (12-16/05)</th><th>W21 (19-23/05)</th><th>W22 (26-30/05)</th>
+          </tr></thead>
+          <tbody><tr class="section-header"><td colspan="6">A. CHUẨN BỊ</td></tr>
+            <tr>
+              <td><strong>Website Audit baseline</strong></td>
+              <td>Technical audit + PageSpeed + canonical</td>
+              <td class="timeline-dot active" style="background:#c6efce">▶</td><td class="timeline-dot done" style="background:#d5f5e3;color:#2E5984;font-weight:700">✓</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td>
+            </tr>
+            <tr>
+              <td><strong>Keyword Research sheet</strong></td>
+              <td>SV + KD cho 3 keyword chính</td>
+              <td class="timeline-dot active" style="background:#c6efce">▶</td><td class="timeline-dot done" style="background:#d5f5e3;color:#2E5984;font-weight:700">✓</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td>
+            </tr>
+            <tr>
+              <td><strong>Competitor Analysis</strong></td>
+              <td>Top 5 SERP crawl mỗi pillar keyword</td>
+              <td class="timeline-dot active" style="background:#c6efce">▶</td><td class="timeline-dot done" style="background:#d5f5e3;color:#2E5984;font-weight:700">✓</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td>
+            </tr>
+            <tr>
+              <td><strong>Site Architecture</strong></td>
+              <td>Silo map: homepage → pillar → cluster</td>
+              <td class="timeline-dot inactive">—</td><td class="timeline-dot active" style="background:#c6efce">▶</td><td class="timeline-dot done" style="background:#d5f5e3;color:#2E5984;font-weight:700">✓</td><td class="timeline-dot inactive">—</td>
+            </tr>
+            <tr>
+              <td><strong>Setup WF1/WF2/WF3</strong></td>
+              <td>N8N + Claude API + Rank Tracker</td>
+              <td class="timeline-dot inactive">—</td><td class="timeline-dot active" style="background:#c6efce">▶</td><td class="timeline-dot done" style="background:#d5f5e3;color:#2E5984;font-weight:700">✓</td><td class="timeline-dot inactive">—</td>
+            </tr><tr class="section-header"><td colspan="6">B.I ON-PAGE</td></tr>
+            <tr>
+              <td><strong>Quick win: Ráy tai</strong></td>
+              <td>Fix title + H1 + meta + schema HowTo + 5 internal links</td>
+              <td class="timeline-dot inactive">—</td><td class="timeline-dot active" style="background:#c6efce">▶</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td>
+            </tr>
+            <tr>
+              <td><strong>Deploy Schema Homepage</strong></td>
+              <td>Org + WebSite + LocalBusiness + Breadcrumb JSON-LD</td>
+              <td class="timeline-dot inactive">—</td><td class="timeline-dot active" style="background:#c6efce">▶</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td>
+            </tr>
+            <tr>
+              <td><strong>On-page audit bài cũ</strong></td>
+              <td>Review 3-5 bài impressions cao, CTR thấp</td>
+              <td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot active" style="background:#c6efce">▶</td><td class="timeline-dot inactive">—</td>
+            </tr><tr class="section-header"><td colspan="6">B.I CONTENT</td></tr>
+            <tr>
+              <td><strong>Pillar 1 — AI Draft</strong></td>
+              <td>SERP crawl → WF1 → Notion → Chương edit</td>
+              <td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot active" style="background:#c6efce">▶</td><td class="timeline-dot inactive">—</td>
+            </tr>
+            <tr>
+              <td><strong>Pillar 1 — Publish</strong></td>
+              <td>On-page checklist 17 → Schema → Publish</td>
+              <td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot active" style="background:#c6efce">▶</td>
+            </tr>
+            <tr>
+              <td><strong>Pillar 2 — AI Draft</strong></td>
+              <td>Counter Coolmate</td>
+              <td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot active" style="background:#c6efce">▶</td>
+            </tr>
+            <tr>
+              <td><strong>Pillar 2 — Publish (sang T6)</strong></td>
+              <td>Publish 06/06</td>
+              <td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot active" style="background:#c6efce">▶</td>
+            </tr><tr class="section-header"><td colspan="6">B.II AI AUTOMATION</td></tr>
+            <tr>
+              <td><strong>WF1 AI Draft Pipeline</strong></td>
+              <td>Setup N8N + Claude API + Notion + WP</td>
+              <td class="timeline-dot inactive">—</td><td class="timeline-dot active" style="background:#c6efce">▶</td><td class="timeline-dot done" style="background:#d5f5e3;color:#2E5984;font-weight:700">✓</td><td class="timeline-dot done" style="background:#d5f5e3;color:#2E5984;font-weight:700">✓</td>
+            </tr>
+            <tr>
+              <td><strong>WF2 Rank Tracker</strong></td>
+              <td>N8N cron T6 + SC API + Sheets</td>
+              <td class="timeline-dot inactive">—</td><td class="timeline-dot active" style="background:#c6efce">▶</td><td class="timeline-dot done" style="background:#d5f5e3;color:#2E5984;font-weight:700">✓</td><td class="timeline-dot done" style="background:#d5f5e3;color:#2E5984;font-weight:700">✓</td>
+            </tr>
+            <tr>
+              <td><strong>WF3 UTM Builder</strong></td>
+              <td>N8N manual + Sheets log</td>
+              <td class="timeline-dot inactive">—</td><td class="timeline-dot active" style="background:#c6efce">▶</td><td class="timeline-dot done" style="background:#d5f5e3;color:#2E5984;font-weight:700">✓</td><td class="timeline-dot done" style="background:#d5f5e3;color:#2E5984;font-weight:700">✓</td>
+            </tr><tr class="section-header"><td colspan="6">B.III ENTITY</td></tr>
+            <tr>
+              <td><strong>Schema homepage deploy</strong></td>
+              <td>Org + WebSite + Breadcrumb JSON-LD</td>
+              <td class="timeline-dot inactive">—</td><td class="timeline-dot active" style="background:#c6efce">▶</td><td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td>
+            </tr>
+            <tr>
+              <td><strong>Schema per bài blog</strong></td>
+              <td>Article + FAQPage + Person + Service</td>
+              <td class="timeline-dot inactive">—</td><td class="timeline-dot inactive">—</td><td class="timeline-dot active" style="background:#c6efce">▶</td><td class="timeline-dot active" style="background:#c6efce">▶</td>
+            </tr><tr class="section-header"><td colspan="6">WEEKLY REVIEW</td></tr>
+            <tr>
+              <td><strong>Rank review T6 hàng tuần</strong></td>
+              <td>WF2 tự pull → Chương review 15 phút</td>
+              <td class="timeline-dot active" style="background:#c6efce">▶</td><td class="timeline-dot active" style="background:#c6efce">▶</td><td class="timeline-dot active" style="background:#c6efce">▶</td><td class="timeline-dot active" style="background:#c6efce">▶</td>
+            </tr>
+            <tr>
+              <td><strong>Weekly sync team</strong></td>
+              <td>Update KPI tracker, chia sẻ insight</td>
+              <td class="timeline-dot active" style="background:#c6efce">▶</td><td class="timeline-dot active" style="background:#c6efce">▶</td><td class="timeline-dot active" style="background:#c6efce">▶</td><td class="timeline-dot active" style="background:#c6efce">▶</td>
+            </tr></tbody>
+        </table>
+        <div class="note">▶ Bắt đầu / Đang làm  •  ✓ Hoàn thành  •  — Chưa đến / Không áp dụng</div>
+      </div>
+    </section>
+    <section id="onpage" class="section">
+      <header>
+        <h2>✅ ON-PAGE SEO CHECKLIST</h2>
+        <div class="subtitle">17 items — Làm cho mỗi bài trước publish</div>
+      </header>
+      <div class="card">
+        <table>
+          <thead><tr>
+            <th>#</th><th>Item</th><th>Tiêu chuẩn / Rule</th><th>Nguồn gốc</th>
+            <th>Bài: Ráy tai</th><th>Pillar 1</th><th>Pillar 2</th>
+          </tr></thead>
+          <tbody>
+        <tr>
+          <td>1</td>
+          <td><strong>Title tag</strong></td>
+          <td>≤60 chars — keyword đầu — có '| 30Shine'</td>
+          <td>Plan T5</td>
+          <td>☐</td><td>☐</td><td>☐</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><strong>Meta description</strong></td>
+          <td>≤160 chars — keyword + CTA 'Đặt lịch ngay'</td>
+          <td>Plan T5</td>
+          <td>☐</td><td>☐</td><td>☐</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><strong>URL slug</strong></td>
+          <td>/blog/keyword-slug (không dấu, không stop words)</td>
+          <td>Plan T5</td>
+          <td>☐</td><td>☐</td><td>☐</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><strong>H1 unique</strong></td>
+          <td>1 thẻ duy nhất — khớp title nhưng không 100%</td>
+          <td>Plan T5</td>
+          <td>☐</td><td>☐</td><td>☐</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><strong>H2/H3 keyword</strong></td>
+          <td>≥30% headings có keyword/LSI — Direct Answer đầu mỗi H2</td>
+          <td>Framework S05</td>
+          <td>☐</td><td>☐</td><td>☐</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td><strong>First 100 words</strong></td>
+          <td>Có keyword chính — Direct Answer cho search intent</td>
+          <td>Framework S05</td>
+          <td>☐</td><td>☐</td><td>☐</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td><strong>Image alt text</strong></td>
+          <td>Mô tả thật + keyword nếu liên quan — format: ten-alt-anh</td>
+          <td>Plan T5</td>
+          <td>☐</td><td>☐</td><td>☐</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td><strong>Image file size</strong></td>
+          <td>≤100KB/ảnh — định dạng WebP</td>
+          <td>Plan T5</td>
+          <td>☐</td><td>☐</td><td>☐</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td><strong>Schema JSON-LD</strong></td>
+          <td>Article + FAQPage + Person + VideoObject + Service 🆕</td>
+          <td>Framework S08</td>
+          <td>☐</td><td>☐</td><td>☐</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td><strong>Canonical tag</strong></td>
+          <td>&lt;link rel='canonical'&gt; đúng URL (không trailing slash conflict)</td>
+          <td>Framework</td>
+          <td>☐</td><td>☐</td><td>☐</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td><strong>OG tags</strong></td>
+          <td>og:title + og:description + og:image (1200×630px)</td>
+          <td>CSV</td>
+          <td>☐</td><td>☐</td><td>☐</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td><strong>Internal links</strong></td>
+          <td>≥3 link đi (bài liên quan) + 1 link từ category trở về</td>
+          <td>Plan T5</td>
+          <td>☐</td><td>☐</td><td>☐</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td><strong>External links</strong></td>
+          <td>no-follow + target='_blank' cho mọi link ra ngoài</td>
+          <td>CSV</td>
+          <td>☐</td><td>☐</td><td>☐</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td><strong>Unique content</strong></td>
+          <td>100% tự viết / AI + edit — ≤10% overlap internal</td>
+          <td>CSV</td>
+          <td>☐</td><td>☐</td><td>☐</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td><strong>Video embed</strong></td>
+          <td>≥1 video (YouTube/TikTok) nếu bài ≥1500 từ</td>
+          <td>Framework S06</td>
+          <td>☐</td><td>☐</td><td>☐</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td><strong>Rankmath score</strong></td>
+          <td>≥85/100 trước publish (AI draft dễ flag, không cần 100)</td>
+          <td>CSV</td>
+          <td>☐</td><td>☐</td><td>☐</td>
+        </tr>
+        <tr class="suggestion-row">
+          <td>17</td>
+          <td><strong>Featured Snippet ready 🆕</strong></td>
+          <td>List/Table/Definition format — Direct Answer ≤50 từ cho 1-2 H2 đầu</td>
+          <td>Đề xuất bổ sung #5</td>
+          <td>☐</td><td>☐</td><td>☐</td>
+        </tr></tbody>
+        </table>
+        <div class="note">Điền ✅ khi pass • ❌ khi fail (cần fix trước publish) • N/A khi không áp dụng. Hàng vàng = đề xuất bổ sung mới.</div>
+      </div>
+    </section>
+    <section id="keywords" class="section">
+      <header>
+        <h2>🔑 BỘ TỪ KHÓA</h2>
+        <div class="subtitle">14 keywords — Phân tầng Primary / LSI / Long-tail</div>
+      </header>
+      <div class="card">
+        <table>
+          <thead><tr>
+            <th>#</th><th>Từ khóa</th><th>SV/tháng</th><th>KD</th><th>CPC</th>
+            <th>Rank hiện tại</th><th>Target T5</th><th>URL bài viết</th>
+            <th>Nhóm/Intent</th><th>Ưu tiên</th><th>Cluster 🆕</th>
+          </tr></thead>
+          <tbody><tr class="section-header"><td colspan="11">PRIMARY</td></tr><tr><td>1</td><td>ráy tai an toàn</td><td>2.400</td><td>—</td><td>—</td><td>#6</td><td>#3</td><td>30shine.com/blog/ray-tai-an-toan</td><td>Informational / YMYL</td><td>🔴 NGAY</td><td style="font-style:italic;color:#2E5984">Ráy tai (USP)</td></tr><tr><td>2</td><td>kiểu tóc nam văn phòng</td><td style="background:#fff8dc">[fill]</td><td>—</td><td>—</td><td>—</td><td>Top 20</td><td>/blog/kieu-toc-nam-van-phong</td><td>Informational</td><td>🔴 T5</td><td style="font-style:italic;color:#2E5984">Transition / Career</td></tr><tr><td>3</td><td>45 phút escape nam công sở</td><td style="background:#fff8dc">[fill]</td><td>—</td><td>—</td><td>—</td><td>Top 50</td><td>/blog/45-phut-escape-cho-nam-cong-so</td><td>Informational</td><td>🔴 T5</td><td style="font-style:italic;color:#2E5984">Relax / Escape</td></tr><tr class="section-header"><td colspan="11">SECONDARY / LSI</td></tr><tr><td>4</td><td>lấy ráy tai có an toàn không</td><td style="background:#fff8dc">[fill]</td><td>—</td><td>—</td><td>—</td><td>Top 10</td><td>Cluster ráy tai</td><td>Informational</td><td>🟡 T6</td><td style="font-style:italic;color:#2E5984">Ráy tai (USP)</td></tr><tr><td>5</td><td>cách lấy ráy tai đúng cách</td><td style="background:#fff8dc">[fill]</td><td>—</td><td>—</td><td>—</td><td>Top 10</td><td>Cluster ráy tai</td><td>Informational</td><td>🟡 T6</td><td style="font-style:italic;color:#2E5984">Ráy tai (USP)</td></tr><tr><td>6</td><td>gội đầu dưỡng sinh 30shine</td><td style="background:#fff8dc">[fill]</td><td>—</td><td>—</td><td>—</td><td>Top 10</td><td>Cluster Relax</td><td>Navigational</td><td>🟡 T6</td><td style="font-style:italic;color:#2E5984">Relax / Escape</td></tr><tr><td>7</td><td>massage đầu vai gáy 30shine</td><td style="background:#fff8dc">[fill]</td><td>—</td><td>—</td><td>—</td><td>Top 10</td><td>Cluster Relax</td><td>Navigational</td><td>🟡 T6</td><td style="font-style:italic;color:#2E5984">Relax / Escape</td></tr><tr><td>8</td><td>cắt tóc nam hà nội</td><td style="background:#fff8dc">[fill]</td><td>—</td><td>—</td><td>—</td><td>Top 20</td><td>Cluster Local HN</td><td>Commercial</td><td>🟡 T6</td><td style="font-style:italic;color:#2E5984">Local</td></tr><tr><td>9</td><td>salon tóc nam gần đây</td><td style="background:#fff8dc">[fill]</td><td>—</td><td>—</td><td>—</td><td>Top 20</td><td>Cluster Local</td><td>Commercial Local</td><td>🟡 T6</td><td style="font-style:italic;color:#2E5984">Local</td></tr><tr class="section-header"><td colspan="11">LONG-TAIL / SEASONAL</td></tr><tr><td>10</td><td>escape ngắn cho dân văn phòng hà nội</td><td style="background:#fff8dc">[fill]</td><td>—</td><td>—</td><td>—</td><td>Top 50</td><td>Cluster Relax</td><td>Informational</td><td>🟢 T7</td><td style="font-style:italic;color:#2E5984">Relax / Escape</td></tr><tr><td>11</td><td>kiểu tóc nam mùa hè 2026</td><td style="background:#fff8dc">[fill]</td><td>—</td><td>—</td><td>—</td><td>Top 50</td><td>Cluster Transition</td><td>Seasonal</td><td>🟢 T7</td><td style="font-style:italic;color:#2E5984">Transition / Career</td></tr><tr><td>12</td><td>massage đầu có lợi gì</td><td style="background:#fff8dc">[fill]</td><td>—</td><td>—</td><td>—</td><td>Top 20</td><td>Cluster Relax</td><td>Informational</td><td>🟢 T7</td><td style="font-style:italic;color:#2E5984">Relax / Escape</td></tr><tr><td>13</td><td>30shine có tốt không</td><td style="background:#fff8dc">[fill]</td><td>—</td><td>—</td><td>—</td><td>Top 5</td><td>Brand SERP — counter narrative</td><td>Navigational</td><td>🟢 T7</td><td style="font-style:italic;color:#2E5984">Brand / YMYL</td></tr><tr><td>14</td><td>review dịch vụ 30shine</td><td style="background:#fff8dc">[fill]</td><td>—</td><td>—</td><td>—</td><td>Top 5</td><td>Brand SERP — counter narrative</td><td>Review / YMYL</td><td>🟢 T7</td><td style="font-style:italic;color:#2E5984">Brand / YMYL</td></tr></tbody>
+        </table>
+        <div class="note">[fill] = cần điền sau khi chạy keyword research. SV từ Google Keyword Planner VN. KD từ Ahrefs.</div>
+      </div>
+    </section>
+    <section id="tracking" class="section">
+      <header>
+        <h2>📊 TRACKING & ĐO LƯỜNG</h2>
+        <div class="subtitle">WF2 Auto Pull mỗi T6 từ Search Console</div>
+      </header>
+      <div class="card">
+        <h3><span class="emoji">🎯</span> Rank Tracking — Top Keywords</h3>
+        <table>
+          <thead><tr>
+            <th>Từ khóa</th><th>Target T5</th><th>Baseline (W16/T4)</th>
+            <th>W19 09/05</th><th>W20 16/05</th><th>W21 23/05</th><th>W22 30/05</th>
+            <th>T6 Avg</th><th>Delta T5</th>
+          </tr></thead>
+          <tbody>
+        <tr>
+          <td><strong>ráy tai an toàn</strong></td>
+          <td class="target-cell">#3</td>
+          <td class="baseline-cell">#6</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td><strong>kiểu tóc nam văn phòng</strong></td>
+          <td class="target-cell">Top 20</td>
+          <td class="baseline-cell">—</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td><strong>45 phút escape nam công sở</strong></td>
+          <td class="target-cell">Top 50</td>
+          <td class="baseline-cell">—</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td><strong>lấy ráy tai có an toàn không</strong></td>
+          <td class="target-cell">Top 10</td>
+          <td class="baseline-cell">—</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td><strong>gội đầu dưỡng sinh 30shine</strong></td>
+          <td class="target-cell">Top 10</td>
+          <td class="baseline-cell">—</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td><strong>cắt tóc nam hà nội</strong></td>
+          <td class="target-cell">Top 20</td>
+          <td class="baseline-cell">—</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr></tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h3><span class="emoji">📈</span> Traffic & User Metrics (GA4 + Search Console)</h3>
+        <table>
+          <thead><tr>
+            <th>Chỉ số</th><th>Target T5</th>
+            <th>T4 baseline</th><th>T5/2026</th><th>T6/2026</th><th>T7/2026</th><th>T8/2026</th><th>T9/2026</th>
+          </tr></thead>
+          <tbody>
+        <tr>
+          <td><strong>Organic Clicks (blog)</strong></td>
+          <td class="target-cell">Tăng +20% vs T4</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td><strong>Impressions (Search Console)</strong></td>
+          <td class="target-cell">Tăng +30% vs T4</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td><strong>CTR trung bình</strong></td>
+          <td class="target-cell">≥ 3%</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td><strong>Sessions organic (GA4)</strong></td>
+          <td class="target-cell">Tăng +20%</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td><strong>Bounce rate blog</strong></td>
+          <td class="target-cell">≤ 65%</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td><strong>Avg. session duration</strong></td>
+          <td class="target-cell">≥ 1m30s</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td><strong>PageSpeed mobile</strong></td>
+          <td class="target-cell">≥ 75</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td><strong>Entity Score homepage</strong></td>
+          <td class="target-cell">≥ 20 (baseline 0)</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr class="suggestion-row">
+          <td><strong>Indexed pages 🆕</strong></td>
+          <td class="target-cell">Track baseline</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr class="suggestion-row">
+          <td><strong>AI Overview presence (5 kw chính) 🆕</strong></td>
+          <td class="target-cell">0/5 → 1/5 T6</td>
+          <td></td><td></td><td></td><td></td><td></td><td></td>
+        </tr></tbody>
+        </table>
+      </div>
+    </section>
+    <section id="wf1" class="section">
+      <header>
+        <h2>🤖 WF1 — Master Prompt Template</h2>
+        <div class="subtitle">Claude API — 8-Slide Framework</div>
+      </header>
+      <div class="card">
+        <p style="margin-bottom:16px;color:#6c7a89">Prompt này dùng cho mọi bài AI draft. Paste outline + persona + SERP data, output là HTML clean cho WordPress.</p>
+        
+        <div class="slide">
+          <span class="slide-name">SLIDE 02 — ROLE (Dual Persona)</span>
+          <pre>Bạn là một chuyên gia có dual role:
+
+1. SEO Content Strategist: tối ưu từ khóa, phân tầng LSI, xây dựng topic cluster, đảm bảo bài đặt top Google và AI Overview.
+2. Front-end Developer: output là HTML sạch theo WordPress Flatsome/Elementor class, không CSS inline, bảo toàn tài nguyên cũ.
+
+MỤC TIÊU BÀI VIẾT: [Chọn: Top 3 Google | Xuất hiện AI Overview | Tăng booking]</pre>
+        </div>
+        <div class="slide">
+          <span class="slide-name">SLIDE 02 — DNA THƯƠNG HIỆU</span>
+          <pre>Tên thương hiệu: 30Shine
+Website: 30shine.com
+Dịch vụ cốt lõi: Cắt tóc nam | Gội đầu dưỡng sinh | Lấy ráy tai | Massage đầu vai gáy
+Tầm nhìn: Chuỗi salon nam số 1 Việt Nam — trải nghiệm đẳng cấp trong 30 phút
+Phong cách viết: Thân thiện, chuyên môn nhưng không hàn lâm. Ngôn ngữ của người bạn tin tưởng.
+CTA chính: 'Đặt lịch ngay' → link đặt lịch 30shine.com</pre>
+        </div>
+        <div class="slide">
+          <span class="slide-name">SLIDE 03 — INPUT: CHÂN DUNG</span>
+          <pre>Đối tượng: Nam giới văn phòng 28-45 tuổi, bận rộn, áp lực cao
+
+Insight quote: 'Tôi chỉ có 1 giờ nghỉ trưa, tôi cần một nơi mát mẻ, yên tĩnh để được chăm sóc và ngủ bù 30 phút để buổi chiều làm việc tỉnh táo.'
+
+Pain points: (1) Áp lực deadline, cần reset ngắn. (2) Thiếu ngủ, cần trạm sạc. (3) Mê bóng đá, sợ thiếu năng lượng.
+
+JTBD: 'Khi tôi quá tải giữa ngày, tôi thuê 1 giờ tại 30Shine để vừa được chăm sóc vừa nạp lại năng lượng.'</pre>
+        </div>
+        <div class="slide">
+          <span class="slide-name">SLIDE 03 — INPUT: DỮ LIỆU</span>
+          <pre>[INPUT A — KEYWORD]
+Từ khóa chính: [paste keyword]
+Search Volume: [paste SV]
+Search Intent: [Informational / Commercial / Navigational]
+
+[INPUT B — SERP DATA (crawl top 5 trước khi chạy WF1)]
+Top 1: Title: [paste] | Mục lục: [paste heading list]
+Top 2: Title: [paste] | Mục lục: [paste heading list]
+Top 3: Title: [paste] | Mục lục: [paste heading list]
+
+[INPUT C — SOCIAL INSIGHTS (Facebook / Reddit / Webtretho / VOZ)]
+Câu hỏi thực tế người dùng hay hỏi:
+- [paste Q1]
+- [paste Q2]
+- [paste Q3]
+
+[INPUT D — TRUST SIGNALS / E-E-A-T] 🆕 SỬA
+Tác giả: [Tên stylist / chuyên gia] — [chứng chỉ / kinh nghiệm]
+Nguồn uy tín VN tham khảo: vinmec.com / hellobacsi.com / suckhoedoisong.vn / Tạp chí Y học VN
+(Đã sửa: 'Healthline VN' không tồn tại)</pre>
+        </div>
+        <div class="slide">
+          <span class="slide-name">SLIDE 04 — KEYWORD STRATEGY</span>
+          <pre>Yêu cầu phân tầng từ khóa:
+- Từ khóa chính (Primary): [keyword] — xuất hiện trong title, H1, first 100 words, URL slug
+- Từ khóa LSI: tự nhiên rải, phân bố tự nhiên (25 LSI variants)
+- Từ khóa long-tail: nhúng vào FAQ section và H3 headings
+- Semantic entities: xác định và làm nổi bật: [tên dịch vụ, địa điểm, nhân vật, khái niệm chuyên ngành]
+- Thuộc tính độc đáo: khai thác góc nhìn mà top 5 chưa đề cập</pre>
+        </div>
+        <div class="slide">
+          <span class="slide-name">SLIDE 05 — GEO &amp; CẤU TRÚC</span>
+          <pre>Cấu trúc bắt buộc:
+1. SAPO (first 100 words): câu trả lời trực tiếp cho search intent — súc tích, định lượng
+2. Mỗi H2/H3: đoạn đầu tiên PHẢI là Direct Answer (1-2 câu, bot AI dễ trích xuất)
+3. Sau Direct Answer: mở rộng với Actionable Guide / số liệu / ví dụ cụ thể
+4. Độ dài tối thiểu: 1500 từ (pillar articles)
+5. Format skimmable: bullet points, table, numbered list cho mobile readers
+
+Quy hoạch heading tối thiểu:
+H1: [keyword chính — 1 thẻ duy nhất]
+H2: ≥ 4 headings chính
+H3: ≥ 2 sub-headings per H2 (nếu có nội dung)</pre>
+        </div>
+        <div class="slide">
+          <span class="slide-name">SLIDE 06 — E-E-A-T &amp; CRO</span>
+          <pre>E-E-A-T requirements:
+- Thêm ≥1 đoạn 'Lưu ý chuyên môn từ [tên stylist]' với trích dẫn trực tiếp
+- Trích dẫn ≥1 nguồn uy tín VN (vinmec / hellobacsi / suckhoedoisong) nếu topic health
+- Thêm author bio snippet ở cuối bài
+
+CRO Hooks (Contextual CTA — rải theo ngữ cảnh, KHÔNG chỉ ở cuối):
+- Sau đoạn mô tả thư giãn → [Box: 'Trải nghiệm ngay tại 30Shine — Đặt lịch 30 giây']
+- Sau pain point → [Nút: 'Đặt lịch giờ nghỉ trưa hôm nay']
+- Cuối bài → [Form mini: 'Để lại số điện thoại — 30Shine sẽ gọi lại trong 5 phút']</pre>
+        </div>
+        <div class="slide">
+          <span class="slide-name">SLIDE 07 — FRONT-END RULES</span>
+          <pre>HTML OUTPUT RULES:
+
+✅ ĐƯỢC:
+- Clean HTML theo WordPress class system
+- 100% class CSS — KHÔNG style inline
+- Bảo toàn URL ảnh cũ, internal links cũ (chỉ sửa anchor text nếu cần)
+- Format skimmable: &lt;ul&gt;, &lt;ol&gt;, &lt;table&gt; cho danh sách và so sánh
+
+❌ CẤM:
+- style="..." inline CSS
+- Xóa/thay URL hình ảnh đã có
+- Thay đổi internal links (trừ khi optimize anchor text)
+- Markdown syntax (**, ##) — chỉ HTML thuần</pre>
+        </div>
+        <div class="slide">
+          <span class="slide-name">SLIDE 08 — OUTPUT FORMAT</span>
+          <pre>ĐỊNH DẠNG ĐẦU RA:
+Chỉ trả về mã HTML sạch.
+KHÔNG kèm lời dẫn, giải thích, hoặc markdown.
+KHÔNG bọc trong ```html``` code block.
+Bắt đầu thẳng bằng &lt;article&gt; hoặc &lt;div class="entry-content"&gt;.
+
+SCHEMA MARKUP (tự động thêm cuối bài):
+- Article schema: name, author, datePublished, publisher
+- FAQPage schema: ≥3 Q&amp;A từ phần FAQ
+- Person schema: author stylist (name, jobTitle, worksFor)
+- VideoObject schema: nếu bài có nhúng video
+- Service schema 🆕: cho mỗi dịch vụ 30Shine được nhắc trong bài
+
+VÙNG CẤM (negative constraints):
+- Không dùng icon/emoji thiếu chuyên nghiệp trong nội dung
+- Không đưa năm cụ thể ('năm 2024') — dùng 'hiện nay'
+- Không cam kết tuyệt đối: 'chắc chắn 100%', 'tốt nhất thế giới' — vi phạm chính sách QC</pre>
+        </div>
+      </div>
+    </section>
+    <section id="entity" class="section">
+      <header>
+        <h2>🛡️ Entity & Trust Signals</h2>
+        <div class="subtitle">Xây dựng thương hiệu với Google + AI</div>
+      </header>
+      <div class="card">
+        <div class="schema-section">
+          <div class="section-title">SCHEMA JSON-LD HOMEPAGE</div>
+          <table>
+            <thead><tr>
+              <th style="width:40px">#</th><th>Schema / Signal</th><th>Nội dung / Yêu cầu</th>
+              <th>Người thực hiện</th><th>Deadline</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td>1</td>
+              <td><strong>Organization</strong></td>
+              <td>name: 30Shine | logo URL | sameAs: FB, YT, GBP, LinkedIn | url</td>
+              <td>Deploy</td>
+              <td><strong style="color:#c0392b">13/05</strong></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><strong>WebSite</strong></td>
+              <td>name + url + potentialAction SearchBox</td>
+              <td>Deploy</td>
+              <td><strong style="color:#c0392b">13/05</strong></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><strong>LocalBusiness</strong></td>
+              <td>address + phone + openingHours per chi nhánh</td>
+              <td>Deploy</td>
+              <td><strong style="color:#c0392b">T6</strong></td>
+            </tr>
+            <tr class="suggestion-row">
+              <td>4</td>
+              <td><strong>BreadcrumbList 🆕</strong></td>
+              <td>Home → Blog → Category → Article hierarchy</td>
+              <td>Deploy</td>
+              <td><strong style="color:#c0392b">13/05</strong></td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="schema-section">
+          <div class="section-title">SCHEMA JSON-LD PER BÀI BLOG</div>
+          <table>
+            <thead><tr>
+              <th style="width:40px">#</th><th>Schema / Signal</th><th>Nội dung / Yêu cầu</th>
+              <th>Người thực hiện</th><th>Deadline</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td>1</td>
+              <td><strong>Article</strong></td>
+              <td>headline + author + datePublished + dateModified + image</td>
+              <td>Per bài</td>
+              <td><strong style="color:#c0392b">Mỗi bài</strong></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><strong>FAQPage</strong></td>
+              <td>≥3 Q&amp;A từ phần FAQ trong bài</td>
+              <td>Per bài</td>
+              <td><strong style="color:#c0392b">Mỗi bài</strong></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><strong>Person (author)</strong></td>
+              <td>name + jobTitle (Stylist) + worksFor (30Shine)</td>
+              <td>Per bài</td>
+              <td><strong style="color:#c0392b">Mỗi bài</strong></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><strong>VideoObject</strong></td>
+              <td>name + uploadDate + thumbnailUrl (nếu có video)</td>
+              <td>Optional</td>
+              <td><strong style="color:#c0392b">Nếu có video</strong></td>
+            </tr>
+            <tr class="suggestion-row">
+              <td>5</td>
+              <td><strong>Service 🆕</strong></td>
+              <td>name (vd: Lấy ráy tai 70K) + provider + areaServed + offers</td>
+              <td>Per dịch vụ</td>
+              <td><strong style="color:#c0392b">Khi bài liên quan</strong></td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="schema-section">
+          <div class="section-title">SOCIAL TRUST STACK</div>
+          <table>
+            <thead><tr>
+              <th style="width:40px">#</th><th>Schema / Signal</th><th>Nội dung / Yêu cầu</th>
+              <th>Người thực hiện</th><th>Deadline</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td>1</td>
+              <td><strong>Google Business Profile</strong></td>
+              <td>Verify + update hours + photos + posts weekly</td>
+              <td>Escalate Ops</td>
+              <td><strong style="color:#c0392b">T6</strong></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><strong>YouTube Channel</strong></td>
+              <td>Upload salon experience videos → index</td>
+              <td>Content team</td>
+              <td><strong style="color:#c0392b">T6</strong></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><strong>LinkedIn Page</strong></td>
+              <td>Brand page + company info</td>
+              <td>Chương</td>
+              <td><strong style="color:#c0392b">T6</strong></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><strong>Wikipedia</strong></td>
+              <td>Create / improve 30Shine article (notability check)</td>
+              <td>Brand Mgr</td>
+              <td><strong style="color:#c0392b">T7+</strong></td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="schema-section">
+          <div class="section-title">E-E-A-T SIGNALS</div>
+          <table>
+            <thead><tr>
+              <th style="width:40px">#</th><th>Schema / Signal</th><th>Nội dung / Yêu cầu</th>
+              <th>Người thực hiện</th><th>Deadline</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td>1</td>
+              <td><strong>Author profiles</strong></td>
+              <td>Stylist author pages: bio + chứng chỉ + ảnh</td>
+              <td>Chương</td>
+              <td><strong style="color:#c0392b">T6</strong></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><strong>Certifications</strong></td>
+              <td>Gắn chứng chỉ / giải thưởng vào About page</td>
+              <td>Chương</td>
+              <td><strong style="color:#c0392b">T6</strong></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><strong>Expert quotes</strong></td>
+              <td>Mỗi bài blog ≥1 trích dẫn từ stylist có tên</td>
+              <td>Chương</td>
+              <td><strong style="color:#c0392b">Per bài</strong></td>
+            </tr>
+            <tr class="suggestion-row">
+              <td>4</td>
+              <td><strong>Trust links — y tế VN 🆕</strong></td>
+              <td>Link đến vinmec.com / hellobacsi.com / suckhoedoisong.vn</td>
+              <td>Chương</td>
+              <td><strong style="color:#c0392b">Per bài health</strong></td>
+            </tr></tbody>
+          </table>
+        </div></div>
+    </section></main>
+  </div>
+  <script>
+function showSection(sid) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.sidebar nav a').forEach(a => a.classList.remove('active'));
+  const target = document.getElementById(sid);
+  const link = document.querySelector(`[data-target="${sid}"]`);
+  if (target) target.classList.add('active');
+  if (link) link.classList.add('active');
+  window.scrollTo(0, 0);
+  localStorage.setItem('seo-dash-tab', sid);
+}
+window.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('seo-dash-tab');
+  showSection(saved || 'overview');
+});
+</script>
+</body>
+</html>

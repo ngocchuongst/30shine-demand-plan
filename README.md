@@ -1,30 +1,36 @@
-# Demand Master Plan T5-T10/2026
+# 30Shine Marketing Plans T5/2026
 
-Single-file HTML dashboard — kế hoạch quản trị demand theo framework "bàn tay 5 ngón + ngón thứ 6".
+3 plan liên thông — Demand × Branding × SEO. Single-file HTML dashboards, không cần server.
 
 ## Xem online
 
-Bật GitHub Pages cho repo này (Settings → Pages → Source: `main` branch, folder `/ (root)`) rồi truy cập:
+```
+https://ngocchuongst.github.io/30shine-demand-plan/
+```
 
-```
-https://<username>.github.io/<repo-name>/
-```
+Trang `index.html` là hub link đến 3 plan. Mỗi plan tải bằng filename gốc.
+
+## 3 plan
+
+| Plan | File | Window |
+|---|---|---|
+| 🏆 Master Branding Plan | `MASTER_BRANDING_PLAN_T5_2026.html` | T5/2026 — 1 tháng |
+| ✋ Demand Master Plan | `DEMAND_MASTER_PLAN_T5-T10_2026.html` | T5–T10/2026 — 6 tháng |
+| 🔍 SEO Master Plan | `SEO_MASTER_PLAN_T5-T10_2026.html` | T5–T10/2026 — 6 tháng |
+
+## Logic 3 plan liên thông
+
+30Shine có **6 ngón demand** (5 cũ + 1 mới Trẻ hóa).
+
+- **Demand Plan** quản trị bộ ngón (Define → Radar → Test → Lock)
+- **Branding Plan** bồi đắp / bảo vệ / duy trì từng ngón (3 việc)
+- **SEO Plan** lock top-of-mind kênh search cho từng ngón (24 bài blog map vào 6 ngón)
+
+Không plan nào chạy tách rời.
 
 ## Xem local
 
-Tải file `index.html` về và mở bằng browser bất kỳ. Không cần server, không cần dependency.
-
-## Cấu trúc
-
-7 sections (sidebar nav):
-
-1. Tổng quan & KPI 6 tháng
-2. Bàn tay 5 ngón — demand bucket
-3. Quy trình 4 bước (Define → Radar → Test → Lock)
-4. Pipeline T5
-5. Test Engine — spend velocity rule
-6. Tracking & Đo lường
-7. Risk & Backup — ngưỡng an toàn
+Tải repo về và mở `index.html` bằng browser bất kỳ. Không cần server, không cần dependency.
 
 ## Tech
 
