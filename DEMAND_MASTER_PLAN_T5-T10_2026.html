@@ -544,7 +544,7 @@ tr:last-child td { border-bottom: none; }
       </h1>
       <nav>
         <a data-target="overview" onclick="showSection('overview')"><span class="num">1</span>🎯 Tổng quan & KPI</a>
-        <a data-target="hand" onclick="showSection('hand')"><span class="num">2</span>✋ Bàn tay 5 ngón</a>
+        <a data-target="hand" onclick="showSection('hand')"><span class="num">2</span>🧠 4 Macro CEP + Angle Bank</a>
         <a data-target="process" onclick="showSection('process')"><span class="num">3</span>🔄 Quy trình 4 bước</a>
         <a data-target="pipeline" onclick="showSection('pipeline')"><span class="num">4</span>📋 Pipeline T5</a>
         <a data-target="engine" onclick="showSection('engine')"><span class="num">5</span>⚙️ Test Engine</a>
@@ -562,29 +562,39 @@ tr:last-child td { border-bottom: none; }
     <!-- ========== 1. OVERVIEW ========== -->
     <section id="overview" class="section">
       <header class="hero">
-        <h2>✋ DEMAND MASTER PLAN — 30SHINE</h2>
-        <div class="subtitle">T5/2026 → T10/2026 • 6 tháng • Bàn tay 5 ngón + ngón thứ 6 • Hypothesis-driven, không cảm tính</div>
+        <h2>🧠 DEMAND MASTER PLAN — 30SHINE</h2>
+        <div class="subtitle">T5–T10/2026 • 2 tầng (Macro CEP demand + Angle bank) — <strong>cả 2 đều linh hoạt</strong>, cập nhật weekly qua Radar (spy)</div>
       </header>
       <div class="kpi-grid">
         <div class="kpi-card">
-          <div class="label">Demand đã lock</div>
-          <div class="value">5 + 1</div>
-          <div class="delta">+ Trẻ hóa (mới pass T4)</div>
+          <div class="label">Tầng 1 — Macro pool (linh hoạt)</div>
+          <div class="value">~4 hiện có</div>
+          <div class="delta">Radar weekly có thể đề xuất thêm Macro mới hoặc drop Macro yếu</div>
         </div>
         <div class="kpi-card">
-          <div class="label">Demand test/tháng</div>
-          <div class="value">4 chặng</div>
-          <div class="delta">10 video/demand × 1.6tr/3 ngày</div>
+          <div class="label">Tầng 2 — Angle bank (linh hoạt)</div>
+          <div class="value">Test liên tục</div>
+          <div class="delta">5-10+ angle/Macro, đổi theo signal Radar</div>
         </div>
         <div class="kpi-card">
-          <div class="label">Pass rate giả định</div>
-          <div class="value">30%</div>
-          <div class="delta">→ ~1.2 demand WIN/tháng</div>
+          <div class="label">Test slot (Hà-led)</div>
+          <div class="value">10 video</div>
+          <div class="delta">Test DEMAND (chính) + ANGLE (phụ) — Radar quét cả 2</div>
         </div>
         <div class="kpi-card">
-          <div class="label">Test budget/tháng</div>
-          <div class="value">64tr</div>
-          <div class="delta">4 demand × 10 video × 1.6tr</div>
+          <div class="label">KOC build-up demand</div>
+          <div class="value">10 video</div>
+          <div class="delta">KOC nội bộ (stylist) kể chuyện demand đã PASS</div>
+        </div>
+        <div class="kpi-card">
+          <div class="label">KOC booking external (tận dụng)</div>
+          <div class="value">10 video</div>
+          <div class="delta">Đã book — tận dụng cho scale + cross-promote demand đã PASS</div>
+        </div>
+        <div class="kpi-card">
+          <div class="label">Tổng video/tháng</div>
+          <div class="value">~30 video</div>
+          <div class="delta">10 test + 10 KOC build-up + 10 KOC external tận dụng</div>
         </div>
         <div class="kpi-card">
           <div class="label">3s view rate</div>
@@ -606,17 +616,23 @@ tr:last-child td { border-bottom: none; }
             <th>T5</th><th>T6</th><th>T7</th><th>T8</th><th>T9</th><th>T10</th>
           </tr></thead>
           <tbody>
-            <tr><td><strong>Demand đã lock</strong></td><td>5 cũ + ngón thứ 6 trong test</td><td class="baseline-cell">5</td><td class="target-cell">6</td><td class="target-cell">≥6</td><td class="target-cell">≥7</td><td class="target-cell">≥7</td><td class="target-cell">≥8</td><td class="target-cell">≥8</td></tr>
-            <tr><td>Demand đang test</td><td>Mỗi chặng 1 demand × 4 chặng</td><td class="baseline-cell">—</td><td class="target-cell">4</td><td class="target-cell">4</td><td class="target-cell">4</td><td class="target-cell">4</td><td class="target-cell">4</td><td class="target-cell">4</td></tr>
-            <tr><td>Hypothesis card/tháng (Radar)</td><td>Chương cấp input cho test</td><td class="baseline-cell">0</td><td class="target-cell">≥3</td><td class="target-cell">≥4</td><td class="target-cell">≥4</td><td class="target-cell">≥5</td><td class="target-cell">≥5</td><td class="target-cell">≥6</td></tr>
-            <tr><td>Số video sản xuất/tháng</td><td>2 Hà + KOC + stylist</td><td class="baseline-cell">~60</td><td class="target-cell">≥80</td><td class="target-cell">≥90</td><td class="target-cell">≥90</td><td class="target-cell">≥90</td><td class="target-cell">≥90</td><td class="target-cell">≥90</td></tr>
+            <tr><td><strong>Macro pool đang có</strong></td><td>Linh hoạt — Radar có thể đề xuất add/drop theo điểm rubric</td><td class="baseline-cell">~4</td><td class="target-cell">≥4</td><td class="target-cell">≥4</td><td class="target-cell">≥4</td><td class="target-cell">≥5</td><td class="target-cell">≥5</td><td class="target-cell">≥5</td></tr>
+            <tr><td>Macro hypothesis/tháng (Radar weekly)</td><td>Đề xuất Macro mới — chấm điểm rubric &gt;4.0 mới promote</td><td class="baseline-cell">0</td><td class="target-cell">≥1</td><td class="target-cell">≥1</td><td class="target-cell">≥1</td><td class="target-cell">≥1</td><td class="target-cell">≥1</td><td class="target-cell">≥1</td></tr>
+            <tr><td>Angle WIN bank (cộng dồn)</td><td>Angle PASS test → vào bank, dùng cho branding/scale</td><td class="baseline-cell">~5</td><td class="target-cell">≥6</td><td class="target-cell">≥7</td><td class="target-cell">≥9</td><td class="target-cell">≥11</td><td class="target-cell">≥13</td><td class="target-cell">≥15</td></tr>
+            <tr><td>Test video/tháng (TOTAL)</td><td>Cap cứng 10 video — phân bổ cho 1-3 angle ưu tiên cao</td><td class="baseline-cell">—</td><td class="target-cell">10</td><td class="target-cell">10</td><td class="target-cell">10</td><td class="target-cell">10</td><td class="target-cell">10</td><td class="target-cell">10</td></tr>
+            <tr><td>Angle đưa vào test/tháng</td><td>Số angle khác nhau test trong 10 video — tùy chiến thuật (1 angle deep / 2-3 angle parallel)</td><td class="baseline-cell">—</td><td class="target-cell">1-3</td><td class="target-cell">1-3</td><td class="target-cell">1-3</td><td class="target-cell">1-3</td><td class="target-cell">1-3</td><td class="target-cell">1-3</td></tr>
+            <tr><td>Angle hypothesis/tháng (Radar)</td><td>Chương quét angle mới trong 4 Macro</td><td class="baseline-cell">0</td><td class="target-cell">≥3</td><td class="target-cell">≥4</td><td class="target-cell">≥4</td><td class="target-cell">≥5</td><td class="target-cell">≥5</td><td class="target-cell">≥6</td></tr>
+            <tr class="section-header"><td colspan="9">📦 BẢNG TỔNG HỢP VIDEO — 3 TUYẾN RIÊNG (~30 video/tháng)</td></tr>
+            <tr><td><strong>Tuyến 1: TEST (Hà-led)</strong></td><td>Test demand + angle, 16tr ngân sách, Decision gate ngày 20</td><td class="baseline-cell">—</td><td class="target-cell">10</td><td class="target-cell">10</td><td class="target-cell">10</td><td class="target-cell">10</td><td class="target-cell">10</td><td class="target-cell">10</td></tr>
+            <tr><td><strong>Tuyến 2: KOC build-up demand (nội bộ)</strong></td><td>Stylist 30Shine kể chuyện demand đã PASS — scale, không test</td><td class="baseline-cell">—</td><td class="target-cell">10</td><td class="target-cell">10</td><td class="target-cell">10</td><td class="target-cell">10</td><td class="target-cell">10</td><td class="target-cell">10</td></tr>
+            <tr><td><strong>Tuyến 3: KOC booking external (tận dụng)</strong></td><td>Đã book sẵn — re-use cho scale demand đã PASS + cross-promote (không tạo demand mới)</td><td class="baseline-cell">~10</td><td class="target-cell">10</td><td class="target-cell">10</td><td class="target-cell">10</td><td class="target-cell">10</td><td class="target-cell">10</td><td class="target-cell">10</td></tr>
+            <tr><td><strong>Tổng cộng</strong></td><td>10 test + 10 KOC nội bộ + 10 KOC external tận dụng</td><td class="baseline-cell">~30</td><td class="target-cell">~30</td><td class="target-cell">~30</td><td class="target-cell">~30</td><td class="target-cell">~30</td><td class="target-cell">~30</td><td class="target-cell">~30</td></tr>
             <tr><td>3s view rate TB</td><td>Leading metric — chị Oanh chốt</td><td class="baseline-cell">7%</td><td class="target-cell">≥7.5%</td><td class="target-cell">≥8%</td><td class="target-cell">≥8.5%</td><td class="target-cell">≥9%</td><td class="target-cell">≥9.5%</td><td class="target-cell">≥10%</td></tr>
             <tr><td>25% view rate TB</td><td>Engagement check</td><td class="baseline-cell">—</td><td class="target-cell">track</td><td class="target-cell">≥3%</td><td class="target-cell">≥3.5%</td><td class="target-cell">≥4%</td><td class="target-cell">≥4%</td><td class="target-cell">≥4.5%</td></tr>
             <tr><td>50% view rate TB</td><td>Hấp dẫn thực sự</td><td class="baseline-cell">—</td><td class="target-cell">track</td><td class="target-cell">≥1.5%</td><td class="target-cell">≥2%</td><td class="target-cell">≥2%</td><td class="target-cell">≥2.5%</td><td class="target-cell">≥2.5%</td></tr>
             <tr><td>Ngân sách TB/video</td><td>1 video chất = 10tr ads</td><td class="baseline-cell">—</td><td class="target-cell">10tr</td><td class="target-cell">10tr</td><td class="target-cell">10tr</td><td class="target-cell">10tr</td><td class="target-cell">10tr</td><td class="target-cell">10tr</td></tr>
-            <tr><td>Số KOC booking</td><td>Đáp ứng pipeline 90 video</td><td class="baseline-cell">20</td><td class="target-cell">≥40</td><td class="target-cell">≥45</td><td class="target-cell">≥45</td><td class="target-cell">≥50</td><td class="target-cell">≥50</td><td class="target-cell">≥50</td></tr>
-            <tr><td>Decision Log entry</td><td>Mỗi demand test ghi pass/drop + lý do</td><td class="baseline-cell">0</td><td class="target-cell">≥4</td><td class="target-cell">≥8</td><td class="target-cell">≥12</td><td class="target-cell">≥16</td><td class="target-cell">≥20</td><td class="target-cell">≥24</td></tr>
-            <tr><td>Top-of-mind ngón đã lock</td><td>Brand lift survey hoặc share-of-voice social</td><td class="baseline-cell">—</td><td class="target-cell">setup</td><td class="target-cell">baseline</td><td class="target-cell">+5%</td><td class="target-cell">+10%</td><td class="target-cell">+15%</td><td class="target-cell">+20%</td></tr>
+            <tr><td>Decision Log entry</td><td>Mỗi angle test ghi pass/drop + lý do</td><td class="baseline-cell">0</td><td class="target-cell">≥4</td><td class="target-cell">≥8</td><td class="target-cell">≥12</td><td class="target-cell">≥16</td><td class="target-cell">≥20</td><td class="target-cell">≥24</td></tr>
+            <tr><td>Top-of-mind / Macro CEP</td><td>Share-of-voice social per Macro</td><td class="baseline-cell">—</td><td class="target-cell">setup 4 Macro</td><td class="target-cell">baseline</td><td class="target-cell">+5%</td><td class="target-cell">+10%</td><td class="target-cell">+15%</td><td class="target-cell">+20%</td></tr>
           </tbody>
         </table>
       </div>
@@ -626,9 +642,9 @@ tr:last-child td { border-bottom: none; }
         <table>
           <thead><tr><th>Plan</th><th>Liên kết với Demand ở đâu</th><th>File</th></tr></thead>
           <tbody>
-            <tr><td><strong>Master Branding Plan T5</strong></td><td>Demand đã pass (Trẻ hóa) → branding lock top-of-mind. 5 ngón hiện hữu → branding bồi đắp/bảo vệ. WC = chất liệu bồi đắp demand "xả stress" + "phong độ đàn ông"</td><td><code>MASTER_BRANDING_PLAN_T5_2026.html</code></td></tr>
-            <tr><td><strong>SEO Master Plan T5-T10</strong></td><td>Mỗi ngón demand → 1 cluster SEO. 24 bài blog phân bổ theo độ ưu tiên ngón (Trẻ hóa 25%, Ráy tai 25%, Cắt VP 17%, Massage 17%, KOC 8%, TMXD 8%). Demand pass = unlock SEO cluster ngân sách</td><td><code>SEO_MASTER_PLAN_T5-T10_2026.html</code> (section 2 — SEO ↔ Demand Mapping)</td></tr>
-            <tr><td><strong>Plan Test Demands T5</strong></td><td>4 chặng test ngón thứ 6 — file Excel chi tiết per video</td><td><code>PLAN_TEST_DEMANDS_T5_2026_v3-DE-XUAT.xlsx</code></td></tr>
+            <tr><td><strong>Master Branding Plan T5</strong></td><td>Branding lock top-of-mind cho <strong>Macro CEP</strong> (không lock từng angle). Angle WIN bank → cung cấp chất liệu cho branding. WC = nguyên liệu bồi đắp Macro Escape + Insecurity</td><td><code>MASTER_BRANDING_PLAN_T5_2026.html</code></td></tr>
+            <tr><td><strong>SEO Master Plan T5-T10</strong></td><td>Mỗi <strong>Macro CEP</strong> → 1 cluster SEO. 24 bài blog phân bổ vào 4 Macro × N angle. Mỗi bài blog = 1 angle phục vụ 1 Macro</td><td><code>SEO_MASTER_PLAN_T5-T10_2026.html</code> (section 2 — SEO ↔ Demand Mapping)</td></tr>
+            <tr><td><strong>Plan Test Demands T5</strong></td><td>4 chặng test <strong>angle</strong> trong 4 Macro — file Excel chi tiết per video</td><td><code>PLAN_TEST_DEMANDS_T5_2026_v3-DE-XUAT.xlsx</code></td></tr>
           </tbody>
         </table>
       </div>
@@ -638,16 +654,18 @@ tr:last-child td { border-bottom: none; }
         <table>
           <thead><tr><th>Tool / Tài khoản</th><th>Vai trò trong demand model</th><th>Trạng thái</th></tr></thead>
           <tbody>
+            <tr><td><strong>Cty 1.xlsx</strong> (purchase ads)</td><td><strong>Source CPA/CPM tier baseline</strong> — 142 ad T4 tối ưu lượt mua. Recompute tier hằng tháng.</td><td>✅ Có (refresh hàng tháng)</td></tr>
+            <tr><td><strong>Cty 2.xlsx</strong> (reach ads)</td><td>Source CPM tier cho reach campaigns (Nhượng quyền) — 144 ad T4. Khác biệt mạnh với Cty 1.</td><td>✅ Có (refresh hàng tháng)</td></tr>
             <tr><td><strong>Facebook Ads Manager</strong></td><td>Test ads + đo CPA + 3s/25%/50% view</td><td>✅ Có</td></tr>
             <tr><td><strong>TikTok Ads Manager</strong></td><td>Cross-channel test (T6+)</td><td>✅ Có</td></tr>
-            <tr><td><strong>Google Search Console</strong></td><td>Demand intent — keyword volume cho Radar</td><td>✅ Có</td></tr>
-            <tr><td><strong>Daily Collect (Chương)</strong></td><td>Source hypothesis card — competitor barber, NEW ads, Top advertisers</td><td>✅ Có (skill collect-daily)</td></tr>
-            <tr><td><strong>FB Ads Library API</strong></td><td>Quét competitor barber → angle mới</td><td>✅ Có</td></tr>
+            <tr><td><strong>Google Search Console</strong></td><td>Demand intent — keyword volume cho Radar weekly</td><td>✅ Có</td></tr>
+            <tr><td><strong>Daily Collect (Chương — spy weekly)</strong></td><td>Source angle hypothesis + macro hypothesis — competitor barber, NEW ads, Top advertisers, VOZ/Tinhte</td><td>✅ Có (skill collect-daily)</td></tr>
+            <tr><td><strong>FB Ads Library API</strong></td><td>Spy competitor barber → angle/macro mới</td><td>✅ Có</td></tr>
             <tr><td><strong>VOZ / Tinhte WebSearch</strong></td><td>Validate pain point + tiếng nói thật nam VN</td><td>✅ Có (skill analyze-validate)</td></tr>
             <tr><td><strong>Apify ($0.45/run)</strong></td><td>Pull own ads + competitor quote — paid version</td><td>⚠️ Optional — weekly deep-dive</td></tr>
-            <tr><td><strong>Notion (Decision Log)</strong></td><td>Log mỗi demand đã test — pass/drop/why</td><td>🆕 Cần setup T5</td></tr>
-            <tr><td><strong>Looker Studio / Excel</strong></td><td>Dashboard theo dõi 3s/25%/50% view</td><td>🆕 Cần setup T5</td></tr>
-            <tr><td><strong>Brand Lift Survey</strong></td><td>Đo top-of-mind cho ngón đã lock</td><td>⚠️ T6+ (escalate Vân Hà)</td></tr>
+            <tr><td><strong>Notion (Decision Log)</strong></td><td>Log mỗi angle test + Macro hypothesis — pass/drop/why + scoring</td><td>🆕 Cần setup T5</td></tr>
+            <tr><td><strong>Looker Studio / Excel</strong></td><td>Dashboard theo dõi 3s/25%/50% view + CPA/CPM tier compare Cty 1+2</td><td>🆕 Cần setup T5</td></tr>
+            <tr><td><strong>Brand Lift Survey</strong></td><td>Đo top-of-mind per Macro CEP</td><td>⚠️ T6+ (escalate Vân Hà)</td></tr>
           </tbody>
         </table>
       </div>
@@ -657,91 +675,217 @@ tr:last-child td { border-bottom: none; }
     <!-- ========== 2. BÀN TAY 5 NGÓN ========== -->
     <section id="hand" class="section">
       <header class="hero">
-        <h2>✋ Bàn tay 5 ngón + ngón thứ 6</h2>
-        <div class="subtitle">5 demand bucket đang phục vụ + 1 ngón thứ 6 đang test mỗi tháng — chị Oanh chốt họp Plan T5</div>
+        <h2>🧠 4 Macro CEP demand + Angle Bank</h2>
+        <div class="subtitle">2 tầng riêng biệt — Tầng 1: 4 Macro CEP cố định (demand) • Tầng 2: Angle Bank đổi liên tục (cách kể chuyện)</div>
       </header>
 
-      <div class="card">
-        <h3><span class="emoji">🧠</span> Tư duy: từ phần ngọn về phần gốc</h3>
-        <p style="color:var(--slate-700);margin-bottom:14px">
-          <strong>Phần ngọn</strong> (cũ): chạy theo "trend" / "mẫu mới" — đẹp ngắn hạn, fail không có log, không nhân rộng.<br>
-          <strong>Phần gốc</strong> (mới): xác định 30Shine đang sở hữu bao nhiêu <strong>"giỏ nhu cầu" (demand bucket)</strong>. Mỗi giỏ = 1 ngón tay. Mục tiêu Branding = làm 30Shine <strong>top-of-mind</strong> trong từng giỏ — kiểu khách muốn xả stress là nghĩ ngay 30Shine, như Haidilao = lẩu vui vẻ.
+      <div class="card" style="border-left:4px solid var(--rose-500);background:linear-gradient(135deg,#FFF1F2 0%,#FEFCE8 100%)">
+        <h3><span class="emoji">⚠️</span> Operating model — Unit test & phân loại</h3>
+        <p style="color:var(--slate-700);margin-bottom:12px">
+          <strong>Test slot = test DEMAND (chính) + ANGLE (phụ)</strong>. Radar weekly (Chương) quét <strong>cả 2 tầng</strong> — demand mới chiếm tỷ trọng lớn hơn vì sửa Macro pool. Total test capacity <strong>= 10 video/tháng × 1.6tr</strong> phân bổ theo priority rubric. KHÔNG phải mỗi unit cố định 10 video.
         </p>
-        <div class="note">
-          <strong>Quy ước</strong>: 5 ngón = duy trì + bồi đắp, KHÔNG được mất thị phần. Ngón thứ 6 = thí nghiệm, mỗi tháng test 1 ngón mới → pass thì lock, fail thì cắt bỏ tập trung nguồn lực.
+        <p style="color:var(--slate-700);margin-bottom:12px">
+          <strong>Tổng video sản xuất tháng ~30 video</strong> — 3 tuyến riêng: <strong>10 test (Hà-led)</strong> kiểm thử demand/angle • <strong>10 KOC build-up nội bộ</strong> (stylist 30Shine kể chuyện demand đã PASS) • <strong>10 KOC external (tận dụng)</strong> đã book sẵn → re-use scale + cross-promote.
+        </p>
+        <h4 style="margin-top:12px;margin-bottom:10px;color:var(--navy-900);font-size:14px">📂 Demand classification — 3 trạng thái (chỉ 1 trạng thái cần test)</h4>
+        <table>
+          <thead><tr><th>Trạng thái</th><th>Mô tả</th><th>Có test angle mới?</th><th>Action chính</th></tr></thead>
+          <tbody>
+            <tr><td><span class="badge locked">🔒 LOCK & SCALE</span></td><td>Demand đã có angle WIN bank, branding lock top-of-mind, đang scale</td><td>❌ Không (focus scale)</td><td>Bồi đắp branding + scale paid amplification</td></tr>
+            <tr><td><span class="badge maintain">⚙️ MAINTAIN</span></td><td>Demand stable, organic, không có dấu hiệu mất share</td><td>❌ Không (refresh occasional)</td><td>Always-on cadence, tận dụng angle WIN cũ</td></tr>
+            <tr><td><span class="badge testing">🧪 TEST (active)</span></td><td>Demand cần thêm angle (vd Insecurity vừa pass 1 angle, cần thêm 2-3 để lock chắc)</td><td>✅ Có — chiếm slot trong 10 video</td><td>Allocate video, chấm angle scoring rubric, test</td></tr>
+            <tr><td><span class="badge warning">🔄 PENDING RE-TEST</span></td><td>Demand đã từng có angle WIN nhưng dấu hiệu mệt mỏi (CPA tăng, share-of-voice giảm)</td><td>✅ Có — re-test với angle mới</td><td>Refresh angle, rotate creative</td></tr>
+          </tbody>
+        </table>
+        <h4 style="margin-top:18px;margin-bottom:10px;color:var(--navy-900);font-size:14px">📂 Angle classification — 4 trạng thái</h4>
+        <table>
+          <thead><tr><th>Trạng thái</th><th>Mô tả</th><th>Source / sink</th></tr></thead>
+          <tbody>
+            <tr><td><span class="badge locked">✅ WIN bank</span></td><td>Đã PASS test — dùng cho branding chất liệu, KOC scale, paid amplification</td><td>Sink — dùng tiếp tục đến khi mệt mỏi → re-test</td></tr>
+            <tr><td><span class="badge testing">🧪 TESTING</span></td><td>Đang test trong tháng — chiếm slot trong 10 video</td><td>Active — chờ verdict ngày 20</td></tr>
+            <tr><td><span class="badge deferred">📋 BACKLOG</span></td><td>Đã chấm rubric ≥3.0, chờ slot test các tháng sau</td><td>Source — Radar weekly bổ sung</td></tr>
+            <tr><td><span class="badge dropped" style="background:var(--rose-100);color:#BE123C">❌ DROPPED</span></td><td>Đã FAIL test hoặc rubric &lt;3.0 — ghi kho know-how</td><td>Sink — không tái sử dụng nguyên bản</td></tr>
+          </tbody>
+        </table>
+        <div class="note" style="margin-top:12px">
+          <strong>Hệ quả</strong>: tổng ~30 video/tháng = <strong>10 test (Hà-led)</strong> tạo angle/demand mới • <strong>10 KOC nội bộ</strong> stylist scale demand đã PASS • <strong>10 KOC external (tận dụng)</strong> đã book → reach lớn cho scale + cross-promote, KHÔNG dùng để test demand mới (rủi ro cao + chi phí KOC external đắt).
         </div>
       </div>
 
       <div class="card">
-        <h3><span class="emoji">✋</span> 5 ngón hiện hữu (cần Tùng + Chương chốt baseline T5)</h3>
+        <h3><span class="emoji">🧠</span> Phân biệt cốt lõi: Demand vs Angle</h3>
+        <table>
+          <thead><tr><th></th><th>DEMAND (Macro CEP)</th><th>ANGLE (Micro CEP / hook content)</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Bản chất</strong></td><td>Lý do khách bước vào danh mục</td><td>Cách kể chuyện để trigger demand đó</td></tr>
+            <tr><td><strong>Số lượng</strong></td><td>Ít, ổn định (4)</td><td>Nhiều, đổi liên tục (5-10+ /Macro)</td></tr>
+            <tr><td><strong>Sống bao lâu</strong></td><td>5-10+ năm</td><td>1-3 tháng (theo trend)</td></tr>
+            <tr><td><strong>Đo bằng</strong></td><td>Share-of-mind, top-of-mind survey</td><td>3s view, CTR, engagement per video</td></tr>
+            <tr><td><strong>Ai owner</strong></td><td>Brand strategy (Oanh + Tùng)</td><td>Content team (Vân Hà + Thanh Hà) + Radar (Chương)</td></tr>
+            <tr><td><strong>Test rule</strong></td><td>Không test (fix)</td><td>1.6tr/3 ngày × 10 video</td></tr>
+            <tr><td><strong>Ví dụ</strong></td><td>Insecurity (sợ già/lão hóa)</td><td>"Sếp tưởng tôi đổi việc" / "Hack 7 tuổi" / "Vợ ngỡ ngàng"</td></tr>
+          </tbody>
+        </table>
+        <div class="note">
+          <strong>Tinh thần Oanh chốt</strong>: trước em làm trộn 2 tầng (gọi "Trẻ hóa" là demand, thật ra là angle). Giờ tách rõ — demand là <em>nhu cầu nền</em> (cố định), angle là <em>cách kể</em> (đổi liên tục). Test rule áp lên angle, branding lock áp lên demand.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🎯</span> Tầng 1 — Macro pool đang có (linh hoạt — Radar weekly cập nhật)</h3>
         <div class="bucket-grid">
-          <div class="bucket">
-            <span class="pill">NGÓN 1 — LOCKED</span>
-            <h4>👔 Cắt tóc văn phòng</h4>
-            <div class="persona">Nam 25-40 đi làm — cần gọn gàng, chuyên nghiệp</div>
-            <div class="metric">Service: <strong>Cắt + gội thường (CTV/CT)</strong></div>
-            <div class="metric">JTBD: chỉn chu cho meeting / sếp / khách hàng</div>
-            <div class="metric">Status: <span class="badge locked">Đang scale</span></div>
+          <div class="bucket boost">
+            <span class="pill">MACRO01 — IN POOL</span>
+            <h4>🌴 Escape / Relax</h4>
+            <div class="persona">Lý do khách bước vào: "Tôi cần thoát áp lực 45 phút giữa ngày làm việc"</div>
+            <div class="metric">Service map: <strong>massage gội + ráy tai (combo Relax)</strong></div>
+            <div class="metric">Persona điển hình: coder / banking / BĐS / sales</div>
+            <div class="metric">Status: <span class="badge locked">Đã có angle WIN — bồi đắp</span></div>
           </div>
-          <div class="bucket">
-            <span class="pill">NGÓN 2 — LOCKED</span>
-            <h4>👂 Lấy ráy tai (USP)</h4>
-            <div class="persona">Nam 28-45 — relax sau giờ làm, signature 30Shine</div>
-            <div class="metric">Service: <strong>Lấy ráy tai 70K</strong> (CPA tier ngon ~22k)</div>
-            <div class="metric">JTBD: thư giãn + signature experience</div>
-            <div class="metric">Status: <span class="badge locked">USP phải bảo vệ</span></div>
+          <div class="bucket boost">
+            <span class="pill">MACRO02 — IN POOL</span>
+            <h4>🚀 Transition — Cột mốc sự nghiệp</h4>
+            <div class="persona">Lý do khách bước vào: "Tôi cần diện mạo khác cho thăng chức / đổi job / pitch lớn"</div>
+            <div class="metric">Service map: <strong>cắt tạo kiểu Leader + styling</strong></div>
+            <div class="metric">Persona điển hình: nam 28-40 sắp lên chức / chuyển job</div>
+            <div class="metric">Status: <span class="badge locked">Đã có angle WIN — bồi đắp</span></div>
           </div>
-          <div class="bucket">
-            <span class="pill">NGÓN 3 — LOCKED</span>
-            <h4>🎬 KOC look</h4>
-            <div class="persona">Nam 22-35 — cắt giống idol/creator, theo trend</div>
-            <div class="metric">Service: <strong>Combo KOC</strong> (CPA tier ~28k)</div>
-            <div class="metric">JTBD: bắt trend, đẹp giống KOC</div>
-            <div class="metric">Status: <span class="badge locked">Đang scale</span></div>
+          <div class="bucket boost">
+            <span class="pill">MACRO03 — IN POOL</span>
+            <h4>😰 Insecurity — Nỗi lo cá nhân (rộng)</h4>
+            <div class="persona">Lý do khách bước vào: "Tôi sợ già / hói / rụng tóc / lão hóa / stress mất phong độ — cần diện mạo trẻ + da đầu khỏe"</div>
+            <div class="metric">Bao gồm: <strong>trẻ hóa diện mạo + chống lão hóa + rụng tóc + stress da đầu</strong></div>
+            <div class="metric">Service map: <strong>cắt + nhuộm phủ bạc + styling + GỘI DƯỠNG SINH (relax) + DƯỠNG TÓC + sản phẩm chăm sóc tóc nam</strong></div>
+            <div class="metric">Persona điển hình: nam 30-45 — overlap mạnh với Macro Escape (relax giải stress)</div>
+            <div class="metric">Status: <span class="badge testing">1 angle "Trẻ hóa" PASS — mở rộng angle: rụng tóc / hói / dưỡng da đầu</span></div>
           </div>
-          <div class="bucket">
-            <span class="pill">NGÓN 4 — LOCKED</span>
-            <h4>💆 Massage gội thư giãn</h4>
-            <div class="persona">Coder / banking / BĐS — xả stress giờ trưa</div>
-            <div class="metric">Service: <strong>Gội dưỡng sinh / massage đầu vai gáy</strong></div>
-            <div class="metric">JTBD: 45 phút escape khỏi văn phòng</div>
-            <div class="metric">Status: <span class="badge locked">Cluster Relax (SEO synergy)</span></div>
+          <div class="bucket boost">
+            <span class="pill">MACRO04 — IN POOL</span>
+            <h4>🎯 Hybrid Lý + Cảm (USP)</h4>
+            <div class="persona">Lý do khách bước vào: "Tai ngứa cần xử lý + tự thưởng cảm giác thư giãn"</div>
+            <div class="metric">Service map: <strong>lấy ráy tai (USP) + gội dưỡng sinh</strong></div>
+            <div class="metric">Persona điển hình: nam 28-45 quay lại nhiều lần</div>
+            <div class="metric">Status: <span class="badge locked">USP mạnh nhất — bảo vệ</span></div>
           </div>
-          <div class="bucket">
-            <span class="pill">NGÓN 5 — LOCKED</span>
-            <h4>✨ TMXD (combo cao cấp)</h4>
-            <div class="persona">Khách thân thiết / chăm sóc combo</div>
-            <div class="metric">Service: <strong>TMXD</strong> (CPA tier ~27k)</div>
-            <div class="metric">JTBD: chăm sóc toàn diện, thưởng cho bản thân</div>
-            <div class="metric">Status: <span class="badge locked">Đang scale</span></div>
-          </div>
-          <div class="bucket testing">
-            <span class="pill">NGÓN 6 — JUST PASSED</span>
-            <h4>🧬 Trẻ hóa / Hack tuổi</h4>
-            <div class="persona">Nam 35-45 — sợ già, muốn thay đổi diện mạo để thăng tiến</div>
-            <div class="metric">Service: <strong>Đa dạng (cắt + nhuộm + styling)</strong></div>
-            <div class="metric">JTBD: hack 5-10 tuổi, lợi thế công việc + tình cảm</div>
-            <div class="metric">Status: <span class="badge testing">Pass test → cần LOCK top-of-mind</span></div>
+          <div class="bucket testing" style="border:2px dashed var(--slate-400)">
+            <span class="pill" style="background:var(--slate-500)">MACRO XX — RADAR WEEKLY</span>
+            <h4>🛰️ Macro mới đang quét</h4>
+            <div class="persona">Radar weekly (Chương) quét spy để đề xuất Macro mới — chấm điểm rubric &gt;4.0 mới promote</div>
+            <div class="metric">Source: daily collect, FB Ads Library spy, VOZ/Tinhte, Google Trends</div>
+            <div class="metric">Cadence: weekly hypothesis → monthly review</div>
+            <div class="metric">Status: <span class="badge deferred">Open slot — chờ signal</span></div>
           </div>
         </div>
         <div class="note">
-          <strong>⚠️ Action T5</strong>: Tùng + Chương chốt lại 5 ngón này (có thể adjust tên gọi / persona / KPI sức khỏe). Đây là <em>baseline</em> để biết ngón nào yếu cần bồi, ngón nào mạnh cần khóa top-of-mind. Không có baseline = không biết test ngón thứ 6 cho cái gì.
+          <strong>Macro pool KHÔNG cố định</strong>. Radar weekly có thể đề xuất Macro mới hoặc drop Macro yếu (theo Demand Scoring Rubric ở dưới). Hiện tại 4 Macro trong pool — có thể thành 5 hoặc 3 tùy signal.<br>
+          Bỏ "KOC look" + "TMXD" — KOC là format content, TMXD là brand message, không phải demand.
         </div>
       </div>
 
       <div class="card">
-        <h3><span class="emoji">🎯</span> Sức khỏe baseline — 5 ngón (cần fill T5)</h3>
+        <h3><span class="emoji">📏</span> Demand Scoring Rubric — chấm điểm Macro CEP (vào pool / out pool)</h3>
+        <p style="color:var(--slate-700);margin-bottom:12px">
+          Mỗi tuần Radar quét xong, Chương chấm điểm cho Macro mới đang nổi (hoặc Macro hiện tại có dấu hiệu yếu). Tổng điểm 1-5.
+        </p>
+        <table>
+          <thead><tr><th>Tiêu chí</th><th>Trọng số</th><th>1 điểm</th><th>3 điểm</th><th>5 điểm</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Volume signal</strong> (search + social mention)</td><td class="target-cell">30%</td><td>Ít, không thấy nổi</td><td>Đều đều, có người nhắc</td><td>Bùng nổ — hashtag, thread VOZ &gt;500 reply</td></tr>
+            <tr><td><strong>Persona overlap với 30Shine</strong></td><td class="target-cell">25%</td><td>Tệp khác hoàn toàn (vd phụ nữ, trẻ em)</td><td>Overlap ~50% (cross-segment)</td><td>Trùng tệp Cắt VP / Lấy ráy tai (nam 25-45)</td></tr>
+            <tr><td><strong>Service map khả thi</strong></td><td class="target-cell">20%</td><td>Phải mở dịch vụ mới (vd cắt nữ)</td><td>Cần adjust dịch vụ hiện có</td><td>Đã có sẵn, dùng được ngay</td></tr>
+            <tr><td><strong>Đối thủ chen vào</strong></td><td class="target-cell">15%</td><td>Trống — chưa ai làm</td><td>Có 1-2 đối thủ test thử</td><td>Coolmate / brand X đã chiếm — phải vào ngay nếu không mất</td></tr>
+            <tr><td><strong>Sustainability</strong> (sống &gt;6 tháng?)</td><td class="target-cell">10%</td><td>Trend nhất thời (vài tuần)</td><td>Theo mùa / sự kiện</td><td>Demand vĩnh cửu (relax / thăng chức)</td></tr>
+          </tbody>
+        </table>
+        <table style="margin-top:14px">
+          <thead><tr><th>Tổng điểm</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td><strong style="color:#047857">≥ 4.0</strong></td><td><strong>PROMOTE vào Macro pool</strong> — bắt đầu test angle, branding lock dần</td></tr>
+            <tr><td><strong style="color:#B45309">3.0 – 4.0</strong></td><td><strong>HOLD</strong> — watch Radar 4 tuần, xem điểm có lên không</td></tr>
+            <tr><td><strong style="color:#BE123C">&lt; 3.0</strong></td><td><strong>DROP</strong> hypothesis — không quan tâm, ghi kho know-how</td></tr>
+            <tr><td>Macro hiện tại + tổng điểm tụt &lt;3.0</td><td><strong>OUT POOL</strong> — chấm dứt branding lock, dồn nguồn lực sang Macro khác</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🎯</span> Angle Scoring Rubric — chấm điểm Angle (vào test / drop)</h3>
+        <p style="color:var(--slate-700);margin-bottom:12px">
+          Mỗi tháng Chương cấp ≥3 angle hypothesis. Chấm điểm rubric → top 4 vào 4 chặng test. Còn lại vào backlog.
+        </p>
+        <table>
+          <thead><tr><th>Tiêu chí</th><th>Trọng số</th><th>1 điểm</th><th>3 điểm</th><th>5 điểm</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Map vào Macro nào</strong> (rõ ràng)</td><td class="target-cell">25%</td><td>Mơ hồ, không gắn Macro nào</td><td>Khớp 1 Macro nhưng yếu</td><td>Khớp Macro hoàn toàn, persona trúng đích</td></tr>
+            <tr><td><strong>Specificity của trigger</strong></td><td class="target-cell">20%</td><td>Chung chung "đàn ông cần đẹp"</td><td>Có context "đi làm văn phòng"</td><td>Cụ thể "Sếp giao deadline lúc 11h30"</td></tr>
+            <tr><td><strong>Production feasibility</strong></td><td class="target-cell">20%</td><td>Phải tuyển mẫu / quay studio đắt</td><td>KOC nano cần brief kỹ</td><td>KOC sẵn quay tại salon, không phụ kiện</td></tr>
+            <tr><td><strong>CPA tier estimate</strong> (dựa Cty 1)</td><td class="target-cell">20%</td><td>&gt;60.000đ (CUT tier)</td><td>30.000-50.000đ (OK tier)</td><td>≤25.000đ (STAR tier — như "Slicky Hair" T4)</td></tr>
+            <tr><td><strong>Khác biệt với angle WIN cũ</strong></td><td class="target-cell">15%</td><td>Trùng 90% angle đã có</td><td>Variation nhẹ</td><td>Angle hoàn toàn mới, không trùng</td></tr>
+          </tbody>
+        </table>
+        <table style="margin-top:14px">
+          <thead><tr><th>Tổng điểm</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td><strong style="color:#047857">≥ 4.0</strong></td><td><strong>VÀO 4 CHẶNG TEST T+1</strong> — top 4 angle/tháng</td></tr>
+            <tr><td><strong style="color:#B45309">3.0 – 4.0</strong></td><td><strong>BACKLOG</strong> — chờ tháng sau hoặc fill chỗ trống</td></tr>
+            <tr><td><strong style="color:#BE123C">&lt; 3.0</strong></td><td><strong>DROP</strong> hypothesis ngay — ghi kho know-how, không test</td></tr>
+          </tbody>
+        </table>
+        <div class="note">
+          <strong>Logic 2 rubric</strong>: Demand rubric chấm <em>cả Macro</em> (chiến lược dài hạn) — chậm, mỗi tháng review 1 lần. Angle rubric chấm <em>từng angle hypothesis</em> (tactical) — nhanh, mỗi tuần Radar quét + chấm.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">📚</span> Tầng 2 — Angle Bank (test liên tục, đổi theo trend)</h3>
+        <p style="color:var(--slate-700);margin-bottom:12px">
+          Mỗi Macro có 5-10+ angle. Angle PASS test = vào bank → branding dùng làm chất liệu. Angle FAIL = ghi kho know-how, không tái sử dụng nguyên bản.
+        </p>
+        <table>
+          <thead><tr><th>Macro</th><th>Angle đã có / đã PASS</th><th>Angle đang test T5</th><th>Angle backlog (Radar quét)</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>🌴 MACRO01 Escape</strong></td>
+              <td>"Sếp giao deadline lúc 11h30" (S1 POV) ✅<br>"Thử thách 60 phút" (S2) ✅<br>"Vợ theo dõi" (S5 humor) ✅</td>
+              <td style="background:#fff8dc">[Chương + Radar fill T5]</td>
+              <td>"Minitrip giữa lòng phố"<br>"Coder không ngủ trưa"<br>"45 phút before/after stress"</td>
+            </tr>
+            <tr>
+              <td><strong>🚀 MACRO02 Transition</strong></td>
+              <td>"Bí kíp pitching" (S4 before/after) ✅<br>"Sales 40 tuổi gặp khách trẻ"</td>
+              <td style="background:#fff8dc">[fill]</td>
+              <td>"Sắp lên chức quản lý"<br>"Đổi job tháng sau"<br>"Pitch khách lớn"<br>"Photo profile LinkedIn"</td>
+            </tr>
+            <tr>
+              <td><strong>😰 MACRO03 Insecurity</strong><br><em style="font-size:11px;color:var(--slate-500)">Trẻ hóa + rụng tóc + lão hóa + stress da đầu</em></td>
+              <td><strong>"Hack 7 tuổi với 1 lần cắt"</strong> ✅ (PASS T4)</td>
+              <td style="background:#fff8dc">[fill — ưu tiên cao, mở rộng sang rụng tóc + dưỡng]</td>
+              <td><strong>Trẻ hóa</strong>: "Sợi tóc bạc đầu tiên" / "Sếp tưởng tôi 50 tuổi" / "Hack 5 năm trong 60 phút" / "Trước-sau lão hóa"<br><strong>Rụng tóc / hói</strong>: "Tóc thưa từ tuổi 30" / "Stress = rụng tóc từng mảng" / "Dưỡng da đầu khỏe"<br><strong>Stress + relax</strong>: "Gội dưỡng sinh giảm stress" / "Combo Insecurity + Escape" (cross-Macro)<br><strong>Sản phẩm</strong>: "Dầu gội nam phòng rụng" / "Tinh chất dưỡng tóc"</td>
+            </tr>
+            <tr>
+              <td><strong>🎯 MACRO04 Hybrid Lý+Cảm</strong></td>
+              <td>"Dịch vụ gây nghiện hơn cafe" (S3 ASMR) ✅<br>"Ráy tai an toàn vs spa 200K vs clinic 500K" ✅</td>
+              <td style="background:#fff8dc">[fill]</td>
+              <td>"Tự thưởng giữa tuần"<br>"Tai ngứa = báo động"<br>"Self-care thường xuyên"</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="note">
+          <strong>Logic Radar (em — Chương)</strong>: hằng tuần quét daily collect + niche research → bổ sung cột "Angle backlog". Mỗi tháng pick 4 angle vào 4 chặng test. Decision gate ngày 20 → angle PASS vào cột "Đã có / Đã PASS", angle FAIL → ghi kho know-how + bỏ.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">📊</span> Sức khỏe Macro CEP — baseline (cần fill T5)</h3>
         <table>
           <thead><tr>
-            <th>Ngón</th><th>Volume khách/tháng</th><th>CPA</th><th>IOV</th><th>Share-of-mind</th><th>Trạng thái</th>
+            <th>Macro</th><th>Số angle WIN</th><th>Volume khách/tháng</th><th>CPA TB</th><th>Share-of-mind</th><th>Trạng thái branding</th>
           </tr></thead>
           <tbody>
-            <tr><td><strong>Cắt VP</strong></td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>230k (ref)</td><td style="background:#fff8dc">[fill]</td><td><span class="badge locked">Stable</span></td></tr>
-            <tr><td><strong>Lấy ráy tai</strong></td><td style="background:#fff8dc">[fill]</td><td>~22k</td><td>70k</td><td style="background:#fff8dc">[fill]</td><td><span class="badge locked">USP</span></td></tr>
-            <tr><td><strong>KOC look</strong></td><td style="background:#fff8dc">[fill]</td><td>~28k</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td><span class="badge locked">Scaling</span></td></tr>
-            <tr><td><strong>Massage gội</strong></td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td><span class="badge locked">Cluster Relax</span></td></tr>
-            <tr><td><strong>TMXD</strong></td><td style="background:#fff8dc">[fill]</td><td>~27k</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td><span class="badge locked">Combo cao</span></td></tr>
-            <tr><td><strong>Trẻ hóa (mới)</strong></td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>0 (chưa lock)</td><td><span class="badge testing">Pass → lock</span></td></tr>
+            <tr><td><strong>🌴 Escape</strong></td><td>3</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill — setup T5]</td><td><span class="badge locked">Bồi đắp</span></td></tr>
+            <tr><td><strong>🚀 Transition</strong></td><td>~2</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill — setup T5]</td><td><span class="badge locked">Bồi đắp</span></td></tr>
+            <tr><td><strong>😰 Insecurity</strong></td><td>1 (Trẻ hóa)</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill — baseline 0]</td><td><span class="badge testing">Pending lock — cần thêm 2-3 angle</span></td></tr>
+            <tr><td><strong>🎯 Hybrid Lý+Cảm</strong></td><td>2</td><td style="background:#fff8dc">[fill]</td><td>~22k (ráy tai)</td><td style="background:#fff8dc">[fill — setup T5]</td><td><span class="badge locked">USP — bảo vệ</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -761,46 +905,53 @@ tr:last-child td { border-bottom: none; }
             <div class="num">1</div>
             <div class="who">Owner: Tùng + Chương</div>
             <h4>DEFINE — Chốt baseline</h4>
-            <p>Liệt kê 5-6 ngón hiện hữu, define:</p>
+            <p>Chốt baseline 4 Macro CEP demand:</p>
             <ul>
-              <li>Persona + JTBD</li>
-              <li>KPI sức khỏe (volume, CPA, IOV)</li>
-              <li>Service tương ứng</li>
+              <li>Persona + JTBD per Macro</li>
+              <li>KPI sức khỏe (volume, CPA, share-of-mind)</li>
+              <li>Service map per Macro</li>
             </ul>
-            <p style="margin-top:8px"><strong>Output</strong>: Baseline doc (xem section "Bàn tay")</p>
+            <p style="margin-top:8px"><strong>Output</strong>: Baseline 4 Macro (xem section "4 Macro CEP")</p>
           </div>
           <div class="step">
             <div class="num">2</div>
             <div class="who">Owner: Chương (T-5 BI)</div>
-            <h4>RADAR — Quét ngón thứ 6</h4>
-            <p>Quét thị trường tìm hypothesis demand mới:</p>
+            <h4>RADAR — Quét DEMAND + ANGLE</h4>
+            <p style="font-size:11px;color:var(--slate-500);margin-bottom:6px">Spy weekly — quét cả 2 tầng:</p>
+            <p style="margin-bottom:6px"><strong>(a) Demand mới (Macro)</strong>:</p>
             <ul>
-              <li>Daily collect: FB Ads, VOZ, Tinhte</li>
-              <li>Niche research 4-layer</li>
-              <li>Cross-industry signal</li>
+              <li>Macro CEP đang nổi nhưng 30Shine chưa serve</li>
+              <li>Persona overlap đủ → chấm rubric</li>
+              <li>Output: ≥1 macro hypothesis/tháng</li>
             </ul>
-            <p style="margin-top:8px"><strong>Output</strong>: ≥3 hypothesis card/tháng</p>
+            <p style="margin-top:8px;margin-bottom:6px"><strong>(b) Angle mới (trong Macro có sẵn)</strong>:</p>
+            <ul>
+              <li>Hook/trigger mới đang viral</li>
+              <li>Angle competitor đang chạy</li>
+              <li>Output: ≥3 angle hypothesis/tháng</li>
+            </ul>
+            <p style="margin-top:6px;font-size:11px;color:var(--slate-500)">Source: daily collect, FB Ads Library, VOZ/Tinhte, niche research 4-layer, cross-industry</p>
           </div>
           <div class="step">
             <div class="num">3</div>
             <div class="who">Owner: 2 Hà + Khánh/Huế</div>
             <h4>TEST — Spend velocity</h4>
-            <p>10 video × 1.6tr/3 ngày × 4 demand:</p>
+            <p>10 video × 1.6tr/3 ngày × 4 angle:</p>
             <ul>
               <li>2 Hà: produce video</li>
               <li>Khánh/Huế: chạy ads</li>
               <li>Decision gate ngày 20</li>
             </ul>
-            <p style="margin-top:8px"><strong>Output</strong>: Pass / Drop verdict</p>
+            <p style="margin-top:8px"><strong>Output</strong>: Pass / Drop verdict per angle</p>
           </div>
           <div class="step">
             <div class="num">4</div>
             <div class="who">Owner: Tùng + Vân Hà</div>
             <h4>LOCK / DROP</h4>
-            <p>Demand pass → lock vào bộ quản trị:</p>
+            <p>Angle PASS → vào Angle Bank → branding lock Macro:</p>
             <ul>
-              <li>Branding top-of-mind</li>
-              <li>KPI dài hạn</li>
+              <li>Angle PASS = chất liệu cho branding</li>
+              <li>Branding lock Macro CEP (không phải angle)</li>
               <li>Fail → ghi kho know-how</li>
             </ul>
             <p style="margin-top:8px"><strong>Output</strong>: Decision Log + branding brief</p>
@@ -818,13 +969,13 @@ tr:last-child td { border-bottom: none; }
             <th>Hoạt động</th><th>Chương (T-5 BI)</th><th>Tùng (QL)</th><th>Vân Hà / Thanh Hà</th><th>Khánh / Huế (Perf)</th>
           </tr></thead>
           <tbody>
-            <tr><td>Define baseline 5 ngón</td><td>R</td><td>A</td><td>C</td><td>I</td></tr>
-            <tr><td>Radar — hypothesis card</td><td><strong>R/A</strong></td><td>C</td><td>I</td><td>I</td></tr>
-            <tr><td>Mapping fit demand × 30Shine</td><td><strong>R</strong></td><td>A</td><td>C</td><td>C</td></tr>
+            <tr><td>Define baseline 4 Macro CEP</td><td>R</td><td>A</td><td>C</td><td>I</td></tr>
+            <tr><td>Radar — angle hypothesis card</td><td><strong>R/A</strong></td><td>C</td><td>I</td><td>I</td></tr>
+            <tr><td>Mapping angle × Macro CEP</td><td><strong>R</strong></td><td>A</td><td>C</td><td>C</td></tr>
             <tr><td>Produce video test</td><td>I</td><td>C</td><td><strong>R</strong></td><td>I</td></tr>
             <tr><td>Chạy ads test (1.6tr/3 ngày)</td><td>I</td><td>C</td><td>I</td><td><strong>R</strong></td></tr>
             <tr><td>Decision gate ngày 20</td><td>R (log)</td><td><strong>A</strong></td><td>C</td><td>C</td></tr>
-            <tr><td>Branding lock demand pass</td><td>C</td><td>A</td><td><strong>R</strong></td><td>I</td></tr>
+            <tr><td>Branding lock Macro CEP (dùng angle bank)</td><td>C</td><td>A</td><td><strong>R</strong></td><td>I</td></tr>
             <tr><td>Decision Log + Kho know-how</td><td><strong>R/A</strong></td><td>I</td><td>C</td><td>C</td></tr>
           </tbody>
         </table>
@@ -838,35 +989,72 @@ tr:last-child td { border-bottom: none; }
     <section id="pipeline" class="section">
       <header class="hero">
         <h2>📋 Pipeline T5/2026</h2>
-        <div class="subtitle">Demand đang test — đã pass — đã drop — backlog hypothesis cho T6+</div>
+        <div class="subtitle">~30 video/tháng = 10 test (Hà-led) + 10 KOC nội bộ build-up + 10 KOC external tận dụng</div>
       </header>
 
       <div class="card">
-        <h3><span class="emoji">🎯</span> 4 chặng test T5 (1 demand/chặng)</h3>
+        <h3><span class="emoji">🎯</span> Test slot T5 — 10 video Hà-led (test DEMAND chính + ANGLE phụ)</h3>
+        <p style="color:var(--slate-700);margin-bottom:12px">
+          Total test = <strong>10 video × 1.6tr/3 ngày = 16tr</strong>. Đơn vị test = <strong>demand mới</strong> (Macro hypothesis cần validate) hoặc <strong>angle mới</strong> trong Macro đã có. <strong>Demand chiếm tỷ trọng lớn hơn</strong> vì grow Macro pool quan trọng hơn add angle.
+        </p>
         <table>
           <thead><tr>
-            <th>Chặng</th><th>Tuần</th><th>Demand</th><th>Hypothesis</th><th>Pain point</th><th>Service</th><th>Producer</th><th>Status</th>
+            <th>#</th><th>Loại</th><th>Tên</th><th>Macro CEP</th><th>Số video</th><th>Ngân sách</th><th>Hypothesis</th><th>Producer</th><th>Verdict</th>
           </tr></thead>
           <tbody>
-            <tr><td><strong>Chặng 1</strong></td><td>04/05 → 10/05</td><td style="background:#fff8dc">[D01 fill từ Daily Collect]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>Vân Hà</td><td><span class="badge testing">Testing</span></td></tr>
-            <tr><td><strong>Chặng 2</strong></td><td>11/05 → 17/05</td><td style="background:#fff8dc">[D02]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>Thanh Hà</td><td><span class="badge testing">Queue</span></td></tr>
-            <tr><td><strong>Chặng 3</strong></td><td>18/05 → 24/05</td><td style="background:#fff8dc">[D03]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>Vân Hà</td><td><span class="badge testing">Queue</span></td></tr>
-            <tr><td><strong>Chặng 4</strong></td><td>25/05 → 31/05</td><td style="background:#fff8dc">[D04]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>Thanh Hà</td><td><span class="badge testing">Queue</span></td></tr>
-            <tr class="section-header"><td colspan="8">DEMAND ĐÃ LOCK (5 ngón cũ + 1 mới)</td></tr>
-            <tr><td>—</td><td>—</td><td><strong>Cắt tóc văn phòng</strong></td><td>Nam 25-40 cần gọn gàng chuyên nghiệp</td><td>Outfit chỉn chu cho meeting</td><td>CTV/CT</td><td>—</td><td><span class="badge locked">Locked</span></td></tr>
-            <tr><td>—</td><td>—</td><td><strong>Lấy ráy tai</strong></td><td>Relax sau giờ làm, USP</td><td>Stress về nhà không thư giãn</td><td>Lấy ráy tai 70K</td><td>—</td><td><span class="badge locked">USP</span></td></tr>
-            <tr><td>—</td><td>—</td><td><strong>KOC look</strong></td><td>Bắt trend creator</td><td>Sợ lỗi mốt, muốn giống idol</td><td>Combo KOC</td><td>—</td><td><span class="badge locked">Locked</span></td></tr>
-            <tr><td>—</td><td>—</td><td><strong>Massage gội</strong></td><td>Coder/banking xả stress giờ trưa</td><td>Stress công sở</td><td>Dưỡng sinh / vai gáy</td><td>—</td><td><span class="badge locked">Locked</span></td></tr>
-            <tr><td>—</td><td>—</td><td><strong>TMXD</strong></td><td>Combo cao cấp khách thân</td><td>Tự thưởng / chăm sóc combo</td><td>TMXD</td><td>—</td><td><span class="badge locked">Locked</span></td></tr>
-            <tr><td>—</td><td>—</td><td><strong>Trẻ hóa / Hack tuổi 🆕</strong></td><td>Nam 35-45 sợ già, muốn thăng tiến</td><td>Diện mạo già hơn tuổi thật</td><td>Cắt + nhuộm + styling</td><td>—</td><td><span class="badge testing">Pass → cần LOCK top-of-mind</span></td></tr>
-            <tr class="section-header"><td colspan="8">BACKLOG HYPOTHESIS (T6+) — Chương cấp từ Radar</td></tr>
-            <tr><td>—</td><td>T6</td><td style="background:#fff8dc">[H01 fill]</td><td style="background:#fff8dc">[hypothesis]</td><td style="background:#fff8dc">[evidence]</td><td style="background:#fff8dc">[map service]</td><td>—</td><td><span class="badge deferred">Backlog</span></td></tr>
-            <tr><td>—</td><td>T6</td><td style="background:#fff8dc">[H02]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>—</td><td><span class="badge deferred">Backlog</span></td></tr>
-            <tr><td>—</td><td>T6</td><td style="background:#fff8dc">[H03]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>—</td><td><span class="badge deferred">Backlog</span></td></tr>
+            <tr><td><strong>U1</strong></td><td style="background:#fff8dc">[Demand?/Angle?]</td><td style="background:#fff8dc">[Tên ưu tiên #1]</td><td style="background:#fff8dc">[Macro? hoặc NEW]</td><td style="background:#fff8dc">[5 video]</td><td>8tr</td><td style="background:#fff8dc">[hook + evidence]</td><td>Vân Hà</td><td>≥3/5 PASS = WIN</td></tr>
+            <tr><td><strong>U2</strong></td><td style="background:#fff8dc">[Demand?/Angle?]</td><td style="background:#fff8dc">[Tên ưu tiên #2]</td><td style="background:#fff8dc">[Macro?]</td><td style="background:#fff8dc">[3 video]</td><td>4.8tr</td><td style="background:#fff8dc">[hook]</td><td>Thanh Hà</td><td>≥2/3 PASS = WIN</td></tr>
+            <tr><td><strong>U3</strong></td><td style="background:#fff8dc">[Demand?/Angle?]</td><td style="background:#fff8dc">[Tên ưu tiên #3 — explore]</td><td style="background:#fff8dc">[Macro?]</td><td style="background:#fff8dc">[2 video]</td><td>3.2tr</td><td style="background:#fff8dc">[hook]</td><td>Vân Hà</td><td>2/2 PASS = signal</td></tr>
+            <tr><td colspan="4"><strong>TOTAL TEST</strong></td><td><strong>10 video</strong></td><td><strong>16tr</strong></td><td colspan="3">Decision gate ngày 20</td></tr>
+            <tr class="section-header"><td colspan="9">DEMAND POOL — chỉ TEST ACTIVE + PENDING RE-TEST mới chiếm slot 10 video</td></tr>
+            <tr><td>—</td><td>Demand</td><td><strong>🌴 MACRO01 Escape</strong></td><td>—</td><td>3 angle WIN bank</td><td>—</td><td>"Thoát áp lực 45 phút giữa ngày"</td><td>—</td><td><span class="badge locked">🔒 LOCK & SCALE</span></td></tr>
+            <tr><td>—</td><td>Demand</td><td><strong>🚀 MACRO02 Transition</strong></td><td>—</td><td>~2 angle WIN bank</td><td>—</td><td>"Diện mạo cho thăng chức/đổi job"</td><td>—</td><td><span class="badge locked">🔒 LOCK & SCALE</span></td></tr>
+            <tr><td>—</td><td>Demand</td><td><strong>😰 MACRO03 Insecurity (rộng)</strong></td><td>—</td><td>1 angle "Trẻ hóa" PASS — chưa cover rụng tóc/dưỡng</td><td>—</td><td>"Sợ già/hói/rụng tóc/stress — cần trẻ + da đầu khỏe + relax + sản phẩm"</td><td>—</td><td><span class="badge testing">🧪 TEST ACTIVE</span></td></tr>
+            <tr><td>—</td><td>Demand</td><td><strong>🎯 MACRO04 Hybrid Lý+Cảm</strong></td><td>—</td><td>2 angle WIN bank</td><td>—</td><td>"Tai ngứa + reward cảm tính"</td><td>—</td><td><span class="badge locked">🔒 LOCK & SCALE</span></td></tr>
+            <tr class="section-header"><td colspan="9">BACKLOG (T6+) — Radar weekly quét cả Demand mới + Angle mới</td></tr>
+            <tr><td>—</td><td style="background:#fff8dc">[Demand?/Angle?]</td><td style="background:#fff8dc">[Tên]</td><td style="background:#fff8dc">[Macro?]</td><td>—</td><td>—</td><td style="background:#fff8dc">[hook]</td><td>—</td><td><span class="badge deferred">📋 Backlog</span></td></tr>
+            <tr><td>—</td><td style="background:#fff8dc">[Demand?/Angle?]</td><td style="background:#fff8dc">[Tên]</td><td style="background:#fff8dc">[Macro?]</td><td>—</td><td>—</td><td style="background:#fff8dc">[hook]</td><td>—</td><td><span class="badge deferred">📋 Backlog</span></td></tr>
+            <tr><td>—</td><td style="background:#fff8dc">[Demand?/Angle?]</td><td style="background:#fff8dc">[Tên]</td><td style="background:#fff8dc">[Macro?]</td><td>—</td><td>—</td><td style="background:#fff8dc">[hook]</td><td>—</td><td><span class="badge deferred">📋 Backlog</span></td></tr>
           </tbody>
         </table>
         <div class="note">
-          Demand chặng 1-4 sẽ <strong>auto-fill</strong> từ skill <code>plan-test-demands</code> (đọc Daily Collect 14 ngày + niche research). Hypothesis card backlog do skill <code>collect-daily</code> + manual research của Chương cung cấp.
+          U1-U3 fill từ Radar weekly + scoring rubric (top điểm). Đa số demand ở LOCK & SCALE → KHÔNG chiếm slot test. <strong>Total cap cứng test = 10 video/tháng</strong>.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🎬</span> Build-up slot T5 — 10 video salon (KOC nội bộ scale demand đã PASS)</h3>
+        <p style="color:var(--slate-700);margin-bottom:12px">
+          KHÔNG phải test. Stylist 30Shine kể chuyện từ những demand đã có angle WIN. Mục đích: <strong>build up demand đã PASS</strong> → branding lock top-of-mind. Tiết kiệm hơn KOC external + content thật từ trải nghiệm salon.
+        </p>
+        <table>
+          <thead><tr><th>Macro CEP</th><th>Angle WIN dùng</th><th>Salon đầu mối</th><th>Stylist KOC</th><th>Số video</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td><strong>🌴 Escape</strong></td><td>Angle WIN từ bank (45 phút escape, ASMR)</td><td style="background:#fff8dc">[Salon?]</td><td style="background:#fff8dc">[Stylist?]</td><td style="background:#fff8dc">[~3]</td><td><span class="badge locked">Build-up</span></td></tr>
+            <tr><td><strong>🚀 Transition</strong></td><td>Angle WIN (Bí kíp pitching, kiểu tóc Leader)</td><td style="background:#fff8dc">[Salon?]</td><td style="background:#fff8dc">[Stylist?]</td><td style="background:#fff8dc">[~2]</td><td><span class="badge locked">Build-up</span></td></tr>
+            <tr><td><strong>😰 Insecurity (rộng)</strong></td><td>"Trẻ hóa" + mở thêm angle rụng tóc/dưỡng tóc/relax stress + upsell sản phẩm chăm sóc tóc nam</td><td style="background:#fff8dc">[Salon?]</td><td style="background:#fff8dc">[Stylist?]</td><td style="background:#fff8dc">[~3]</td><td><span class="badge testing">Build-up + lock</span></td></tr>
+            <tr><td><strong>🎯 Hybrid Lý+Cảm</strong></td><td>"Ráy tai an toàn" + "Dịch vụ gây nghiện ASMR"</td><td style="background:#fff8dc">[Salon?]</td><td style="background:#fff8dc">[Stylist?]</td><td style="background:#fff8dc">[~2]</td><td><span class="badge locked">Build-up</span></td></tr>
+            <tr><td colspan="4"><strong>TOTAL BUILD-UP</strong></td><td><strong>10 video</strong></td><td>Stylist 30Shine nội bộ</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3><span class="emoji">🤝</span> Tận dụng KOC booking external T5 — 10 video (đã book sẵn)</h3>
+        <p style="color:var(--slate-700);margin-bottom:12px">
+          KHÔNG phải test, KHÔNG tạo demand mới. <strong>Tận dụng</strong> 10 video KOC external đã book — re-use cho <strong>scale demand đã PASS</strong> + cross-promote brand. Tránh để slot trống lãng phí ngân sách booking.
+        </p>
+        <table>
+          <thead><tr><th>Mục đích sử dụng</th><th>Số video</th><th>Demand phục vụ</th><th>Note</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Scale demand đã PASS</strong> — KOC kể trải nghiệm</td><td>~6</td><td>Macro Escape + Hybrid Lý+Cảm + Insecurity (Trẻ hóa)</td><td>Reach lớn — KOC follower có audience riêng, complement KOC nội bộ</td></tr>
+            <tr><td><strong>Cross-promote WC + brand</strong></td><td>~3</td><td>Macro Transition (cầu thủ) + cross-Macro</td><td>WorldCup synergy — KOC review "cắt tóc theo sao" ở salon</td></tr>
+            <tr><td><strong>Buffer test angle</strong> (nếu Hà-led không đủ producer)</td><td>~1</td><td>Tùy slot trống</td><td>Backup nếu Vân Hà / Thanh Hà overload</td></tr>
+            <tr><td colspan="1"><strong>TOTAL EXTERNAL</strong></td><td><strong>10 video</strong></td><td colspan="2">Đã book — chi phí cố định, tận dụng tối đa</td></tr>
+          </tbody>
+        </table>
+        <div class="note">
+          <strong>Quan trọng</strong>: KOC external KHÔNG dùng để TEST demand mới (test = job của Hà-led 10 video, dễ control rubric). KOC external thiên về reach + scale content đã pass — vì chi phí KOC external cao, không nên đốt vào test risk.
         </div>
       </div>
 
@@ -907,10 +1095,21 @@ tr:last-child td { border-bottom: none; }
           velocity &lt; 0.80 → <span style="color:#F43F5E">FAIL — DROP demand, không cứu</span>
         </div>
         <div class="formula">
-          <div class="label">Demand Test Block</div>
-          1 demand = 10 video × 1.6tr × 3 ngày = <strong>16tr/demand</strong><br>
-          1 tháng = 4 demand × 4 chặng = <strong>64tr ngân sách test/tháng</strong><br>
-          Pass rate giả định 30% → ~1.2 demand WIN/tháng → 4 chặng/tháng
+          <div class="label">Monthly Test Block — CAP CỨNG</div>
+          1 tháng = <strong>10 video TOTAL</strong> × 1.6tr/3 ngày = <strong>16tr/tháng test</strong><br>
+          Phân bổ cho <strong>1-3 angle</strong> (chấm điểm rubric, top điểm cao chiếm video nhiều hơn)<br><br>
+          <span style="color:#F59E0B">Ví dụ phân bổ:</span><br>
+          • <strong>Deep test 1 angle</strong>: 10 video × 1 angle (priority cao nhất, gấp)<br>
+          • <strong>Spread parallel</strong>: 5+3+2 video × 3 angle (mix priority)<br>
+          • <strong>Balanced</strong>: 5+5 video × 2 angle (so sánh A/B)
+        </div>
+        <div class="formula">
+          <div class="label">Angle PASS criteria — sample size logic</div>
+          Angle có N video trong test → PASS nếu <strong>≥60% video pass spend velocity</strong>:<br>
+          • N=10 → ≥6 video pass = angle WIN<br>
+          • N=5 → ≥3 video pass<br>
+          • N=3 → ≥2 video pass<br>
+          • N=2 → cả 2 pass = preliminary signal (full test T+1)
         </div>
       </div>
 
@@ -923,7 +1122,7 @@ tr:last-child td { border-bottom: none; }
             <tr><td><strong>25% view rate</strong></td><td class="baseline-cell">—</td><td class="target-cell">track</td><td>≥2.5%</td><td>2-2.5%</td><td>&lt;2%</td></tr>
             <tr><td><strong>50% view rate</strong></td><td class="baseline-cell">—</td><td class="target-cell">track</td><td>≥1%</td><td>0.8-1%</td><td>&lt;0.8%</td></tr>
             <tr><td><strong>CTR (link click)</strong></td><td class="baseline-cell">—</td><td class="target-cell">track</td><td>≥1.5%</td><td>1-1.5%</td><td>&lt;1%</td></tr>
-            <tr><td><strong>CPA</strong></td><td class="baseline-cell">—</td><td class="target-cell">≤30k tier STAR</td><td>≤30k</td><td>30-40k</td><td>&gt;40k</td></tr>
+            <tr><td><strong>CPA</strong> (Cty 1 purchase ads)</td><td class="baseline-cell">~85k median T4</td><td class="target-cell">≤30k STAR</td><td>≤30k</td><td>30-60k</td><td>&gt;100k</td></tr>
           </tbody>
         </table>
         <div class="note">
@@ -932,13 +1131,54 @@ tr:last-child td { border-bottom: none; }
       </div>
 
       <div class="card">
+        <h3><span class="emoji">💸</span> CPA / CPM tier — dựa data thực T4 (Cty 1 + Cty 2)</h3>
+        <p style="color:var(--slate-700);margin-bottom:12px">
+          Tier dưới đây tính từ <code>Cty 1.xlsx</code> (ads tối ưu LƯỢT MUA, 142 ad T4) và <code>Cty 2.xlsx</code> (ads tối ưu REACH, 144 ad T4). Tier này dùng để <strong>chấm điểm angle</strong> (rubric phía trên) và <strong>quyết định scale/cut</strong> sau test.
+        </p>
+
+        <h4 style="margin-top:14px;margin-bottom:10px;color:var(--navy-900);font-size:14px">📘 Cty 1 — Purchase ads (lượt mua khách thật)</h4>
+        <table>
+          <thead><tr><th>Tier</th><th>CPA</th><th>CPM</th><th>Action</th><th>Ad mẫu T4</th></tr></thead>
+          <tbody>
+            <tr><td><span class="badge locked">⭐ STAR</span></td><td class="target-cell">≤ 30k</td><td class="target-cell">≤ 40k</td><td><strong>Scale mạnh</strong></td><td>"Combo 45 phút làm đàn ông sáng" 27.9k • "927 HG" 25.9k • "708 LTT" 26.2k</td></tr>
+            <tr><td><span class="badge testing">🏆 WIN</span></td><td>30k – 60k</td><td>40k – 80k</td><td>Scale có kiểm soát</td><td>"312 LVS" 87.7k CPA / "730 TL10" 43.4k</td></tr>
+            <tr><td><span class="badge warning">✅ OK</span></td><td>60k – 100k</td><td>80k – 120k</td><td>Giữ + tối ưu hook</td><td>"99 TSN" 128k / "HBT ShineCombo" 53.9k</td></tr>
+            <tr><td><span class="badge urgent">● CUT</span></td><td>&gt; 100k</td><td>&gt; 120k</td><td><strong>Stop ngay</strong></td><td>"190 HB" 199k CPM, "Slicky Hair" 36.6k CPM (no purchase)</td></tr>
+          </tbody>
+        </table>
+
+        <h4 style="margin-top:18px;margin-bottom:10px;color:var(--navy-900);font-size:14px">📕 Cty 2 — Purchase ads (Nhượng quyền — đã đổi cách chạy, KHÔNG còn reach)</h4>
+        <p style="color:var(--slate-700);margin-bottom:10px;font-size:12px">
+          <strong>Update T5</strong>: Nhượng quyền chuyển từ tối ưu reach (T4) sang tối ưu lượt mua. Tier mới CPA 30-60K (cao hơn Cty 1 vì tệp khác — nhượng quyền có CPV cao hơn salon Cty).
+        </p>
+        <table>
+          <thead><tr><th>Tier</th><th>CPA</th><th>Action</th><th>Note</th></tr></thead>
+          <tbody>
+            <tr><td><span class="badge locked">⭐ STAR</span></td><td class="target-cell">≤ 30k</td><td><strong>Scale mạnh</strong></td><td>Top performer — lock angle, paid amp</td></tr>
+            <tr><td><span class="badge testing">🏆 WIN</span></td><td>30k – 45k</td><td>Scale có kiểm soát</td><td>Range chính của Nhượng quyền — chấp nhận được</td></tr>
+            <tr><td><span class="badge warning">✅ OK</span></td><td>45k – 60k</td><td>Giữ + tối ưu hook/offer</td><td>Trên ngưỡng range — phải tối ưu trước scale</td></tr>
+            <tr><td><span class="badge urgent">● CUT</span></td><td>&gt; 60k</td><td><strong>Stop ngay</strong></td><td>Vượt ngưỡng range tệp Nhượng quyền</td></tr>
+          </tbody>
+        </table>
+
+        <div class="note">
+          <strong>Cách dùng tier</strong>:<br>
+          • Test angle mới ở salon Cty → áp tier <strong>Cty 1</strong> (CPA ≤30k STAR) sau 72h spend gate.<br>
+          • Test angle mới ở Nhượng quyền → áp tier <strong>Cty 2</strong> (CPA ≤30k STAR / 30-45k WIN).<br>
+          • Median CPA Cty 1 T4 = ~85k → đa số ad đang ở OK/CUT → dư địa improve lớn nếu lock đúng angle WIN.<br>
+          • <strong>Cập nhật tier hằng tháng</strong>: download Cty 1 + Cty 2 mới, recompute median CPA, update tier nếu drift &gt;10%.
+        </div>
+      </div>
+
+      <div class="card">
         <h3><span class="emoji">⚖️</span> Ratio Media : Ads = 1 : 10</h3>
         <div class="formula">
           <div class="label">Quy tắc ngân sách</div>
-          1 đồng booking content (KOC/stylist) = 10 đồng chi ads<br><br>
+          1 đồng booking content (stylist nội bộ) = 10 đồng chi ads<br><br>
           1 video chất lượng → tiêu được <strong>10tr ads</strong><br>
-          90 video/tháng → cần <strong>~40 KOC booking</strong> (T4 chỉ có 20 → thiếu)<br>
-          Action: tăng commission +20% để collect đủ media
+          ~30 video/tháng × 10tr = ~300tr ads tiềm năng<br>
+          Trong đó: 10 test (16tr ngân sách test) + 10 build-up scale (paid amp)
+        </div>
         </div>
       </div>
 
@@ -980,11 +1220,22 @@ tr:last-child td { border-bottom: none; }
             <tr><td><strong>Massage gội</strong></td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td><span class="badge locked">Cluster</span></td></tr>
             <tr><td><strong>TMXD</strong></td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>~27k</td><td><span class="badge locked">Combo</span></td></tr>
             <tr><td><strong>Trẻ hóa 🆕</strong></td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td><span class="badge testing">Lock pending</span></td></tr>
-            <tr class="section-header"><td colspan="9">4 CHẶNG TEST T5 — ngón thứ 6</td></tr>
-            <tr><td>D01 (chặng 1)</td><td>10</td><td>16tr</td><td>1.6tr</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">TBD ngày 20</td></tr>
-            <tr><td>D02 (chặng 2)</td><td>10</td><td>16tr</td><td>1.6tr</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">TBD</td></tr>
-            <tr><td>D03 (chặng 3)</td><td>10</td><td>16tr</td><td>1.6tr</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">TBD</td></tr>
-            <tr><td>D04 (chặng 4)</td><td>10</td><td>16tr</td><td>1.6tr</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">TBD</td></tr>
+            <tr class="section-header"><td colspan="9">TEST SLOT T5 — 10 video Hà-led (test demand + angle)</td></tr>
+            <tr><td>U1 — ưu tiên #1 (Demand or Angle)</td><td style="background:#fff8dc">[5]</td><td style="background:#fff8dc">[8tr]</td><td>1.6tr</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">≥3/5 PASS = WIN</td></tr>
+            <tr><td>U2 — ưu tiên #2</td><td style="background:#fff8dc">[3]</td><td style="background:#fff8dc">[4.8tr]</td><td>1.6tr</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">≥2/3 PASS = WIN</td></tr>
+            <tr><td>U3 — explore (optional)</td><td style="background:#fff8dc">[2]</td><td style="background:#fff8dc">[3.2tr]</td><td>1.6tr</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">2/2 = signal</td></tr>
+            <tr><td><strong>TOTAL TEST</strong></td><td><strong>10</strong></td><td><strong>16tr</strong></td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Decision gate ngày 20</td></tr>
+            <tr class="section-header"><td colspan="9">BUILD-UP SLOT T5 — 10 video KOC nội bộ (stylist scale demand đã PASS)</td></tr>
+            <tr><td>KOC nội bộ — Macro Escape</td><td style="background:#fff8dc">[~3]</td><td>—</td><td>—</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>—</td><td><span class="badge locked">Build-up</span></td></tr>
+            <tr><td>KOC nội bộ — Macro Transition</td><td style="background:#fff8dc">[~2]</td><td>—</td><td>—</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>—</td><td><span class="badge locked">Build-up</span></td></tr>
+            <tr><td>KOC nội bộ — Macro Insecurity (rộng)</td><td style="background:#fff8dc">[~3]</td><td>—</td><td>—</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>—</td><td><span class="badge testing">Build-up + lock</span></td></tr>
+            <tr><td>KOC nội bộ — Macro Hybrid</td><td style="background:#fff8dc">[~2]</td><td>—</td><td>—</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>—</td><td><span class="badge locked">Build-up</span></td></tr>
+            <tr><td><strong>TOTAL BUILD-UP</strong></td><td><strong>10</strong></td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Stylist nội bộ</td></tr>
+            <tr class="section-header"><td colspan="9">TẬN DỤNG KOC EXTERNAL T5 — 10 video (đã book, scale + cross-promote)</td></tr>
+            <tr><td>KOC external — scale demand đã PASS</td><td style="background:#fff8dc">[~6]</td><td>—</td><td>—</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>—</td><td><span class="badge locked">Tận dụng</span></td></tr>
+            <tr><td>KOC external — cross-promote WC</td><td style="background:#fff8dc">[~3]</td><td>—</td><td>—</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>—</td><td><span class="badge locked">Tận dụng</span></td></tr>
+            <tr><td>KOC external — buffer test</td><td style="background:#fff8dc">[~1]</td><td>—</td><td>—</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td style="background:#fff8dc">[fill]</td><td>—</td><td><span class="badge locked">Tận dụng</span></td></tr>
+            <tr><td><strong>TOTAL EXTERNAL</strong></td><td><strong>10</strong></td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Đã book</td></tr>
           </tbody>
         </table>
       </div>
@@ -996,10 +1247,11 @@ tr:last-child td { border-bottom: none; }
           <tbody>
             <tr><td><strong>Daily</strong></td><td>Spend velocity check (T+1, T+2, T+3 mỗi chặng)</td><td>Huế / Khánh</td><td>Slack alert nếu velocity &lt;0.8</td></tr>
             <tr><td><strong>3 ngày/lần</strong></td><td>Review chặng đang chạy: 3s/25%/CPA</td><td>Chương + Hà</td><td>Pause/continue/iterate</td></tr>
-            <tr><td><strong>Weekly</strong></td><td>Radar weekly — collect-daily quét hypothesis mới</td><td><strong>Chương</strong></td><td>Add hypothesis vào backlog</td></tr>
-            <tr><td><strong>Monthly (ngày 20)</strong></td><td>Decision gate — chốt pass/drop 4 chặng</td><td>Tùng + Chương + 2 Hà</td><td>Decision Log + Kho know-how</td></tr>
-            <tr><td><strong>Monthly (ngày 25-30)</strong></td><td>Plan T+1 + chốt 4 demand cho chặng tháng sau</td><td>Tùng + Chương</td><td>Plan T+1 publish</td></tr>
-            <tr><td><strong>Quarterly</strong></td><td>Review 5 ngón đã lock — share-of-mind, sức khỏe, có ngón nào cần re-test không</td><td>Tùng + Vân Hà + Chương</td><td>Adjust baseline</td></tr>
+            <tr><td><strong>Weekly — RADAR (spy)</strong></td><td>Quét daily collect + FB Ads Library + VOZ → chấm điểm rubric: (a) angle mới có vào test? (b) Macro nào đang nổi/sụp?</td><td><strong>Chương</strong></td><td>Angle backlog + Macro hypothesis (nếu có) + Decision Log</td></tr>
+            <tr><td><strong>Weekly — refresh Cty 1+2</strong></td><td>Download Cty 1.xlsx + Cty 2.xlsx mới, recompute median CPA/CPM, update tier nếu drift &gt;10%</td><td>Chương</td><td>Tier baseline mới</td></tr>
+            <tr><td><strong>Monthly (ngày 20)</strong></td><td>Decision gate — chốt PASS/FAIL các angle đang test (theo ≥60% video PASS) + xem có promote/drop Macro nào không</td><td>Tùng + Chương + 2 Hà</td><td>Decision Log + Kho know-how + Macro pool update</td></tr>
+            <tr><td><strong>Monthly (ngày 25-30)</strong></td><td>Plan T+1: chấm điểm rubric → chọn angle top vào 10 video test, quyết phân bổ (deep test 1 angle / spread 2-3 angle)</td><td>Tùng + Chương</td><td>Plan T+1 publish</td></tr>
+            <tr><td><strong>Quarterly</strong></td><td>Review Macro pool — share-of-mind, có Macro nào cần drop / Macro mới cần promote (rubric ≥4.0)</td><td>Tùng + Vân Hà + Chương</td><td>Update Macro pool baseline</td></tr>
           </tbody>
         </table>
       </div>
@@ -1028,16 +1280,16 @@ tr:last-child td { border-bottom: none; }
               <td><strong>Pass rate test demand</strong></td>
               <td><span class="severity s1">⚠️ S1</span></td>
               <td>&lt;30% (giả định)<br>Hết tháng &lt;1 demand WIN</td>
-              <td>4 chặng test ra 0-1 demand WIN → không có ngón thứ 6 để lock → bộ ngón đứng yên</td>
-              <td>(1) Quay lại scale 5 ngón cũ + tăng ngân sách bồi đắp<br>(2) Tăng pool hypothesis 3→6/tháng (Chương deep-dive collect-daily-paid)<br>(3) Mở source cross-industry (8 ngành) tìm angle transferable</td>
+              <td>10 video test ra 0-1 angle WIN → angle bank không grow → Macro cần thêm angle bị stuck</td>
+              <td>(1) Quay lại scale angle WIN cũ + branding lock dùng angle bank hiện có<br>(2) Tăng pool angle hypothesis 3→6/tháng (Chương deep-dive collect-daily-paid)<br>(3) Đổi chiến thuật phân bổ: deep test 1 angle (10 video) thay vì spread 2-3 angle<br>(4) Mở source cross-industry (8 ngành) tìm angle transferable</td>
               <td>Chương + Tùng review ngày 20</td>
             </tr>
             <tr class="risk-row s2">
               <td><strong>3s view rate sụp</strong></td>
               <td><span class="severity s2">🚨 S2</span></td>
-              <td>&lt;5% trên 3 video liên tiếp<br>(baseline 7%)</td>
-              <td>Hook tệ → ads burn tiền không có leading metric → CPA sẽ tệ theo, lag 5-7 ngày</td>
-              <td>(1) <strong>PAUSE campaign ngay</strong> sau 3 video fail<br>(2) Audit hook framework (3 giây đầu) — test alt hook<br>(3) Switch creator/format (ASMR → before-after, hoặc đổi KOC)<br>(4) Drop demand nếu fail 5 video liên tiếp</td>
+              <td>&lt;5% trên ≥50% video của 1 angle<br>(vd angle có 5 video → ≥3 fail = trigger)</td>
+              <td>Hook tệ → ads burn → CPA sẽ tệ lag 5-7 ngày. Với sample size nhỏ (3-5 video/angle), cần đánh giá %, không đếm liên tiếp</td>
+              <td>(1) <strong>PAUSE angle ngay</strong> khi ≥50% video fail 3s view<br>(2) Audit hook framework (3 giây đầu) — test alt hook trong slot tháng sau<br>(3) Switch creator/format (ASMR → before-after, đổi KOC)<br>(4) DROP angle nếu &gt;60% video fail (vd 4/5 video) — không cứu, ghi kho know-how</td>
               <td>Huế Slack alert tự động</td>
             </tr>
             <tr class="risk-row s2">
@@ -1068,7 +1320,7 @@ tr:last-child td { border-bottom: none; }
               <td><strong>Backlog hypothesis cạn</strong></td>
               <td><span class="severity s1">⚠️ S1</span></td>
               <td>&lt;3 hypothesis card cho tháng sau (tới ngày 25)</td>
-              <td>Pipeline khô → tháng sau không có ngón thứ 6 để test → 4 chặng trống</td>
+              <td>Pipeline khô → tháng sau không có angle để test → 4 chặng trống</td>
               <td>(1) Trigger Radar deep-dive: collect-daily 14 ngày + niche research 4-layer<br>(2) Bật collect-daily-paid (Apify $0.45/run) — pull competitor barber + VOZ quote<br>(3) Cross-industry scan 8 ngành (Same Customer Any Industry)<br>(4) Reuse hypothesis đã drop nếu có signal mới</td>
               <td>Chương ngày 25 mỗi tháng</td>
             </tr>
@@ -1076,15 +1328,15 @@ tr:last-child td { border-bottom: none; }
               <td><strong>Ngân sách test vượt cap</strong></td>
               <td><span class="severity s2">🚨 S2</span></td>
               <td>&gt;120% cap (64tr × 1.2 = 76.8tr)</td>
-              <td>Cash burn không kiểm soát — Khánh/Huế cứu demand fail bằng cách đổ thêm tiền</td>
-              <td><strong>HARD CAP</strong>: ngân sách test = 64tr/tháng. Vượt = STOP toàn bộ test, escalate Tùng. Demand fail 72h = drop, KHÔNG đổ thêm tiền cứu.</td>
+              <td>Cash burn không kiểm soát — Khánh/Huế cứu angle fail bằng cách đổ thêm tiền</td>
+              <td><strong>HARD CAP</strong>: ngân sách test = <strong>16tr/tháng</strong> (10 video × 1.6tr). Vượt = STOP toàn bộ test, escalate Tùng. Video fail spend velocity 72h = drop ngay, KHÔNG đổ thêm tiền cứu.</td>
               <td>Huế daily check ngân sách</td>
             </tr>
             <tr class="risk-row s3">
-              <td><strong>Share-of-mind ngón đã lock sụp</strong></td>
+              <td><strong>Share-of-mind Macro đã lock sụp</strong></td>
               <td><span class="severity s3">🆘 S3</span></td>
               <td>-15% YoY trên brand lift / share-of-voice social</td>
-              <td>Đối thủ chiếm thị phần ngón đó (vd Coolmate ăn cluster Transition / brand X ăn ráy tai) → mất top-of-mind dần</td>
+              <td>Đối thủ chiếm thị phần Macro đó (vd Coolmate ăn Macro Transition / brand X ăn ráy tai trong Macro Hybrid) → mất top-of-mind dần</td>
               <td>(1) Trigger <strong>Branding Sprint khẩn cấp</strong>: KOC fan-club + content series + paid amplification 3-6 tuần<br>(2) Reposition messaging — đào sâu USP (vd ráy tai → "an toàn y tế" vs "lạnh nhanh")<br>(3) Defensive ads: chạy keyword đối thủ trên FB/TikTok<br>(4) Escalate chị Oanh + CEO nếu sau 6 tuần không hồi</td>
               <td>Quarterly brand survey</td>
             </tr>
@@ -1093,7 +1345,7 @@ tr:last-child td { border-bottom: none; }
               <td><span class="severity s1">⚠️ S1</span></td>
               <td>Sau 3 tháng lock, share-of-mind không tăng / CPA tier &gt;30k</td>
               <td>Đã pass test nhưng không lock được top-of-mind → coi như chưa pass thực sự</td>
-              <td>(1) Re-classify thành "pending re-test" — không tính trong 6 ngón<br>(2) Đào sâu sub-angle (trẻ hóa cho ai? sếp / chồng / FA?) → chia 2-3 demand con<br>(3) Hold branding 1 tháng, tập trung performance trước</td>
+              <td>(1) Re-classify "Trẻ hóa" thành "pending re-test" trong Macro03<br>(2) Đào sâu sub-angle (trẻ hóa cho ai? sếp / chồng / FA?) → cần thêm 2-3 angle mới<br>(3) Hold branding lock Macro03 1 tháng, tập trung Macro khác</td>
               <td>Tùng + Vân Hà T8 review</td>
             </tr>
             <tr class="risk-row s2">
@@ -1101,15 +1353,31 @@ tr:last-child td { border-bottom: none; }
               <td><span class="severity s2">🚨 S2</span></td>
               <td>&gt;1:15 (booking quá rẻ vs ads quá nhiều)<br>hoặc &lt;1:6 (booking quá đắt)</td>
               <td>1:15 → media chất lượng kém kéo CPA xuống / 1:6 → đốt tiền content không tiêu hết ads</td>
-              <td>(1) Re-balance: tăng booking commission (lệch &gt;1:15) hoặc giảm số booking (lệch &lt;1:6)<br>(2) Audit chất lượng video — chấm 3s view rate per creator<br>(3) Cut creator có 3s view &lt;5% trong 5 video</td>
+              <td>(1) Re-balance: tăng booking commission (lệch &gt;1:15) hoặc giảm số booking (lệch &lt;1:6)<br>(2) Audit chất lượng video — chấm 3s view rate per creator<br>(3) Cut creator có 3s view &lt;5% trên ≥3 video gần nhất</td>
               <td>Huế weekly</td>
+            </tr>
+            <tr class="risk-row s2">
+              <td><strong>KOC build-up không đủ 10 video/tháng</strong></td>
+              <td><span class="severity s2">🚨 S2</span></td>
+              <td>&lt;7/10 video build-up trong tháng (stylist không hợp tác / lịch quay vỡ / chất lượng kém)</td>
+              <td>Demand đã PASS không được scale qua KOC nội bộ → branding lock không đủ chất liệu → top-of-mind không tăng</td>
+              <td>(1) Tạo rotation list 15-20 stylist sẵn sàng quay (buffer nếu fail)<br>(2) Salon ưu tiên cấp slot quay (Tùng + salon manager commit)<br>(3) Cut stylist kém — chấm 3s view per stylist sau 3 video<br>(4) Backup: tăng tỉ trọng tuyến TEST nếu KOC build-up fail liên tục 2 tháng</td>
+              <td>Vân Hà weekly check</td>
+            </tr>
+            <tr class="risk-row s2">
+              <td><strong>Radar miss demand mới (đối thủ chiếm trước)</strong></td>
+              <td><span class="severity s2">🚨 S2</span></td>
+              <td>Đối thủ launch demand mới trước 30Shine ≥30 ngày (vd Coolmate ăn Macro Transition trước)</td>
+              <td>Mất window first-mover advantage cho Macro mới → đuổi theo đắt hơn 3-5x, có thể không lấy lại được top-of-mind</td>
+              <td>(1) Tăng cadence Radar weekly → daily nếu signal mạnh<br>(2) Bật collect-daily-paid (Apify) — cover competitor active ads sớm hơn<br>(3) Cross-industry scan 8 ngành — bắt signal trước khi vào hair salon<br>(4) Defensive launch: nếu đối thủ đã chiếm, test angle counter/differentiate (vd USP "an toàn y tế" vs spa thường)</td>
+              <td>Chương weekly + chấm Demand Rubric</td>
             </tr>
             <tr class="risk-row s1">
               <td><strong>Decision Log không có entry</strong></td>
               <td><span class="severity s1">⚠️ S1</span></td>
               <td>0 entry trong tháng (tháng 20 không log)</td>
               <td>Test xong không log = không nhân rộng được, fail repeat → vô nghĩa</td>
-              <td>(1) Hard rule: <strong>không có log = demand không được tính pass/drop</strong><br>(2) Chương assigned R/A — Tùng accountability<br>(3) Template Notion ngắn (5 field): demand / signal / verdict / why / next action</td>
+              <td>(1) Hard rule: <strong>không có log = unit test không được tính pass/drop</strong><br>(2) Chương assigned R/A — Tùng accountability<br>(3) Template Notion ngắn (6 field): loại (demand/angle) / signal / số video / verdict / why / next action</td>
               <td>Tùng kiểm ngày 20</td>
             </tr>
           </tbody>
@@ -1126,7 +1394,7 @@ tr:last-child td { border-bottom: none; }
           <tbody>
             <tr><td><span class="severity s1">S1</span></td><td>Cảnh báo — chỉ số chệch 10-30%</td><td>Tùng (QL trực tiếp)</td><td>Fix trong tuần</td></tr>
             <tr><td><span class="severity s2">S2</span></td><td>Nguy hiểm — chỉ số chệch &gt;30% / spend velocity fail / CPA tăng vọt</td><td>Tùng + Khánh/Huế (Performance lead)</td><td>Fix trong 72h</td></tr>
-            <tr><td><span class="severity s3">S3</span></td><td>Khẩn cấp — share-of-mind sụp / ngón locked mất thị phần</td><td>Chị Oanh (sếp lớn) + Vân Hà (Branding) + CEO nếu cần</td><td>Họp ngay trong ngày</td></tr>
+            <tr><td><span class="severity s3">S3</span></td><td>Khẩn cấp — share-of-mind sụp / Macro CEP mất thị phần</td><td>Chị Oanh (sếp lớn) + Vân Hà (Branding) + CEO nếu cần</td><td>Họp ngay trong ngày</td></tr>
           </tbody>
         </table>
       </div>
@@ -1134,13 +1402,13 @@ tr:last-child td { border-bottom: none; }
       <div class="card">
         <h3><span class="emoji">🛟</span> Fallback master plan — kịch bản xấu nhất</h3>
         <p style="color:var(--slate-700);margin-bottom:14px">
-          Nếu sau 3 tháng (T5-T6-T7) <strong>nhiều rủi ro xảy ra cùng lúc</strong> — pass rate &lt;20%, share-of-mind 1-2 ngón locked sụp, backlog cạn:
+          Nếu sau 3 tháng (T5-T6-T7) <strong>nhiều rủi ro xảy ra cùng lúc</strong> — angle WIN rate &lt;20% (≤2 angle pass / 30 video test 3 tháng), share-of-mind 1-2 Macro CEP sụp, backlog cạn:
         </p>
         <ol style="margin-left:20px;color:var(--navy-700);line-height:1.9">
-          <li><strong>Freeze test ngón thứ 6</strong> 1 tháng — dồn toàn bộ ngân sách bồi đắp 5 ngón cũ + lock chặt "Trẻ hóa".</li>
-          <li><strong>Branding sprint 6 tuần</strong> cho ngón yếu nhất — KOC fan-club + content series + paid amplification.</li>
-          <li><strong>Re-define baseline</strong> — Chương + Tùng + Vân Hà rà lại 5 ngón, có thể merge / split / remove (vd massage gội + ráy tai gộp thành "Cluster Relax").</li>
-          <li><strong>Pivot framework</strong> nếu cần — escalate chị Oanh + CEO. Có thể không phải lúc test ngón thứ 6, mà là lúc đào sâu 5 ngón hiện hữu.</li>
+          <li><strong>Freeze test angle mới</strong> 1 tháng — dồn ngân sách scale angle WIN cũ + branding lock 4 Macro CEP có sẵn.</li>
+          <li><strong>Branding sprint 6 tuần</strong> cho Macro yếu nhất — KOC fan-club + content series + paid amplification dùng angle WIN bank.</li>
+          <li><strong>Re-define baseline</strong> — Chương + Tùng + Vân Hà rà lại 4 Macro CEP, có thể merge / split (chỉ trong trường hợp cực).</li>
+          <li><strong>Pivot framework</strong> nếu cần — escalate chị Oanh + CEO. Có thể không phải lúc test angle mới, mà là lúc đào sâu angle WIN bank đã có.</li>
           <li><strong>Communication nội bộ</strong> — không giấu kết quả, công bố decision log + kho know-how cho team toàn marketing để học.</li>
         </ol>
       </div>
